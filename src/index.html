@@ -185,53 +185,6 @@ order: 100
 
     <hr class="my-5">
 
-    <!-- Contact Us Form -->
-
-    <div class="row justify-content-center text-center" id="contact">
-        <div class="col">
-            <h2>Tell Us About Your Project</h2>
-        </div>
-    </div>
-    <div class="row justify-content-center">
-        <div class="col col-xl-8">
-            <form name="request-quote" data-netlify=true method="POST" enctype="application/x-www-form-urlencoded">
-                <div class="mb-3">
-                    <label for="customer_name" class="form-label">Name *</label>
-                    <input type="text" class="form-control" id="customer_name" name="customer_name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="customer_phone" class="form-label">Phone *</label>
-                    <input type="tel" class="form-control" id="customer_phone" name="customer_phone" required>
-                </div>
-                <div class="mb-3">
-                    <label for="customer_email" class="form-label">Email *</label>
-                    <input type="email" class="form-control" id="customer_email" name="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="service_type" class="form-label">Service Type *</label>
-                    <select class="form-control" id="service_type" name="service_type" required>
-                        <option value="" selected disabled>Select a service</option>
-                        <option value="Custom Cabinets">Custom Cabinets</option>
-                        <option value="Kitchen Remodel">Kitchen Remodel</option>
-                        <option value="General Contracting">General Contracting</option>
-                        <option value="Handyman Services">Handyman Services</option>
-                        <option value="Other">Other</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="customer_message" class="form-label">Project Description *</label>
-                    <textarea class="form-control" id="customer_message" rows="5" name="message"
-                        placeholder="Tell us more about your project..." required></textarea>
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="textable" name="textable">
-                    <label class="form-check-label" for="textable">Contact me by text message.</label>
-                </div>
-                <p class="form-required">* Required fields</p>
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg mb-5">Request an Estimate</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    {% include "contact-form.html" %}
+    
 </div>

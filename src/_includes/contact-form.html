@@ -1,0 +1,65 @@
+<!-- Contact Us Form -->
+
+    <div class="row justify-content-center text-center" id="contact">
+        <div class="col">
+            <h2>Tell Us About Your Project</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col col-xl-8">
+            <form name="request-quote" data-netlify="true" method="POST">
+                
+                <input type="hidden" name="form-name" value="request-quote" />
+                <input type="hidden" name="source_page" value="{{ page.url }}">
+                <input type="hidden" name="form_identifier" value="Request for Estimate">
+                
+                <div class="mb-3">
+                    <label for="customer_name" class="form-label">Name *</label>
+                    <input type="text" class="form-control" id="customer_name" name="customer_name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customer_phone" class="form-label">Phone *</label>
+                    <input type="tel" class="form-control" id="customer_phone" name="customer_phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="customer_email" class="form-label">Email *</label>
+                    <input type="email" class="form-control" id="customer_email" name="customer_email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="service_type" class="form-label">Service Type *</label>
+                    <select class="form-control" id="service_type" name="service_type" required>
+                        <option value="" selected disabled>Select a service *</option>
+                        <option value="New Construction">New Construction</option>
+                        <option value="Whole Home Renovation">Whole Home Renovation</option>
+                        <option value="Kitchen Remodel">Kitchen Remodel</option>
+                        <option value="Bathroom Remodel">Bathroom Remodel</option>
+                        <option value="Custom Cabinets and Storage">Custom Cabinets & Storage</option>
+                        <option value="General Contracting">General Contracting / Custom Project</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="referral_source" class="form-label">How did you hear about us? *</label>
+                    <select class="form-control" id="referral_source" name="referral_source" required>
+                        <option value="" selected disabled>Please select an option</option>
+                        <option value="Friend or Family Referral">Friend or Family Referral</option>
+                        <option value="Professional Referral">Referral from another Professional</option>
+                        <option value="Google / Online Search">Google / Online Search</option>
+                        <option value="Social Media">Social Media (Facebook, Instagram, etc.)</option>
+                        <option value="Yard Sign / Saw Our Truck">Yard Sign / Saw Our Truck</option>
+                        <option value="Returning Customer">I'm a Returning Customer</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="project_description" class="form-label">Project Description *</label>
+                    <textarea class="form-control" id="project_description" rows="5" name="project_description"
+                        placeholder="Tell us more about your project..." required></textarea>
+                </div>
+                <p class="form-required">* Required fields</p>
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary btn-lg mb-5">Request an Estimate</button>
+                </div>
+            </form>
+        </div>
+    </div>
