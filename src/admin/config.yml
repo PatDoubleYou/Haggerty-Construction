@@ -6,8 +6,8 @@ local_backend: true
 # change url to a link to the image you want to use, no file paths, must be a URL
 logo_url: https://d33wubrfki0l68.cloudfront.net/c89899bad974606ce0e0f5d5a95842dc787dcb56/7fe98/assets/images/logo-blue.png
 
-media_folder: 'public/images/blog'
-public_folder: '/images/blog'
+media_folder: 'public/images'
+public_folder: '/images'
 
 collections:
   - name: 'blog'
@@ -25,4 +25,19 @@ collections:
       - { label: 'Tags', name: 'tags', widget: 'list', default: ['post'] }
       - { label: 'Featured Image', name: 'image', widget: 'image' }
       - { label: 'Image Caption', name: 'imageAlt', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'projects'
+    label: 'Projects'
+    folder: 'src/projects'
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Subtitle', name: 'subtitle', widget: 'string', required: false }
+      - { label: 'Date', name: 'date', widget: 'datetime' }
+      - { label: 'Hero Image', name: 'heroImage', widget: 'image' }
+      - { label: 'Hero Image Alt', name: 'heroImageAlt', widget: 'string' }
+      - { label: 'Summary', name: 'summary', widget: 'text', hint: 'Short description shown on the gallery card.' }
+      - { label: 'Tags', name: 'tags', widget: 'list', default: ['project'] }
       - { label: 'Body', name: 'body', widget: 'markdown' }

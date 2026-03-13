@@ -1,52 +1,34 @@
 [
   {
-    "path": "./src/assets/images/portfolio/blake and william balanced cabinets maxfields cover.jpg",
-    "alt": "William and Blake Haggerty installing custom custom cabinetry.",
-    "class": "grid-col-span-2 grid-row-span-2"
+    "path": "src/assets/images/gallery/Book Case.jpg",
+    "alt": "Book case"
   },
   {
-    "path": "./src/assets/images/portfolio/PXL_20250909_171340926.MP (1).jpg",
-    "alt": "Completed custom bathroom tile installation with gold fixtures.",
-    "class": "grid-row-span-2"
+    "path": "src/assets/images/gallery/garage_cabinets.jpg",
+    "alt": "Garage cabinets"
   },
   {
-    "path": "./src/assets/images/kitchen-island-remodel.jpg",
-    "alt": "Wide shot of a completed custom kitchen remodel featuring a large knotty alder island and modern appliances.",
-    "class": "grid-col-span-2"
+    "path": "src/assets/images/gallery/ledges pool room.jpg",
+    "alt": "Ledges pool room"
   },
   {
-    "path": "./src/assets/images/portfolio/Maxfields office built-in final.jpg",
-    "alt": "Completed blue built-in office cabinetry and shelving.",
-    "class": ""
+    "path": "src/assets/images/gallery/Living Room.jpg",
+    "alt": "Living room"
   },
   {
-    "path": "./src/assets/images/portfolio/PXL_20251218_185856357.MP.jpg",
-    "alt": "Close up of a newly installed custom bathtub and gold faucet.",
-    "class": "grid-row-span-2"
+    "path": "src/assets/images/gallery/Martys bookcase final.jpg",
+    "alt": "Martys bookcase final"
   },
   {
-    "path": "./src/assets/images/portfolio/PXL_20260106_185520750.MP.jpg",
-    "alt": "A newly installed white oak bathroom vanity with marble top.",
-    "class": ""
+    "path": "src/assets/images/gallery/mudroom.jpg",
+    "alt": "Mudroom"
   },
   {
-    "path": "./src/assets/images/bathroom-door-renovation.jpg",
-    "alt": "Custom sliding barn door installation in a renovated bathroom.",
-    "class": "grid-col-span-2"
+    "path": "src/assets/images/gallery/conners-cabinets-larger.webp",
+    "alt": "Conners cabinets"
   },
   {
-    "path": "./src/assets/images/portfolio/PXL_20260108_213855364.MP.jpg",
-    "alt": "Bathroom renovation showcasing a large, newly tiled walk in shower.",
-    "class": "grid-row-span-2"
-  },
-  {
-    "path": "./src/assets/images/portfolio/PXL_20260127_211514147.MP.jpg",
-    "alt": "A completed laundry room remodel with custom painted cabinets.",
-    "class": ""
-  },
-  {
-    "path": "./src/assets/images/conners-living-room.webp",
-    "alt": "Custom living room fireplace mantle and floating shelves installation.",
-    "class": "grid-col-span-2"
+    "path": "src/assets/images/new-images/Maxfields office built-in final.jpg",
+    "alt": "Maxfields office built-in final"
   }
 ]

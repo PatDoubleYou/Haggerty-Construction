@@ -2,31 +2,31 @@
 layout: 'base.html'
 description: 'Browse through our carefully curated gallery to see the exceptional work we have completed for our clients in St. George, Utah. From custom cabinets to full-scale remodels, our projects reflect our commitment to excellence.'
 metaTitle: 'Haggerty Construction Project Portfolio'
-tagTitle: 'Projects'
+tagTitle: 'Portfolio'
 preloadImg: '/images/cabinets2-1920w.webp'
 preloadCSS: '/css/main.css'
 permalink: 'gallery/'
 eleventyNavigation:
-    key: Projects
+    key: Portfolio
     order: 300
 ---
 
-<!-- Hero Section for Gallery/Portfolio Page -->
+<!-- Hero Section -->
 <section class="hero-section">
     <div class="overlay"></div>
     <div class="container-fluid position-on-top">
         <div class="row">
             <div class="col-12 text-center">
-                <img src="/assets/images/FullName500pxDarkBlue.png" class="img-fluid" alt="Haggerty Construction">
+                <img src="/assets/images/Full_Name500pxWhite.png" class="img-fluid" alt="Haggerty Construction">
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-md-12">
-                <h1 class="hero-title">Showcasing Our Work: Stunning Projects in Washington County.</h1>
-                <h2 class="hero-subtitle">Experience Our Dedication to Quality and Craftsmanship</h2>
-                <p class="hero-description">Browse through our carefully curated gallery to see the exceptional work
-                    we have completed for our clients in St. George, Utah. From custom cabinets to full-scale
-                    remodels, our projects reflect our commitment to excellence.</p>
+        <div class="row align-items-center mt-4">
+            <div class="col-md-10 mx-auto text-center">
+                <h1 class="hero-title">The Work Speaks for Itself.</h1>
+                <p class="hero-description mx-auto" style="max-width: 800px;">
+                    Take a look at some of our recent custom builds and remodels across St. George and Washington County. 
+                    From intricate custom cabinetry to full-scale home renovations, if it demands precision, we build it.
+                </p>
             </div>
         </div>
     </div>
@@ -35,32 +35,71 @@ eleventyNavigation:
 
 <div class="container my-5">
 
-    <section class="gallery-section mb-5" id="gallery">
-        <div class="bento-grid-full">
-            {% for item in gallery %}
-                <div class="bento-card-full {{ item.class }}">
-                    {% if item.type == 'video' %}
-                        <video src="{{ item.path }}" class="bento-img-full" autoplay loop muted playsinline aria-label="{{ item.alt }}"></video>
-                    {% else %}
-                        {% image item.path, item.alt, "bento-img-full", "lazy", "(min-width: 992px) 850px, 400px" %}
-                    {% endif %}
+    <!-- ============================================ -->
+    <!--          Section 1: Featured Projects        -->
+    <!-- ============================================ -->
+
+    {% if collections.project.length > 0 %}
+    <section class="featured-projects mb-5" id="projects">
+        <h2 class="section-heading text-center mb-2">Recent Projects</h2>
+        <p class="text-center text-muted mb-4">Click any project to see the full story.</p>
+
+        <div class="row g-4">
+            {% for project in collections.project | reverse %}
+                <div class="col-md-6 col-lg-4">
+                    <a href="{{ project.url }}" class="project-card-link">
+                        <div class="project-card">
+                            <div class="project-card-img">
+                                <img src="{{ project.data.heroImage }}" alt="{{ project.data.heroImageAlt }}" loading="lazy" />
+                            </div>
+                            <div class="project-card-body">
+                                <h3 class="project-card-title">{{ project.data.title }}</h3>
+                                {% if project.data.subtitle %}
+                                    <span class="project-card-subtitle">{{ project.data.subtitle }}</span>
+                                {% endif %}
+                                <p class="project-card-summary">{{ project.data.summary }}</p>
+                                <span class="project-card-cta">View Project →</span>
+                            </div>
+                        </div>
+                    </a>
                 </div>
             {% endfor %}
         </div>
     </section>
 
-    <!-- Go back button in its own row -->
-    <div class="row">
-        <div class="col text-center">
-            <a href="/" class="btn btn-secondary">
-                <i class="bi bi-arrow-left"></i> Go back to the home page
-            </a>
-        </div>
-    </div>
+    <hr class="my-5">
+    {% endif %}
 
+    <!-- ============================================ -->
+    <!--          Section 2: Photo Grid               -->
+    <!-- ============================================ -->
+
+    <section class="photo-grid-section mb-5" id="gallery">
+        <h2 class="section-heading text-center mb-2">Gallery</h2>
+        <p class="text-center text-muted mb-4">More of our work across Southern Utah.</p>
+
+        <div class="row g-3">
+            {% for item in gallery %}
+                {% if item.type != 'text' %}
+                <div class="col-6 col-md-4">
+                    <div class="gallery-tile">
+                        {% if item.type == 'video' %}
+                            <video src="{{ item.path }}" autoplay loop muted playsinline></video>
+                        {% else %}
+                            {% image item.path, item.alt, "gallery-img", "lazy", "(min-width: 768px) 33vw, 50vw" %}
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </section>
 
     <hr class="my-5">
 
-    {% include "contact-form.html" %}
+    <!-- Contact Form -->
+    <div id="contact-form">
+        {% include "contact-form.html" %}
+    </div>
 
 </div>
