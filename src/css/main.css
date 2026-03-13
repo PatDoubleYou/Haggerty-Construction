@@ -123,6 +123,64 @@ h6 {
 }
 
 /* ============================================
+   Advanced Gallery Masonry
+   ============================================ */
+
+.bento-grid-full {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on mobile */
+    gap: 16px;
+    grid-auto-rows: 300px; /* Base height */
+}
+
+@media (min-width: 768px) {
+    .bento-grid-full {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 350px;
+        grid-auto-flow: dense; /* Crucial: tell CSS to fill gaps! */
+    }
+    
+    .grid-col-span-2 { grid-column: span 2; }
+    .grid-row-span-2 { grid-row: span 2; }
+}
+
+@media (min-width: 1200px) {
+    .bento-grid-full {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 400px;
+    }
+}
+
+.bento-card-full {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--surface-card); /* Placeholder while image loads */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+/* The Eleventy-img shortcode applies the class to the <picture> wrapper */
+.bento-img-full {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.bento-img-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.bento-card-full:hover .bento-img-full img {
+    transform: scale(1.05); /* Slight zoom on hover for interactivity */
+}
+
+/* ============================================
    Animated Section Headers
    ============================================ */
 
@@ -194,7 +252,7 @@ h6 {
    ============================================ */
 
 .hero-section {
-    background-color: #f5f5f5;
+    background-color: var(--surface-base);
     background-size: cover;
     padding: 100px 0;
     text-align: center;
@@ -216,19 +274,20 @@ h6 {
 .hero-title {
     font-size: 48px;
     font-weight: bold;
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
     font-size: 24px;
-    color: #555;
+    color: var(--accent-warm);
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .hero-description {
     font-size: 18px;
-    color: #555;
+    color: var(--text-secondary);
     margin-bottom: 30px;
     max-width: 800px;
     margin-left: auto;
@@ -241,9 +300,8 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(233 229 218 / 84%);
+    background-color: rgba(26, 26, 26, 0.8); /* Charcoal dark overlay */
     z-index: 0;
-    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .position-on-top {
