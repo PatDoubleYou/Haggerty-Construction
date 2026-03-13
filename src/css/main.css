@@ -1,82 +1,429 @@
-/*html {
-    display: block;
-    height: 100%;
-    min-height: 100%;
-    min-width: 100%;
-    width: 100%;
-    overflow: auto;
-}*/
+/* ============================================
+   Haggerty Construction — Design System
+   ============================================ */
 
-body {
-    
-    background-image: url("/assets/images/concrete.webp");
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-blend-mode: normal;
-    
-    background-color: #555;
-    --background-primary: #222;
-    color: #EEEEEE;
+:root {
+    /* Surfaces — neutral charcoal, no blue tint */
+    --surface-base:     #1a1a1a;
+    --surface-card:     #242424;
+    --surface-elevated: #2c2c2c;
+    --surface-overlay:  #333333;
 
-    /*
-    font-family: sans-serif;
-    font-family: apotek, sans-serif;
-    font-weight: 200;
-    
+    /* Text */
+    --text-primary:     #F0F4F8;
+    --text-secondary:   #B1BCC7;
+    --text-muted:       #9BA8B5;
 
-    font-family: "apotek-comp", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    */
+    /* Borders */
+    --border-subtle:    #333333;
+    --border-emphasis:  #444444;
+
+    /* Accent — interactive elements only */
+    --accent-primary:   #4A6D8C;
+    --accent-hover:     #3B597A;
+    --accent-muted:     rgba(74, 109, 140, 0.15);
+
+    /* Warm accent — leather/cognac, used sparingly */
+    --accent-warm:      #A07D5A;
+    --accent-warm-muted: rgba(160, 125, 90, 0.2);
+
+    /* Radius */
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   12px;
+
+    /* Spacing */
+    --section-padding: 80px;
+    --card-padding:    32px;
+
+    /* Legacy aliases */
+    --background-primary: var(--surface-base);
+}
+
+/* ============================================
+   Base
+   ============================================ */
+
+html, body {
+    /* background-image: url("/assets/images/concrete.webp"); — removed for clean dark mode */
+
+    background-color: var(--surface-base);
+    color: var(--text-primary);
 
     font-family: "articulat-cf", sans-serif;
     font-weight: 500;
     font-style: normal;
-
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 
     margin: 0;
-    opacity: 5;
-    line-height: 1.2em;
-
-    /*
-    min-height: 100%;
-    min-width: 100%;
-    width: 100%;
-    */
+    overflow-x: hidden;
+    line-height: 1.6em;
 }
 
 h6 {
-    color: #e1dfee;
+    color: var(--text-secondary);
 }
 
-/* Hero Section */
+/* ============================================
+   Utilities & Overrides
+   ============================================ */
+
+.text-muted { color: var(--text-muted) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-primary { color: var(--text-primary) !important; }
+
+.section-spacing-lg {
+    margin-top: 120px;
+    padding-top: 120px;
+}
+
+/* ============================================
+   Bento Gallery Grid
+   ============================================ */
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    grid-auto-rows: minmax(250px, auto);
+}
+
+@media (min-width: 768px) {
+    .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 240px;
+    }
+
+    .bento-item-1 { grid-column: span 2; grid-row: span 2; }
+    .bento-item-2 { grid-column: span 2; grid-row: span 1; }
+    .bento-item-3 { grid-column: span 1; grid-row: span 1; }
+    .bento-item-4 { grid-column: span 1; grid-row: span 2; }
+    .bento-item-5 { grid-column: span 2; grid-row: span 1; }
+    .bento-item-6 { grid-column: span 1; grid-row: span 1; }
+}
+
+.bento-item {
+    position: relative;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.bento-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.bento-item:hover img {
+    transform: scale(1.03);
+}
+
+/* ============================================
+   Project Cards (Gallery Page)
+   ============================================ */
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.project-card {
+    background-color: var(--surface-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.project-card-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-img img {
+    transform: scale(1.05);
+}
+
+.project-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.project-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.project-card-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent-warm);
+    margin-bottom: 0.75rem;
+}
+
+.project-card-summary {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-card-cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-warm);
+}
+
+/* ============================================
+   Simple Photo Gallery Grid
+   ============================================ */
+
+.gallery-tile {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 280px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-tile video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-tile:hover .gallery-img img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Project Story Page
+   ============================================ */
+
+.project-hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.project-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-subtitle {
+    color: var(--accent-warm);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-date {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.project-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.project-content img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin: 2rem 0;
+}
+
+.project-back {
+    text-align: center;
+    margin: 2rem 0 4rem;
+}
+
+.btn-project-back {
+    color: var(--accent-warm);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-project-back:hover {
+    text-decoration: underline;
+}
+
+.project-cta {
+    padding: 4rem 0;
+    background-color: var(--surface-card);
+}
+
+.project-cta h2 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+.project-cta p {
+    color: var(--text-secondary);
+}
+
+/* ============================================
+   Animated Section Headers
+   ============================================ */
+
+.animated-underline {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px; /* space for the line */
+}
+
+.animated-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0; /* Starts at 0 width */
+    background-color: var(--accent-warm); /* The cognac leather brown */
+    transition: width 1s cubic-bezier(0.25, 1, 0.5, 1);
+    border-radius: 2px;
+}
+
+/* This class is added by JS IntersectionObserver when scrolled into view */
+.animated-underline.is-visible::after {
+    width: 60%; /* Animate width to 60% of the text width */
+}
+
+/* For center-aligned headers, center the line */
+.text-center .animated-underline::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ============================================
+   Reviews Section
+   ============================================ */
+
+.review-card {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-card .client-name {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.review-card .stars {
+    color: #FABB05; /* Google Gold */
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.review-card .review-text {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1; /* Pushes author info to the bottom if differing heights */
+}
+
+/* ============================================
+   Hero Section
+   ============================================ */
+
 .hero-section {
-    background-color: #f5f5f5; /* Change to your preferred background color */
-    background-image: url('/assets/images/wood-texture.webp');
+    background-color: var(--surface-base);
     background-size: cover;
     padding: 100px 0;
     text-align: center;
     position: relative;
 }
 
+.hero-home {
+    background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85)), url('/assets/images/portfolio/blake_and_william_extended_mobile_v2.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (min-width: 768px) {
+    .hero-home {
+        background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85)), url('/assets/images/portfolio/blake and william balanced cabinets maxfields cover.jpg');
+    }
+}
+
 .hero-title {
     font-size: 48px;
     font-weight: bold;
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
     font-size: 24px;
-    color: #555;
+    color: var(--accent-warm);
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .hero-description {
     font-size: 18px;
-    color: #555;
+    color: var(--text-secondary);
     margin-bottom: 30px;
     max-width: 800px;
     margin-left: auto;
@@ -89,9 +436,8 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(233 229 218 / 84%);
+    background-color: rgba(26, 26, 26, 0.8); /* Charcoal dark overlay */
     z-index: 0;
-    box-shadow: 0px 10px 5px 5px #111;
 }
 
 .position-on-top {
@@ -99,42 +445,53 @@ h6 {
     z-index: 1;
 }
 
+/* ============================================
+   Navigation
+   ============================================ */
+
 .nav-link {
     font-family: apotek-extrawide, sans-serif;
     font-weight: 200;
     font-style: normal;
 }
 
+/* ============================================
+   Links & Buttons
+   ============================================ */
+
 a {
-    color: #51ACD6;
+    color: var(--accent-primary);
 }
 
 .btn {
     display: inline-block;
-    /*background-color: #1a73e8; /* Change to your preferred button color */
     color: #efefef;
-    padding: 12px 24px;
-    font-size: 18px;
-    border-radius: 4px;
+    padding: 14px 32px;
+    font-size: 1.6rem;
+    border-radius: var(--radius-md);
     border: none;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
 
-    transition: background-color 0.3s;
-
-    font-size: 1.8rem;
     font-family: apotek-extrawide, sans-serif;
     font-weight: 700;
     font-style: normal;
 
-    box-shadow: 0px 5px 10px 0px #111111e3;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary {
-    background-color: #346F8A; /* Change to your preferred primary button color */
+    background-color: var(--accent-primary);
 }
 
 .btn-primary:hover {
-    background-color: #3B4E57; /* Change to your preferred primary button hover color */
+    background-color: var(--accent-hover);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+    transform: translateY(-1px);
 }
+
+/* ============================================
+   Typography
+   ============================================ */
 
 h1, h2, h3, h4, h5 {
     font-family: apotek-extrawide, sans-serif;
@@ -142,14 +499,19 @@ h1, h2, h3, h4, h5 {
     font-style: normal;
 }
 
+/* ============================================
+   Content Sections
+   ============================================ */
+
 .kitchen-remodels-section {
-    padding: 60px 0;
+    padding: var(--section-padding) 0;
 }
 
 .about-us-section {
-    background-color: #17313D;
-    border-radius: 2px;
-    padding: 60px 30px;
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--section-padding) 48px;
 }
 
 .extra-light-font {
@@ -157,6 +519,10 @@ h1, h2, h3, h4, h5 {
     font-weight: 300;
     font-style: normal;
 }
+
+/* ============================================
+   Animations
+   ============================================ */
 
 #homepagepicture {
     width: auto;
@@ -195,6 +561,10 @@ h1, h2, h3, h4, h5 {
     }
 }
 
+/* ============================================
+   Title & Jumbotron
+   ============================================ */
+
 .title {
     font-family: apotek-extrawide, sans-serif;
     font-weight: 700;
@@ -209,16 +579,21 @@ h1, h2, h3, h4, h5 {
 }
 
 .jumbo {
-    background-color: var(--background-primary);
+    background-color: var(--surface-base);
     vertical-align: middle;
 }
+
+/* ============================================
+   Gallery
+   ============================================ */
 
 .gallery-row {
     display: flex;
     align-items: center;
-    padding: 3rem;
-    background-color: #17313D;
-    border-radius: 5px;
+    padding: var(--card-padding);
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
 }
 
 .gallery-section .card {
@@ -226,8 +601,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .gallery-section .img-fluid {
-    /*margin-bottom: 1.5rem;*/
-    border-radius: 2px;
+    border-radius: var(--radius-md);
 }
 
 .gallery-section .section-title {
@@ -235,13 +609,37 @@ h1, h2, h3, h4, h5 {
     font-weight: bold;
     margin-bottom: 1rem;
     text-transform: uppercase;
-    color: #333;
+    color: var(--text-primary);
 }
 
+/* ============================================
+   Service Cards
+   ============================================ */
+
 .service {
-    background-color: #17313D;
-    /*box-shadow: 0px 7px 14px 0px #111111e3;*/
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: var(--card-padding);
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.2s;
 }
+
+.service:hover {
+    border-color: var(--border-emphasis);
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.service img {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* ============================================
+   Grid Animations
+   ============================================ */
 
 .d-grid a {
     opacity: 0;
@@ -250,9 +648,13 @@ h1, h2, h3, h4, h5 {
     animation-name: fade;
 }
 
+/* ============================================
+   Footer
+   ============================================ */
+
 footer {
     text-align: center;
-    background-color: var(--background-primary);
+    background-color: var(--surface-card);
 }
 
 
@@ -394,6 +796,10 @@ select.form-control option {
     }
 }
 
+/* ============================================
+   Responsive
+   ============================================ */
+
 @media (max-width: 1200px) {
     .hero-title {
         font-size: 38px;
@@ -410,9 +816,9 @@ select.form-control option {
         padding-bottom: 1rem;
     }
     .about-us-section {
-        background-color: #17313D;
-        border-radius: 2px;
-        padding: 30px 0px;
+        background-color: var(--surface-card);
+        border-radius: var(--radius-md);
+        padding: 40px 20px;
     }
 }
 
@@ -428,7 +834,6 @@ select.form-control option {
     }
 
     .kitchen-remodels-section {
-        padding: 10px 0px;
+        padding: 40px 0px;
     }
-
 }

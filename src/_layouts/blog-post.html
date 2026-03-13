@@ -67,3 +67,29 @@ eleventyComputed:
 
     {% include 'featured-post.html' %}
 </div>
+
+<!-- ============================================ -->
+<!--              JSON-LD Structured Data         -->
+<!-- ============================================ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "{{ blogTitle }}",
+  "description": "{{ blogDescription | striptags | escape }}",
+  "image": "https://haggertyutah.com{{ image }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Haggerty Construction",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://haggertyutah.com/assets/images/Full_Name500pxBlack.png"
+    }
+  },
+  "datePublished": "{{ date }}"
+}
+</script>

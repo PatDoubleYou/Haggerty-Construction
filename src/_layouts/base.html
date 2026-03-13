@@ -10,15 +10,15 @@
     <link rel="canonical" href="https://{{ client.domain }}{{ page.url }}">
 
     <meta name="description" content="{{ description }}">
-    <meta name="keywords" content="">
+
 
     <!--Social Media Display-->
     <meta property="og:title" content="{{ metaTitle }}" />
     <meta property="og:description" content="{{ description }}" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://{{ client.domain }}{{ page.url }}" />
-    <meta property="og:image" content="/images/social.jpg" />
-    <meta property="og:image:secure_url" content="/images/social.jpg" />
+    <meta property="og:image" content="https://{{ client.domain }}/images/social.jpg" />
+    <meta property="og:image:secure_url" content="https://{{ client.domain }}/images/social.jpg" />
 
     <!--Favicons-->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
@@ -29,7 +29,6 @@
     <meta name="theme-color" content="#ffffff">
 
     <!-- Preload -->
-    <link rel="preload" as="image" href="/assets/FullName500pxDarkBlue.png">
     <!--<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
     <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>-->
 
@@ -91,6 +90,84 @@
     src="https://www.facebook.com/tr?id=2353315181731966&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "{{ client.name }}",
+      "url": "https://{{ client.domain }}",
+      "logo": "https://{{ client.domain }}/assets/images/FullName500pxDarkBlue.png",
+      "image": "https://{{ client.domain }}/assets/images/landing-1920w.webp",
+      "description": "{{ description }}",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "{{ client.address.city }}",
+        "addressRegion": "UT",
+        "postalCode": "{{ client.address.postcode }}",
+        "addressCountry": "US"
+      },
+      "telephone": "{{ client.phone }}",
+      "email": "{{ client.email }}",
+      "priceRange": "$$",
+      "areaServed": [
+        { "@type": "City", "name": "St. George" },
+        { "@type": "City", "name": "Washington" },
+        { "@type": "City", "name": "Hurricane" },
+        { "@type": "City", "name": "Ivins" },
+        { "@type": "City", "name": "Santa Clara" },
+        { "@type": "City", "name": "LaVerkin" },
+        { "@type": "City", "name": "Leeds" },
+        { "@type": "AdministrativeArea", "name": "Washington County, Utah" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/HaggertyUtah/",
+        "https://www.instagram.com/haggerty.construction/"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "4"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Taylor Sanchez" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "ULIV Skincare" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids & looks beautiful too! Very grateful!"
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Haley Benware" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "This included flooring, moving an island, all new case and base, painting, new cabinet doors... I could go on and on. They do everything start to finish. It was a great experience."
+        },
+        {
+          "@type": "Review",
+          "author": { "@type": "Person", "name": "Mark Ziegler" },
+          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
+          "reviewBody": "These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty construction!"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Construction Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodels" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Cabinetry" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Renovations" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Contracting" } }
+        ]
+      }
+    }
+    </script>
 </head>
 
 <body>
@@ -101,7 +178,6 @@
     <main id="main">{{ content | safe }}</main>
     {% include "footer.html" %}
 
-    <script defer src="/assets/js/nav.js"></script>
     <script defer src="/assets/js/dark.js"></script>
 
     <!--
