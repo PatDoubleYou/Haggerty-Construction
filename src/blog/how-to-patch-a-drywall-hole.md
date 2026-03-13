@@ -51,3 +51,44 @@ After you have the patch installed and taped up, it is now time to mix and apply
 Drywall can be a bit of a waiting game, you want it to fully dry before attempting to sand. It should be white when dried. You can use a sponge and a bucket of water to do a technique called ‘wet sanding’ which can make less mess but is more complicated and requires significant more finesse. Dry sanding just requires sanding screens, possibly a pole sander if you have to reach far or want to invest a little more in some extra leverage. You want to sand the mud until it is smooth, and you’re ready for paint! If, after sanding, there are still some poor looking spots, just re apply more mud in those areas and sand when it’s dry. When the mud is all dried up, paint! 
 
 I﻿f you are looking for a contractor to perform house repairs like this one then get in touch with us today!
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Patch A Hole In Your Drywall",
+  "description": "A step-by-step guide on how to patch a hole in drywall, from assessing the damage to sanding and painting.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "name": "Assess the Damage",
+      "text": "Determine the thickness of your existing drywall and look for the closest stud on both sides of the hole to provide backing."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Prepare the Hole",
+      "text": "Square up your hole and install wood backing either vertically or horizontally to provide a solid surface for the patch."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Install the patch of drywall",
+      "text": "Cut a patch piece from a sheet of drywall to the shape and size of your hole, and install it with drywall screws directly into the backing."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Apply mesh tape",
+      "text": "Apply mesh tape across the gap from your patch to the existing drywall to provide structural integrity for the mud."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Mix and Apply Mud",
+      "text": "Mix drywall mud and apply it over the patch and mesh tape using a trowel, feathering it into the existing drywall."
+    },
+    {
+      "@type": "HowToStep",
+      "name": "Sand and Assess",
+      "text": "Wait for the mud to dry completely, then sand it smooth. Apply additional mud if necessary, then paint."
+    }
+  ]
+}
+</script>

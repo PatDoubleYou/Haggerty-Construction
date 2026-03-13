@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /admin/
 Allow: /
 
-Sitemap: 
+Sitemap: https://www.haggertyutah.com/sitemap.xml

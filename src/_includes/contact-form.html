@@ -1,13 +1,14 @@
 <!-- Contact Us Form -->
 
-    <div class="row justify-content-center text-center" id="contact">
+    <div class="row justify-content-center text-center mb-4" id="contact">
         <div class="col">
-            <h2>Tell Us About Your Project</h2>
+            <h2 class="animated-underline">Tell Us About Your Project</h2>
         </div>
     </div>
     <div class="row justify-content-center">
-        <div class="col col-xl-8">
-            <form name="request-quote" data-netlify="true" method="POST">
+        <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div class="bg-surface-card rounded-4 shadow-lg p-4 p-md-5 border border-secondary mb-5">
+                <form name="request-quote" data-netlify="true" method="POST">
                 
                 <input type="hidden" name="form-name" value="request-quote" />
                 <input type="hidden" name="source_page" value="{{ page.url }}">
@@ -57,9 +58,10 @@
                         placeholder="Tell us more about your project..." required></textarea>
                 </div>
                 <p class="form-required">* Required fields</p>
-                <div class="d-grid gap-2">
-                    <button type="submit" class="btn btn-primary btn-lg mb-5">Request an Estimate</button>
+                <div class="d-grid gap-2 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg mb-2">Request an Estimate</button>
                 </div>
             </form>
+            </div>
         </div>
     </div>
