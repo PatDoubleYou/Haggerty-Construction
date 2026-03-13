@@ -1,0 +1,55 @@
+---
+layout: 'base.html'
+eleventyComputed:
+    description: '{{ summary }}'
+    metaTitle: '{{ title }} | Haggerty Construction'
+    tagTitle: '{{ title }} | Haggerty Construction'
+    preloadImg: '{{ heroImage }}'
+    permalink: '/projects/{{ title | slug }}/index.html'
+---
+
+<!-- ============================================ -->
+<!--                 Project Hero                 -->
+<!-- ============================================ -->
+
+<section class="project-hero">
+    <picture class="project-hero-img">
+        <img src="{{ heroImage }}" alt="{{ heroImageAlt }}" width="1920" height="800" loading="eager" decoding="async" />
+    </picture>
+    <div class="project-hero-overlay">
+        <div class="container">
+            <h1 class="project-title">{{ title }}</h1>
+            {% if subtitle %}
+                <p class="project-subtitle">{{ subtitle }}</p>
+            {% endif %}
+            <span class="project-date">{{ date | postDate }}</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--              Project Content                 -->
+<!-- ============================================ -->
+
+<div class="container">
+    <article class="project-content">
+        {{ content | safe }}
+    </article>
+
+    <!-- Back to Gallery -->
+    <div class="project-back">
+        <a href="/gallery/" class="btn-project-back">← Back to Portfolio</a>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--                Contact CTA                   -->
+<!-- ============================================ -->
+
+<section class="project-cta">
+    <div class="container" style="text-align: center;">
+        <h2>Like What You See?</h2>
+        <p>Let's talk about your project.</p>
+        <a href="/gallery/#contact-form" class="btn-primary" style="margin-top: 1rem;">Request an Estimate</a>
+    </div>
+</section>

@@ -123,6 +123,200 @@ h6 {
 }
 
 /* ============================================
+   Project Cards (Gallery Page)
+   ============================================ */
+
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.project-card {
+    background-color: var(--surface-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+
+.project-card-img {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-card-img img {
+    transform: scale(1.05);
+}
+
+.project-card-body {
+    padding: 1.25rem 1.5rem 1.5rem;
+}
+
+.project-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.project-card-subtitle {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--accent-warm);
+    margin-bottom: 0.75rem;
+}
+
+.project-card-summary {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-card-cta {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-warm);
+}
+
+/* ============================================
+   Simple Photo Gallery Grid
+   ============================================ */
+
+.gallery-tile {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    height: 280px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-tile video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gallery-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.gallery-tile:hover .gallery-img img {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Project Story Page
+   ============================================ */
+
+.project-hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.project-hero-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3rem 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+}
+
+.project-title {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.project-subtitle {
+    color: var(--accent-warm);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-date {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+.project-content {
+    max-width: 800px;
+    margin: 3rem auto;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.project-content img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    margin: 2rem 0;
+}
+
+.project-back {
+    text-align: center;
+    margin: 2rem 0 4rem;
+}
+
+.btn-project-back {
+    color: var(--accent-warm);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-project-back:hover {
+    text-decoration: underline;
+}
+
+.project-cta {
+    padding: 4rem 0;
+    background-color: var(--surface-card);
+}
+
+.project-cta h2 {
+    font-family: var(--font-heading);
+    color: var(--text-primary);
+}
+
+.project-cta p {
+    color: var(--text-secondary);
+}
+
+/* ============================================
    Animated Section Headers
    ============================================ */
 
@@ -194,7 +388,7 @@ h6 {
    ============================================ */
 
 .hero-section {
-    background-color: #f5f5f5;
+    background-color: var(--surface-base);
     background-size: cover;
     padding: 100px 0;
     text-align: center;
@@ -216,19 +410,20 @@ h6 {
 .hero-title {
     font-size: 48px;
     font-weight: bold;
-    color: #333;
+    color: var(--text-primary);
     margin-bottom: 20px;
 }
 
 .hero-subtitle {
     font-size: 24px;
-    color: #555;
+    color: var(--accent-warm);
     margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .hero-description {
     font-size: 18px;
-    color: #555;
+    color: var(--text-secondary);
     margin-bottom: 30px;
     max-width: 800px;
     margin-left: auto;
@@ -241,9 +436,8 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(233 229 218 / 84%);
+    background-color: rgba(26, 26, 26, 0.8); /* Charcoal dark overlay */
     z-index: 0;
-    box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .position-on-top {

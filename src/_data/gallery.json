@@ -1,0 +1,34 @@
+[
+  {
+    "path": "src/assets/images/gallery/Book Case.jpg",
+    "alt": "Book case"
+  },
+  {
+    "path": "src/assets/images/gallery/garage_cabinets.jpg",
+    "alt": "Garage cabinets"
+  },
+  {
+    "path": "src/assets/images/gallery/ledges pool room.jpg",
+    "alt": "Ledges pool room"
+  },
+  {
+    "path": "src/assets/images/gallery/Living Room.jpg",
+    "alt": "Living room"
+  },
+  {
+    "path": "src/assets/images/gallery/Martys bookcase final.jpg",
+    "alt": "Martys bookcase final"
+  },
+  {
+    "path": "src/assets/images/gallery/mudroom.jpg",
+    "alt": "Mudroom"
+  },
+  {
+    "path": "src/assets/images/gallery/conners-cabinets-larger.webp",
+    "alt": "Conners cabinets"
+  },
+  {
+    "path": "src/assets/images/new-images/Maxfields office built-in final.jpg",
+    "alt": "Maxfields office built-in final"
+  }
+]
