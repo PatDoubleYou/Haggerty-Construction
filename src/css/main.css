@@ -255,6 +255,134 @@ footer {
     background-color: var(--background-primary);
 }
 
+
+footer a {
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--text-primary);
+}
+
+/* ============================================
+   Navbar
+   ============================================ */
+
+.navbar-custom-bg {
+    background-color: var(--surface-card) !important;
+}
+
+/* ============================================
+   FAQ Accordion
+   ============================================ */
+
+.accordion {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+}
+
+.accordion-item {
+    background-color: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+
+.accordion-item:first-of-type {
+    border-top-left-radius: var(--radius-lg);
+    border-top-right-radius: var(--radius-lg);
+}
+
+.accordion-item:last-of-type {
+    border-bottom-left-radius: var(--radius-lg);
+    border-bottom-right-radius: var(--radius-lg);
+}
+
+.accordion-button {
+    background-color: var(--surface-card);
+    color: var(--text-primary);
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 20px 24px;
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.2s;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--surface-elevated);
+    color: var(--text-primary);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--border-subtle);
+}
+
+.accordion-button::after {
+    filter: invert(1);
+}
+
+.accordion-body {
+    background-color: var(--surface-elevated);
+    color: var(--text-secondary);
+    font-family: "articulat-cf", sans-serif;
+    font-weight: 400;
+    padding: 20px 24px;
+    border-top: 1px solid var(--border-subtle);
+    line-height: 1.7em;
+}
+
+/* ============================================
+   Contact Form
+   ============================================ */
+
+.form-control {
+    background-color: var(--surface-base);
+    border: 1px solid var(--border-emphasis);
+    color: var(--text-primary);
+    padding: 14px 16px;
+    border-radius: var(--radius-md);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-control:focus {
+    background-color: var(--surface-base);
+    border-color: var(--accent-primary);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 3px var(--accent-muted);
+}
+
+.form-control::placeholder {
+    color: var(--text-muted);
+}
+
+select.form-control option {
+    background-color: var(--surface-base);
+    color: var(--text-primary);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.form-required {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ============================================
+   Keyframes
+   ============================================ */
+
+
 @keyframes fade {
     from {
         opacity: 0;
