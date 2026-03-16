@@ -37,7 +37,7 @@ order: 100
 
         <div class="col-lg-4">
             <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                <img class="card-img-top img-fluid" src="/assets/images/kitchen-island-remodel.jpg" alt="A high-end kitchen remodel in St. George.">
+                {% image './src/assets/images/kitchen-island-remodel.jpg', 'A high-end kitchen remodel in St. George.', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
                 <div class="card-body p-4">
                     <h4 class="card-title text-white fw-bold mb-3">Kitchen Remodels</h4>
                     <p class="card-text text-muted">
@@ -49,7 +49,7 @@ order: 100
 
         <div class="col-lg-4">
             <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                <img class="card-img-top img-fluid" src="/assets/images/bathroom-door-renovation.jpg" alt="Bathroom renovation in progress.">
+                {% image './src/assets/images/bathroom-door-renovation.jpg', 'Bathroom renovation in progress.', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
                 <div class="card-body p-4">
                     <h4 class="card-title text-white fw-bold mb-3">Bathroom Renovations</h4>
                     <p class="card-text text-muted">
@@ -61,7 +61,7 @@ order: 100
 
         <div class="col-lg-4">
             <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                <img class="card-img-top img-fluid" src="/assets/images/new-images/maxfields-office-final.jpg" alt="Custom built-in office cabinetry.">
+                {% image './src/assets/images/new-images/maxfields-office-final.jpg', 'Custom built-in office cabinetry.', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
                 <div class="card-body p-4">
                     <h4 class="card-title text-white fw-bold mb-3">Custom Cabinetry & Built-Ins</h4>
                     <p class="card-text text-muted">
@@ -81,22 +81,22 @@ order: 100
     </div>
     <div class="bento-grid mt-4">
         <div class="bento-item bento-item-1 shadow-sm">
-            <img src="/assets/images/gallery/latest-remodel/after.jpg" alt="Finished kitchen remodel">
+            {% image './src/assets/images/gallery/latest-remodel/after.jpg', 'Finished kitchen remodel', '', 'lazy', '(max-width: 768px) 100vw, 50vw' %}
         </div>
         <div class="bento-item bento-item-2 shadow-sm">
-            <img src="/assets/images/new-images/maxfields-office-final.jpg" alt="Custom built-in cabinetry">
+            {% image './src/assets/images/new-images/maxfields-office-final.jpg', 'Custom built-in cabinetry', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
         </div>
         <div class="bento-item bento-item-3 shadow-sm">
-            <img src="/assets/images/portfolio/PXL_20251218_185856357.MP.jpg" alt="Custom tile installation">
+            {% image './src/assets/images/portfolio/PXL_20251218_185856357.MP.jpg', 'Custom tile installation', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
         </div>
         <div class="bento-item bento-item-4 shadow-sm">
-            <img src="/assets/images/portfolio/towel-rack.jpg" alt="Bathroom towel rack installation">
+            {% image './src/assets/images/portfolio/towel-rack.jpg', 'Bathroom towel rack installation', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
         </div>
         <div class="bento-item bento-item-5 shadow-sm">
-            <img src="/assets/images/gallery/conners-cabinets-larger.webp" alt="Living room custom shelves">
+            {% image './src/assets/images/gallery/conners-cabinets-larger.webp', 'Living room custom shelves', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
         </div>
         <div class="bento-item bento-item-6 shadow-sm">
-            <img src="/assets/images/portfolio/PXL_20260106_185520750.MP.jpg" alt="Bathroom renovation details">
+            {% image './src/assets/images/portfolio/PXL_20260106_185520750.MP.jpg', 'Bathroom renovation details', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
         </div>
     </div>
     <div class="row mt-5">
@@ -145,17 +145,26 @@ order: 100
             </div>
             <div class="row g-4 mt-5 justify-content-center">
                 <div class="col-6 col-md-3 text-center">
-                    <img src="/assets/images/portfolio/bill profile headshot.png" class="img-fluid rounded-circle mb-3 shadow" alt="William Haggerty" style="width: 150px; height: 150px; object-fit: cover;">
+                    <picture>
+                        <source srcset="/assets/images/portfolio/bill-headshot-300w.webp" type="image/webp">
+                        <img src="/assets/images/portfolio/bill-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="William Haggerty" loading="lazy" width="300" height="300" style="width: 150px; height: 150px; object-fit: cover;">
+                    </picture>
                     <h5 class="text-white fw-bold">William Haggerty</h5>
                     <p class="text-muted small">Founder & Vision</p>
                 </div>
                 <div class="col-6 col-md-3 text-center">
-                    <img src="/assets/images/portfolio/blake profile headshot small.jpg" class="img-fluid rounded-circle mb-3 shadow" alt="Blake Haggerty" style="width: 150px; height: 150px; object-fit: cover;">
+                    <picture>
+                        <source srcset="/assets/images/portfolio/blake-headshot-300w.webp" type="image/webp">
+                        <img src="/assets/images/portfolio/blake-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="Blake Haggerty" loading="lazy" width="300" height="300" style="width: 150px; height: 150px; object-fit: cover;">
+                    </picture>
                     <h5 class="text-white fw-bold">Blake Haggerty</h5>
                     <p class="text-muted small">Project Management</p>
                 </div>
                 <div class="col-6 col-md-3 text-center">
-                    <img src="/assets/images/portfolio/jayden profile headshot small.jpg" class="img-fluid rounded-circle mb-3 shadow" alt="Jayden Haggerty" style="width: 150px; height: 150px; object-fit: cover;">
+                    <picture>
+                        <source srcset="/assets/images/portfolio/jayden-headshot-300w.webp" type="image/webp">
+                        <img src="/assets/images/portfolio/jayden-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="Jayden Haggerty" loading="lazy" width="300" height="300" style="width: 150px; height: 150px; object-fit: cover;">
+                    </picture>
                     <h5 class="text-white fw-bold">Jayden Haggerty</h5>
                     <p class="text-muted small">Systems & Tech</p>
                 </div>

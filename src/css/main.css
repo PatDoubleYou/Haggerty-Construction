@@ -111,6 +111,12 @@ h6 {
     width: 100%;
 }
 
+.bento-item picture {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .bento-item img {
     width: 100%;
     height: 100%;
@@ -396,14 +402,14 @@ h6 {
 }
 
 .hero-home {
-    background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85)), url('/assets/images/portfolio/blake_and_william_extended_mobile_v2.jpg');
+    background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85)), url('/assets/images/portfolio/hero-mobile.webp');
     background-size: cover;
     background-position: center center;
 }
 
 @media (min-width: 768px) {
     .hero-home {
-        background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85)), url('/assets/images/portfolio/blake and william balanced cabinets maxfields cover.jpg');
+        background-image: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85)), url('/assets/images/portfolio/hero-desktop.webp');
     }
 }
 
@@ -635,6 +641,10 @@ h1, h2, h3, h4, h5 {
     height: 240px;
     object-fit: cover;
     width: 100%;
+}
+
+.service picture.card-img-top {
+    display: block;
 }
 
 /* ============================================
