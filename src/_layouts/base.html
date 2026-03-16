@@ -40,7 +40,9 @@
     {% endif %}
 
     <!-- Loading in page specific CSS sheets from css block -->
+    {% if preloadCSS %}
     <link rel="stylesheet" href="{{ preloadCSS }}">
+    {% endif %}
 
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
