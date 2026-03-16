@@ -35,15 +35,15 @@
     <!--<link rel="stylesheet" href="/css/root.css">
     <link rel="stylesheet" href="/css/dark.css">-->
 
+    {% if preloadImg %}
     <link rel="preload" as="image" href="{{ preloadImg }}" />
+    {% endif %}
 
     <!-- Loading in page specific CSS sheets from css block -->
     <link rel="stylesheet" href="/css/critical.css" />
     <link rel="stylesheet" href="{{ preloadCSS }}">
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-    crossorigin="anonymous"></script>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
@@ -51,7 +51,7 @@
     <link rel="preload" href="https://use.typekit.net/pfv6oag.css" as="style">
     <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="icon" type="image/x-icon" href="logo white.png">
+    <link rel="icon" type="image/png" href="/assets/images/logo%20white.png">
 
 
     <!-- For home page, use full title, including location for SEO. Other pages should just include the page name -->
@@ -178,6 +178,9 @@
     <main id="main">{{ content | safe }}</main>
     {% include "footer.html" %}
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous" defer></script>
     <script defer src="/assets/js/dark.js"></script>
 
     <!--
