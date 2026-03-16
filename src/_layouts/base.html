@@ -40,15 +40,13 @@
     {% endif %}
 
     <!-- Loading in page specific CSS sheets from css block -->
-    <link rel="stylesheet" href="/css/critical.css" />
     <link rel="stylesheet" href="{{ preloadCSS }}">
 
 
     <link href="/css/bootstrap.min.css" rel="stylesheet">
         
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="preload" href="https://use.typekit.net/pfv6oag.css" as="style">
-    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css">
+    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
     <link rel="icon" type="image/png" href="/assets/images/logo%20white.png">
 
