@@ -441,6 +441,7 @@ h6 {
     color: var(--accent-warm);
     margin-bottom: 20px;
     font-weight: 500;
+    font-family: "articulat-cf", sans-serif;
 }
 
 .hero-description {
