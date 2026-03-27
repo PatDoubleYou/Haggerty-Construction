@@ -1,0 +1,266 @@
+---
+layout: 'base.html'
+preloadCSS: '/css/local.css'
+---
+
+<!-- ============================================ -->
+<!--               Service Hero                   -->
+<!-- ============================================ -->
+
+<section class="hero-section hero-service">
+    <picture class="hero-bg">
+        <source media="(min-width: 768px)" srcset="{{ heroImage }}" type="image/webp">
+        <img src="{{ heroImageMobile if heroImageMobile else heroImage }}" alt="{{ heroImageAlt }}" width="1920" height="800" fetchpriority="high">
+    </picture>
+    <div class="container position-on-top text-center pt-5">
+        <h1 class="hero-title fw-bold text-white mb-3">{{ title }}</h1>
+        <p class="hero-subtitle text-light fs-4 fw-light">{{ subtitle }}</p>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Service Content                  -->
+<!-- ============================================ -->
+
+<div class="container px-3 my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="service-content text-muted fs-5 lh-lg">
+                {{ content | safe }}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--         What We Handle                       -->
+<!-- ============================================ -->
+
+{% if capabilities %}
+<div class="container px-3 mb-5 pb-5">
+    <div class="row text-center mb-5">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold mb-3">What We Handle</h2>
+        </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+        {% for item in capabilities %}
+        <div class="col-md-6 col-lg-4">
+            <div class="capability-card h-100 border-0 p-4 text-center">
+                <i class="bi {{ item.icon }} service-icon mb-3"></i>
+                <h4 class="text-white fw-bold mb-2">{{ item.title }}</h4>
+                <p class="text-muted mb-0">{{ item.text }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- ============================================ -->
+<!--              Our Process                     -->
+<!-- ============================================ -->
+
+{% if process %}
+<div class="container my-5 py-5" style="background-color: var(--surface-card); border-radius: var(--radius-lg);">
+    <div class="row text-center mb-5 px-4">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold mb-3">Our Process</h2>
+            <p class="text-muted fs-5">From first call to final walkthrough — here's how we work.</p>
+        </div>
+    </div>
+    <div class="row g-4 justify-content-center px-4">
+        {% for step in process %}
+        <div class="col-md-6 col-lg-3 text-center">
+            <div class="process-step">
+                <div class="process-number mb-3">{{ loop.index }}</div>
+                <h5 class="text-white fw-bold mb-2">{{ step.title }}</h5>
+                <p class="text-muted small">{{ step.text }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- ============================================ -->
+<!--              Gallery Preview                 -->
+<!-- ============================================ -->
+
+{% if galleryImages %}
+<div class="container my-5 py-5">
+    <div class="row text-center mb-5">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold mb-3">See Our Work</h2>
+        </div>
+    </div>
+    <div class="row g-3 justify-content-center">
+        {% for img in galleryImages %}
+        <div class="col-6 col-md-4">
+            <div class="service-gallery-item shadow-sm rounded overflow-hidden">
+                <img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid w-100" loading="lazy" decoding="async" style="aspect-ratio: 4/3; object-fit: cover;">
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row mt-4">
+        <div class="col text-center">
+            <a href="/gallery" class="btn btn-outline-light btn-lg px-4">View Full Gallery &rarr;</a>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+<!-- ============================================ -->
+<!--            Service FAQ                       -->
+<!-- ============================================ -->
+
+{% if faqs %}
+<section class="faq-section section-spacing-lg mb-5">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2 class="section-title animated-underline text-white">Frequently Asked Questions</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="serviceFaqAccordion">
+                    {% for faq in faqs %}
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="sfaq{{ loop.index }}-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sfaq{{ loop.index }}" aria-expanded="false" aria-controls="sfaq{{ loop.index }}">
+                                {{ faq.question }}
+                            </button>
+                        </h4>
+                        <div id="sfaq{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="sfaq{{ loop.index }}-heading" data-bs-parent="#serviceFaqAccordion">
+                            <div class="accordion-body">{{ faq.answer }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQPage Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": { "@type": "Answer", "text": "{{ faq.answer }}" }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}
+
+<!-- ============================================ -->
+<!--          Client Testimonial                  -->
+<!-- ============================================ -->
+
+{% if testimonial %}
+<section class="reviews-section section-spacing-lg">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="review-card shadow-sm mx-auto" style="max-width: 600px;">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-text">"{{ testimonial.text }}"</p>
+                    <p class="client-name mb-0 mt-3">&mdash; {{ testimonial.name }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ============================================ -->
+<!--          Related Services                    -->
+<!-- ============================================ -->
+
+{% if relatedServices %}
+<div class="container my-5 py-5">
+    <div class="row text-center mb-4">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold mb-3">Other Services</h2>
+        </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+        {% for svc in relatedServices %}
+        <div class="col-md-4">
+            <a href="{{ svc.url }}" class="text-decoration-none">
+                <div class="card service h-100 bg-surface-card border-0 shadow-sm text-center p-4">
+                    <h4 class="card-title text-white fw-bold">{{ svc.title }}</h4>
+                    <p class="card-text text-muted mb-0">{{ svc.description }}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endif %}
+
+<!-- ============================================ -->
+<!--              Service Schema                  -->
+<!-- ============================================ -->
+
+{% if serviceType %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "{{ serviceType }}",
+  "description": "{{ description }}",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Haggerty Construction",
+    "telephone": "+1-435-414-1974",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "St. George",
+      "addressRegion": "UT",
+      "postalCode": "84770"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "St. George, Utah"
+  }
+}
+</script>
+{% endif %}
+
+<!-- ============================================ -->
+<!--                  CTA                         -->
+<!-- ============================================ -->
+
+<div class="section-spacing-lg pb-5">
+    {% include "contact-form.html" %}
+</div>
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, { 
+            threshold: 0.5,
+            rootMargin: "0px 0px -100px 0px"
+        });
+
+        document.querySelectorAll('.animated-underline').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>

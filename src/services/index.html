@@ -1,0 +1,135 @@
+---
+layout: 'base.html'
+title: 'Our Services'
+tagTitle: 'General Contractor Services'
+description: 'Haggerty Construction offers kitchen remodeling, bathroom renovations, custom cabinetry, home remodeling, and commercial renovation services in St. George, Utah. Free estimates.'
+metaTitle: 'Our Services | Haggerty Construction'
+preloadCSS: '/css/local.css'
+preloadImg: ''
+permalink: '/services/'
+eleventyNavigation:
+    key: Services
+    order: 200
+---
+
+<!-- Hero Section -->
+<section class="hero-section hero-service">
+    <picture class="hero-bg">
+        <source media="(min-width: 768px)" srcset="/assets/images/portfolio/hero-desktop.webp" type="image/webp">
+        <img src="/assets/images/portfolio/hero-mobile.webp" alt="Haggerty Construction team at work" width="1920" height="800" fetchpriority="high">
+    </picture>
+    <div class="container position-on-top text-center pt-5">
+        <h1 class="hero-title fw-bold text-white mb-3">What We Do</h1>
+        <p class="hero-subtitle text-light fs-4 fw-light">Full-service general contracting in St. George, Utah.</p>
+    </div>
+</section>
+
+<!-- Services Grid -->
+<div class="container px-3 my-5 py-5">
+    <div class="row text-center mb-5">
+        <div class="col-lg-8 mx-auto">
+            <h2 class="section-title animated-underline fw-bold mb-4">Our Services</h2>
+            <p class="text-muted fs-5 lh-lg">
+                We're a family-owned general contractor that handles projects from start to finish. One crew, one point of contact, one honest estimate. Here's what we do.
+            </p>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <a href="/services/kitchen-remodels/" class="text-decoration-none">
+                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
+                    {% image './src/assets/images/kitchen-island-remodel.jpg', 'Kitchen remodel in St. George', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-white fw-bold mb-3 fs-5">Kitchen Remodels</h3>
+                        <p class="card-text text-muted">Complete kitchen transformations — layout, cabinets, countertops, tile, appliances. We handle the whole thing.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <a href="/services/bathroom-remodels/" class="text-decoration-none">
+                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
+                    {% image './src/assets/images/bathroom-door-renovation.jpg', 'Bathroom renovation in progress', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-white fw-bold mb-3 fs-5">Bathroom Renovations</h3>
+                        <p class="card-text text-muted">From guest baths to master suites. Custom tile, vanities, fixtures — designed around how you use the space.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <a href="/services/custom-cabinetry/" class="text-decoration-none">
+                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
+                    {% image './src/assets/images/new-images/maxfields-office-final.jpg', 'Custom built-in office cabinetry', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-white fw-bold mb-3 fs-5">Custom Cabinetry & Built-Ins</h3>
+                        <p class="card-text text-muted">Custom cabinets, shelving, and storage that fit your home — not the other way around.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <a href="/services/home-remodeling/" class="text-decoration-none">
+                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
+                    {% image './src/assets/images/gallery/Living Room.jpg', 'Home remodeling project', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-white fw-bold mb-3 fs-5">Home Remodeling</h3>
+                        <p class="card-text text-muted">One room or the whole house. We coordinate every trade so you don't have to.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <a href="/services/commercial-remodeling/" class="text-decoration-none">
+                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
+                    {% image './src/images/construction.jpg', 'Commercial construction project', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-white fw-bold mb-3 fs-5">Commercial Remodeling</h3>
+                        <p class="card-text text-muted">Office renovations, tenant improvements, and retail build-outs. Built around your business hours.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 bg-surface-card border-0 shadow-sm d-flex align-items-center justify-content-center p-5 text-center">
+                <div>
+                    <h3 class="text-white fw-bold mb-3 fs-5">Not Sure Where to Start?</h3>
+                    <p class="text-muted mb-4">Tell us about your project and we'll help you figure out the best approach.</p>
+                    <a href="#contact" class="btn btn-primary px-4 py-2">Get a Free Estimate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- CTA / Contact -->
+<div class="section-spacing-lg pb-5">
+    {% include "contact-form.html" %}
+</div>
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, { 
+            threshold: 0.5,
+            rootMargin: "0px 0px -100px 0px"
+        });
+
+        document.querySelectorAll('.animated-underline').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>

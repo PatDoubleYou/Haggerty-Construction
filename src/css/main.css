@@ -417,7 +417,8 @@ h6 {
     display: block;
 }
 
-.hero-home::before {
+.hero-home::before,
+.hero-service::before {
     content: '';
     position: absolute;
     top: 0;
@@ -427,6 +428,49 @@ h6 {
     background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85));
     z-index: 1;
     pointer-events: none;
+}
+
+/* Process Steps */
+.process-number {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-warm, #c8a96e);
+    color: var(--surface-base, #1a1a1a);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Service Gallery Items */
+.service-gallery-item {
+    transition: transform 0.3s ease;
+}
+
+.service-gallery-item:hover {
+    transform: scale(1.03);
+}
+
+/* Capability Cards */
+.capability-card {
+    background: var(--surface-card, #222);
+    border-radius: var(--radius-lg, 12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.capability-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Service Icon (Bootstrap Icons) */
+.service-icon {
+    display: block;
+    font-size: 2rem;
+    color: var(--accent-warm, #c8a96e);
+    line-height: 1;
 }
 
 .hero-title {

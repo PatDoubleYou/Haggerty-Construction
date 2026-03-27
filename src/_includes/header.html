@@ -5,19 +5,31 @@
 
 <nav class="navbar fixed-top navbar-dark navbar-expand-lg navbar-custom-bg">
     <div class="container-fluid">
-        <span class="navbar-brand" href="#"><img class="img-fluid" src="/assets/images/logo white.png" width="40"
-                height="36" alt="Haggerty Construction's 'H' logo."></span>
+        <a class="navbar-brand" href="/">
+            <img class="img-fluid" src="/assets/images/logo white.png" width="40" height="36" alt="Haggerty Construction logo">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link {{ 'active' if '' == page.url }}" aria-current="page" href="/">HOME</a>
-                <a class="nav-link" href="#services">SERVICES</a>
-                <a class="nav-link" href="#about-us-section">ABOUT US</a>
-                <a class="nav-link {{ 'active' if 'gallery' == page.url }}" href="/gallery">GALLERY</a>
-                <a class="nav-link {{ 'active' if 'blog' == page.url }}" href="/blog">BLOG</a>
+                <a class="nav-link {{ 'active' if page.url == '/' }}" aria-current="page" href="/">HOME</a>
+                <li class="nav-item dropdown" style="list-style: none;">
+                    <a class="nav-link dropdown-toggle {% if page.url and '/services/' in page.url %}active{% endif %}" href="/services/" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVICES</a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="servicesDropdown">
+                        <li><a class="dropdown-item" href="/services/kitchen-remodels/">Kitchen Remodels</a></li>
+                        <li><a class="dropdown-item" href="/services/bathroom-remodels/">Bathroom Renovations</a></li>
+                        <li><a class="dropdown-item" href="/services/custom-cabinetry/">Custom Cabinetry & Built-Ins</a></li>
+                        <li><a class="dropdown-item" href="/services/home-remodeling/">Home Remodeling</a></li>
+                        <li><a class="dropdown-item" href="/services/commercial-remodeling/">Commercial Remodeling</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="/services/">All Services</a></li>
+                    </ul>
+                </li>
+                <a class="nav-link {{ 'active' if page.url == '/about/' }}" href="/about/">ABOUT US</a>
+                <a class="nav-link {{ 'active' if page.url == '/gallery/' }}" href="/gallery">GALLERY</a>
+                <a class="nav-link {% if page.url and '/blog/' in page.url %}active{% endif %}" href="/blog">BLOG</a>
                 <a class="nav-link" href="tel:+14354141974"><i class="bi bi-telephone-fill"></i> (435) 414-1974</a>
             </div>
         </div>
