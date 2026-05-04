@@ -19,6 +19,40 @@ preloadCSS: '/css/local.css'
 </section>
 
 <!-- ============================================ -->
+<!--              Breadcrumbs                     -->
+<!-- ============================================ -->
+
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+    <div class="container px-3">
+        <ol class="breadcrumb-trail" itemscope itemtype="https://schema.org/BreadcrumbList">
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+                <meta itemprop="position" content="1" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="/services/" itemprop="item"><span itemprop="name">Services</span></a>
+                <meta itemprop="position" content="2" />
+            </li>
+            {% if parentService %}
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                <a href="{{ parentService.url }}" itemprop="item"><span itemprop="name">{{ parentService.title }}</span></a>
+                <meta itemprop="position" content="3" />
+            </li>
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+                <span itemprop="name">{{ title }}</span>
+                <meta itemprop="position" content="4" />
+            </li>
+            {% else %}
+            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
+                <span itemprop="name">{{ title }}</span>
+                <meta itemprop="position" content="3" />
+            </li>
+            {% endif %}
+        </ol>
+    </div>
+</nav>
+
+<!-- ============================================ -->
 <!--             Service Content                  -->
 <!-- ============================================ -->
 
@@ -178,6 +212,34 @@ preloadCSS: '/css/local.css'
         </div>
     </div>
 </section>
+{% endif %}
+
+<!-- ============================================ -->
+<!--          Spoke Services (Sub-Pages)          -->
+<!-- ============================================ -->
+
+{% if spokeServices %}
+<div class="container my-5 py-5">
+    <div class="row text-center mb-4">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold mb-3">Explore Our {{ serviceType }} Services</h2>
+            <p class="text-muted fs-5">Looking for something specific? We've got you covered.</p>
+        </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+        {% for spoke in spokeServices %}
+        <div class="col-md-6 col-lg-4">
+            <a href="{{ spoke.url }}" class="text-decoration-none">
+                <div class="card spoke-card h-100 bg-surface-card border-0 shadow-sm p-4">
+                    {% if spoke.icon %}<i class="bi {{ spoke.icon }} service-icon mb-3 d-block text-center"></i>{% endif %}
+                    <h4 class="card-title text-white fw-bold text-center mb-2">{{ spoke.title }}</h4>
+                    <p class="card-text text-muted text-center mb-0">{{ spoke.description }}</p>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endif %}
 
 <!-- ============================================ -->

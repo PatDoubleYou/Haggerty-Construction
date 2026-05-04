@@ -78,6 +78,37 @@ h6 {
 }
 
 /* ============================================
+   Buttons — overriding Bootstrap for dark mode
+   ============================================ */
+
+.btn-primary {
+    --bs-btn-bg: var(--accent-primary);
+    --bs-btn-border-color: var(--accent-primary);
+    --bs-btn-color: #fff;
+    --bs-btn-hover-bg: var(--accent-hover);
+    --bs-btn-hover-border-color: var(--accent-hover);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-active-bg: var(--accent-hover);
+    --bs-btn-active-border-color: var(--accent-hover);
+}
+
+.btn-outline-light {
+    color: var(--text-primary) !important;
+    background-color: transparent !important;
+    border: 2px solid var(--accent-primary) !important;
+    transition: all 0.2s ease;
+}
+.btn-outline-light:hover, .btn-outline-light:focus {
+    background-color: var(--accent-primary) !important;
+    border-color: var(--accent-primary) !important;
+    color: #fff !important;
+}
+.btn-outline-light:active {
+    background-color: var(--accent-hover) !important;
+    border-color: var(--accent-hover) !important;
+}
+
+/* ============================================
    Bento Gallery Grid
    ============================================ */
 
@@ -865,6 +896,72 @@ select.form-control option {
         opacity: 1;
         margin-right: 0%;
     }
+}
+
+/* ============================================
+   Breadcrumb Navigation
+   ============================================ */
+
+.breadcrumb-nav {
+    background-color: var(--surface-card);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 12px 0;
+}
+
+.breadcrumb-trail {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+}
+
+.breadcrumb-trail li {
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+}
+
+.breadcrumb-trail li + li::before {
+    content: '›';
+    margin: 0 10px;
+    color: var(--border-emphasis);
+    font-size: 1rem;
+}
+
+.breadcrumb-trail a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-trail a:hover {
+    color: var(--accent-warm);
+}
+
+.breadcrumb-trail li[aria-current="page"] {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ============================================
+   Spoke Service Cards
+   ============================================ */
+
+.spoke-card {
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-subtle);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.spoke-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-warm-muted);
 }
 
 /* ============================================

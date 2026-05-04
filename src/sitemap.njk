@@ -5,12 +5,12 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   {%- for page in collections.all %}
-  {%- if page.url and page.url != '/admin/' and page.url != '/pages/weather-stripping-special/' %}
+  {%- if page.url and page.url != '/admin/' and page.url != '/pages/weather-stripping-special/' and page.url != '/index-original/' and page.url != '/pages/success/' %}
   <url>
     <loc>https://{{ client.domain }}{{ page.url }}</loc>
     <lastmod>{{ page.date.toISOString() }}</lastmod>
     <changefreq>{% if page.url == '/' %}weekly{% else %}monthly{% endif %}</changefreq>
-    <priority>{% if page.url == '/' %}1.0{% elif '/gallery/' in page.url %}0.9{% elif '/blog/' in page.url %}0.8{% else %}0.7{% endif %}</priority>
+    <priority>{% if page.url == '/' %}1.0{% elif page.url == '/services/' %}0.9{% elif '/services/' in page.url and page.url.split('/') | length == 4 %}0.9{% elif '/services/' in page.url %}0.8{% elif '/gallery/' in page.url %}0.9{% elif '/blog/' in page.url %}0.8{% else %}0.7{% endif %}</priority>
   </url>
   {%- endif %}
   {%- endfor %}

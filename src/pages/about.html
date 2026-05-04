@@ -1,72 +1,265 @@
 ---
 layout: 'base.html'
-description: "Meta description for the page"
-metaTitle: 'Title that shows up on google searches'
-tagTitle: 'About'
-preloadImg: '/images/cabinets2-1920w.webp'
-preloadCSS: '/css/about.css'
+description: 'Meet Haggerty Construction — a disabled veteran-owned, family-run general contractor in St. George, Utah. Pioneer roots, local expertise, and a commitment to doing things right.'
+metaTitle: 'About Haggerty Construction | Family-Owned General Contractor in St. George'
+tagTitle: 'About Us'
+preloadImg: ''
+preloadCSS: ''
 permalink: 'about/'
 eleventyNavigation:
     key: About Us
     order: 200
 ---
 
-<!-- Enter html code below -->
-
 <!-- ============================================ -->
-<!--                    LANDING                   -->
+<!--                 Hero Section                 -->
 <!-- ============================================ -->
 
-<section id="int-hero">
-  <h1 id="home-h">About Us</h1>
-  {% image './src/images/cabinets2.jpg', 'cabinets', '', 'lazy', '(max-width: 850px) 850px, 1920px'%}
-</section>
-
-<!-- ============================================ -->
-<!--                 Side By Side                 -->
-<!-- ============================================ -->
-
-<section id="sbs">
-  <div class="cs-container">
-    <!-- Left Image Section -->
-    <div class="cs-left">
-      {% image './src/images/cabinets2.jpg', 'cabinets', 'cs-picture cs-picture1', 'lazy'%}
-      {% image './src/images/construction.jpg', 'house', 'cs-picture cs-picture2', 'lazy'%}
+<section class="hero-section hero-service" style="padding: 80px 0;">
+    <picture class="hero-bg">
+        <source media="(min-width: 768px)" srcset="/images/new-construction-blake-and-bill-1920w.webp" type="image/webp">
+        <img src="/images/new-construction-blake-and-bill-850w.webp" alt="Blake and William Haggerty on a construction site in St. George" width="1920" height="1080" fetchpriority="high">
+    </picture>
+    <div class="container-fluid position-on-top">
+        <div class="row align-items-center justify-content-center text-center">
+            <div class="col-md-10 col-lg-8">
+                <h1 class="hero-title fw-bold text-white mb-3">We're not a franchise.<br class="d-none d-md-inline"> We're your neighbors.</h1>
+                <p class="hero-description text-light mb-0 fs-5">Disabled veteran-owned. Family-built. St. George born and raised.</p>
+            </div>
+        </div>
     </div>
-    <!-- Right Content Section-->
-    <div class="cs-right">
-      <span class="cs-topper">About Us</span>
-      <h2 class="cs-title">About Company Title</h2>
-      <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+</section>
+
+<!-- ============================================ -->
+<!--              Our Story Section               -->
+<!-- ============================================ -->
+
+<div class="container px-3 my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <h2 class="section-title animated-underline fw-bold text-white mb-4">Our Story</h2>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                The Haggerty name has been tied to construction for generations. Our grandfather, Patrick R. Haggerty, managed construction logistics for the U.S. Antarctic Program — the kind of projects where failure isn't an option and the weather is trying to kill you. They named <strong class="text-white">Haggerty Hill</strong> after him. That's the standard we come from.
             </p>
-      <p class="cs-text">
-                In consequat tincidunt turpis sit amet imperdiet. Praesent Class officelan nonatoureanor mauris laoreet, iaculis libero quis. Curabitur et tempus eri consequat tincidunt turpis sit amet imperdiet. Praesent nonatourean olei aptent taciti sociosqu ad litora torquent per.
+            <p class="text-muted fs-5 lh-lg mb-4">
+                Our founder, William, served over 20 years in the National Guard and spent years at Baker Concrete working on massive projects — including the Cincinnati Reds' Great American Ball Park. When he brought his family to St. George, he brought all of that experience with him and turned it into something personal: a small construction company built on doing things right, not doing things fast.
             </p>
-      <div class="cs-flex-group">
-        <p class="cs-flex-p">
-                    In consequat tincidunt turpis sit amet imperdiet. Praesent Classei consequat tincidunt turpis sit amet imperdiet for mind.
-                </p>
-        <span class="cs-name">Justin Time</span>
-        <span class="cs-job">CEO-Founder</span>
-        <img class="cs-quote-icon" loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/quote-white.svg" alt="gavel" width="136" height="77">
-      </div>
-      <a href="" class="button-solid">More About Us</a>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                Today, Haggerty Construction is run by William and his sons. Blake leads project management on the ground. Jayden builds the custom technology that keeps every job organized and transparent. Together, we take on residential remodels that matter to the people who live in them — kitchens, bathrooms, basements, cabinetry, and everything in between.
+            </p>
+            <p class="text-muted fs-5 lh-lg">
+                We're not trying to be the biggest contractor in Southern Utah. We're trying to be the one you trust.
+            </p>
+        </div>
     </div>
-  </div>
-</section>
+</div>
 
 <!-- ============================================ -->
-<!--             Final Call to Action             -->
+<!--             Pioneer Heritage                 -->
 <!-- ============================================ -->
 
-<section id="cta">
-  <div class="container">
-    <h2 class="title">Get It Done <br> With Us Today</h2>
-    <p>
-            Say something catchy, informative, and encouraging to click the button to go to the contact page.  I like to add these to the bottom of all pages.
-        </p>
-    <a href="/contact.html" class="button-solid">Free Estimate</a>
-  </div>
-  {% image './src/images/cabinets2.jpg', 'kitchen cabinets', '', 'lazy', '(max-width: 400px) 400px, (max-width: 850px) 850px, 1920'%}
-</section>
+<div class="container my-5 py-5" style="background-color: var(--surface-card); border-radius: var(--radius-lg);">
+    <div class="row align-items-center p-4 p-md-5">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+            <h2 class="section-title animated-underline fw-bold text-white mb-4">Pioneer Roots. Local Commitment.</h2>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                Our family didn't just move to St. George — we helped build it. The Haggertys have pioneer heritage in this valley, and our roots in Washington County go back generations. This is our community, our neighborhood, our home.
+            </p>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                That matters when you're choosing a contractor. We're not a franchise that rolled in from Las Vegas. We're not a crew you'll never see again after the job is done. We live here. Our kids go to school here. Our reputation in this town is the only marketing we need.
+            </p>
+            <p class="text-muted fs-5 lh-lg">
+                When we say we'll take care of you, we mean it — because we'll see you at the grocery store next week.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <picture>
+                <source srcset="/images/blake and william balanced cabinets maxfields cover-850w.webp" type="image/webp">
+                <img src="/images/blake and william balanced cabinets maxfields cover-850w.jpeg" class="img-fluid rounded shadow" alt="Blake and William Haggerty installing custom cabinetry" loading="lazy" width="850" height="567" style="border-radius: var(--radius-lg);">
+            </picture>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--              Veteran Owned                   -->
+<!-- ============================================ -->
+
+<div class="container px-3 my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h2 class="section-title animated-underline fw-bold text-white mb-4">Disabled Veteran-Owned</h2>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                William Haggerty served over two decades in the National Guard. That service shaped everything about how we run this company — discipline, accountability, attention to detail, and a deep sense of responsibility to the people who depend on us.
+            </p>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                Being a disabled veteran-owned business isn't a marketing badge for us. It's part of who we are. The same values that drove William's service drive the way we approach every project: show up, do the work right, and leave it better than you found it.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--              Meet the Team                   -->
+<!-- ============================================ -->
+
+<div class="container my-5 py-5" style="background-color: var(--surface-card); border-radius: var(--radius-lg);">
+    <div class="row text-center mb-5 pt-4">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold text-white mb-3">Meet the Team</h2>
+            <p class="text-muted fs-5">Father and sons. Zero corporate overhead.</p>
+        </div>
+    </div>
+    <div class="row g-4 justify-content-center pb-4 px-3">
+        <div class="col-md-6 col-lg-3 text-center">
+            <picture>
+                <source srcset="/assets/images/portfolio/bill-headshot-300w.webp" type="image/webp">
+                <img src="/assets/images/portfolio/bill-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="William Haggerty — Founder" loading="lazy" width="300" height="300" style="width: 180px; height: 180px; object-fit: cover; border: 3px solid var(--accent-warm);">
+            </picture>
+            <h4 class="text-white fw-bold mb-1">William Haggerty</h4>
+            <p class="text-muted small mb-2">Founder &amp; Vision</p>
+            <p class="text-muted small px-2">
+                20+ years National Guard. Baker Concrete veteran. The reason every job starts with a handshake and ends with a walkthrough.
+            </p>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center">
+            <picture>
+                <source srcset="/assets/images/portfolio/blake-headshot-300w.webp" type="image/webp">
+                <img src="/assets/images/portfolio/blake-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="Blake Haggerty — Project Manager" loading="lazy" width="300" height="300" style="width: 180px; height: 180px; object-fit: cover; border: 3px solid var(--accent-warm);">
+            </picture>
+            <h4 class="text-white fw-bold mb-1">Blake Haggerty</h4>
+            <p class="text-muted small mb-2">Project Management</p>
+            <p class="text-muted small px-2">
+                On-site lead. Framing, finish, and everything in between. If it's being built, Blake is the one making sure it's built right.
+            </p>
+        </div>
+        <div class="col-md-6 col-lg-3 text-center">
+            <picture>
+                <source srcset="/assets/images/portfolio/jayden-headshot-300w.webp" type="image/webp">
+                <img src="/assets/images/portfolio/jayden-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="Jayden Haggerty — Systems & Tech" loading="lazy" width="300" height="300" style="width: 180px; height: 180px; object-fit: cover; border: 3px solid var(--accent-warm);">
+            </picture>
+            <h4 class="text-white fw-bold mb-1">Jayden Haggerty</h4>
+            <p class="text-muted small mb-2">Systems &amp; Technology</p>
+            <p class="text-muted small px-2">
+                Built Haggerty OS from scratch — our proprietary project management platform. Estimates, schedules, and communication that no other contractor can match.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--         The Haggerty Difference              -->
+<!-- ============================================ -->
+
+<div class="container px-3 my-5 py-5">
+    <div class="row text-center mb-5">
+        <div class="col">
+            <h2 class="section-title animated-underline fw-bold text-white mb-3">Why Clients Choose Us</h2>
+        </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <div class="capability-card h-100 p-4 text-center">
+                <i class="bi bi-chat-dots d-block text-center mb-3" style="font-size: 2rem; color: var(--accent-warm);"></i>
+                <h4 class="text-white fw-bold text-center mb-3">Radical Transparency</h4>
+                <p class="text-muted text-center mb-0">We don't hide behind vague estimates and surprise change orders. You see the numbers, the timeline, and the plan — before we pick up a hammer.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="capability-card h-100 p-4 text-center">
+                <i class="bi bi-cpu d-block text-center mb-3" style="font-size: 2rem; color: var(--accent-warm);"></i>
+                <h4 class="text-white fw-bold text-center mb-3">Haggerty OS</h4>
+                <p class="text-muted text-center mb-0">We built our own project management software. Not because we're tech nerds (we are), but because nothing on the market was good enough for how we run jobs.</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="capability-card h-100 p-4 text-center">
+                <i class="bi bi-people d-block text-center mb-3" style="font-size: 2rem; color: var(--accent-warm);"></i>
+                <h4 class="text-white fw-bold text-center mb-3">One Crew. One Contact.</h4>
+                <p class="text-muted text-center mb-0">You talk to us directly — the people doing the work. No call centers, no project coordinators who've never swung a hammer.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--           Testimonial Highlight              -->
+<!-- ============================================ -->
+
+<div class="container my-5 py-5" style="background-color: var(--surface-card); border-radius: var(--radius-lg);">
+    <div class="row justify-content-center p-4 p-md-5">
+        <div class="col-lg-8 text-center">
+            <i class="bi bi-quote d-block mb-3" style="font-size: 3rem; color: var(--accent-warm); opacity: 0.4;"></i>
+            <p class="text-white fs-4 lh-lg mb-4 fst-italic">
+                "These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty Construction!"
+            </p>
+            <p class="text-muted fw-bold mb-0">&mdash; Mark Ziegler</p>
+        </div>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!--                Service Areas                 -->
+<!-- ============================================ -->
+
+<div class="container px-3 my-5 py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h2 class="section-title animated-underline fw-bold text-white mb-4">Serving All of Washington County</h2>
+            <p class="text-muted fs-5 lh-lg mb-4">
+                We work across the entire St. George metro area — including Washington, Hurricane, Ivins, Santa Clara, LaVerkin, and Leeds. If you're in Washington County, we're in your neighborhood.
+            </p>
+            <a href="/#contact" class="btn btn-primary btn-lg px-5 py-3 shadow-lg">Get a Free Estimate</a>
+        </div>
+    </div>
+</div>
+
+<!-- AboutPage Schema -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Haggerty Construction",
+    "description": "Disabled veteran-owned, family-run general contractor in St. George, Utah. Pioneer heritage, local expertise, and a commitment to quality craftsmanship.",
+    "mainEntity": {
+        "@type": "HomeAndConstructionBusiness",
+        "name": "Haggerty Construction",
+        "founder": {
+            "@type": "Person",
+            "name": "William Haggerty",
+            "jobTitle": "Founder"
+        },
+        "areaServed": {
+            "@type": "City",
+            "name": "St. George",
+            "containedInPlace": {
+                "@type": "State",
+                "name": "Utah"
+            }
+        },
+        "knowsAbout": ["Kitchen Remodeling", "Bathroom Remodeling", "Basement Finishing", "Custom Cabinetry", "Home Remodeling"],
+        "slogan": "The contractor you've been looking for."
+    }
+}
+</script>
+
+<script defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                } else {
+                    entry.target.classList.remove('is-visible');
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: "0px 0px -100px 0px"
+        });
+
+        document.querySelectorAll('.animated-underline').forEach((el) => {
+            observer.observe(el);
+        });
+    });
+</script>

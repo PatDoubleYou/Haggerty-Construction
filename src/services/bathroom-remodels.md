@@ -5,8 +5,8 @@ subtitle: 'A bathroom that actually feels like yours.'
 tagTitle: 'Bathroom Remodeling in St. George, Utah'
 description: 'Professional bathroom renovations in St. George, Utah. Custom tile, vanities, showers, and fixtures. Haggerty Construction — family-owned, detail-obsessed. Free estimates.'
 metaTitle: 'Bathroom Remodeling St. George | Haggerty Construction'
-heroImage: '/images/portfolio/port2.jpg'
-heroImageAlt: 'Bathroom renovation by Haggerty Construction in St. George, Utah'
+heroImage: '/assets/images/bathroom-remodel-hero.jpg'
+heroImageAlt: 'Beautiful master bathroom remodel with glass walk-in shower by Haggerty Construction'
 permalink: '/services/bathroom-remodels/'
 serviceType: 'Bathroom Remodeling'
 eleventyNavigation:
@@ -53,6 +53,19 @@ faqs:
 testimonial:
   text: 'Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them.'
   name: 'Taylor Sanchez'
+spokeServices:
+  - title: 'Shower Remodels'
+    url: '/services/bathroom-remodels/shower-remodels/'
+    icon: 'bi-border-all'
+    description: 'Custom tile showers, walk-ins, glass enclosures, and fixture upgrades.'
+  - title: 'Tub-to-Shower Conversions'
+    url: '/services/bathroom-remodels/tub-to-shower/'
+    icon: 'bi-arrows-angle-expand'
+    description: 'Remove the tub, gain a modern walk-in shower. Real tile, real craftsmanship.'
+  - title: 'Small Bathroom Remodels'
+    url: '/services/bathroom-remodels/small-bathrooms/'
+    icon: 'bi-arrows-angle-contract'
+    description: 'Smart layouts and space-saving solutions for tight bathrooms.'
 relatedServices:
   - title: 'Kitchen Remodels'
     url: '/services/kitchen-remodels/'
@@ -82,3 +95,4 @@ Bathrooms are where sloppy work shows. A tile line that's off by a quarter inch.
 **We sweat the details because we've learned the hard way that they matter.** Every tile gets checked for level. Every seam gets sealed. Every fixture gets tested before we leave.
 
 **You'll know what's happening the whole time.** Our project management runs through Haggerty OS — our proprietary software — so your timeline, budget, and progress are always transparent and tracked.
+
