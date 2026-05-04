@@ -57,7 +57,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/assets');
   eleventyConfig.addPassthroughCopy('./src/admin');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
+  eleventyConfig.addPassthroughCopy({ './src/images': '/images' });
   eleventyConfig.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
+  eleventyConfig.addPassthroughCopy({ './public/assets/favicons/favicon.ico': '/favicon.ico' });
 
   // open on npm start and watch CSS files for changes - doesn't trigger 11ty rebuild
   eleventyConfig.setBrowserSyncConfig({
