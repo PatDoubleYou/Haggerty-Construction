@@ -89,6 +89,27 @@
         });
     </script>
 
+    <!-- QR Code Scan Detection (Cybertruck Wrap) -->
+    <script defer>
+        (function() {
+            // The truck QR code links to /#contact — phone cameras open it as
+            // Direct traffic (empty referrer). When both conditions are true,
+            // fire a GA4 custom event as a proxy for QR scans.
+            if (window.location.hash === '#contact' && document.referrer === '') {
+                // Deduplicate: only fire once per browser session
+                if (!sessionStorage.getItem('qr_scan_tracked')) {
+                    sessionStorage.setItem('qr_scan_tracked', '1');
+                    gtag('event', 'cybertruck_qr_scan', {
+                        'event_category': 'engagement',
+                        'event_label': 'Cybertruck QR Code',
+                        'page_location': window.location.href,
+                        'landing_hash': window.location.hash
+                    });
+                }
+            }
+        })();
+    </script>
+
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
     {
