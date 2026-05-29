@@ -50,7 +50,15 @@ faqs:
     answer: 'That is completely fine. Whether it is one bathroom, one bedroom, or an entire floor, we treat every project with the same level of care and professionalism.'
   - question: 'How do I know if my home needs a full remodel or just updates?'
     answer: 'That is exactly what our free consultation is for. We will help you evaluate your space honestly and recommend the approach that makes the most sense for your goals and budget — even if that means telling you a full remodel is not necessary.'
-beforeAfterPlaceholder: true
+galleryTitle: 'Recent Work'
+gallerySubtitle: 'A few finished spaces from whole-home projects around Washington County.'
+galleryImages:
+  - src: '/assets/images/conners-living-room.webp'
+    alt: 'Custom living room built-ins, floating shelves, and fireplace by Haggerty Construction'
+  - src: '/assets/images/gallery/Living%20Room.webp'
+    alt: 'Finished living room media wall with floating shelves and linear fireplace'
+  - src: '/assets/images/gallery/mudroom.jpg'
+    alt: 'Custom mudroom built-in with bench, lockers, and storage by Haggerty Construction'
 testimonial:
   text: 'Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids and looks beautiful too! Very grateful!'
   name: 'ULIV Skincare'

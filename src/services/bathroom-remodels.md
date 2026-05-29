@@ -50,7 +50,15 @@ faqs:
     answer: 'Usually not. We contain the work area and keep things clean. If we are working on your only bathroom, we will plan the timeline carefully to minimize disruption — and we will be upfront about it.'
   - question: 'What is the average cost of a bathroom remodel in St. George?'
     answer: 'A guest bath refresh typically runs $8,000-$15,000. A full master bathroom renovation with custom tile and fixtures ranges from $20,000-$45,000 depending on materials and scope. We provide a free detailed estimate upfront.'
-beforeAfterPlaceholder: true
+galleryTitle: 'Recent Work'
+gallerySubtitle: 'Real Haggerty Construction projects in St. George — on the job and finished.'
+galleryImages:
+  - src: '/assets/images/bathroom-remodel-hero.jpg'
+    alt: 'Finished master bathroom with glass walk-in shower by Haggerty Construction'
+  - src: '/assets/images/bathroom-door-renovation.jpg'
+    alt: 'Haggerty Construction craftsman installing a new bathroom door'
+  - src: '/assets/images/portfolio/towel-rack.jpg'
+    alt: 'Haggerty Construction craftsman installing bathroom hardware'
 testimonial:
   text: 'Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them.'
   name: 'Taylor Sanchez'

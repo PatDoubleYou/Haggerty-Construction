@@ -159,11 +159,23 @@ preloadCSS: '/css/local.css'
             {% if osScreenshot %}
             <img src="{{ osScreenshot }}" alt="A look inside Haggerty OS, our project management software" class="img-fluid rounded-4 shadow-lg border border-secondary" loading="lazy" decoding="async">
             {% else %}
-            <!-- PLACEHOLDER: Replace with a real Haggerty OS screenshot/visual (Jayden to provide). Set `osScreenshot` in this page's front matter to the image path. -->
-            <div class="os-screenshot-placeholder rounded-4 border border-secondary d-flex flex-column align-items-center justify-content-center text-center p-5">
-                <i class="bi bi-display d-block mb-3" style="font-size: 3rem; color: var(--accent-warm);"></i>
-                <p class="text-white fw-bold mb-1">Haggerty OS Screenshot</p>
-                <p class="text-muted small mb-0">Placeholder — real product visual coming soon.</p>
+            <!-- Illustrative Haggerty OS mockup (example data only — no real client info).
+                 To swap in a real, sanitized screenshot later, set `osScreenshot` in front matter. -->
+            <div class="os-mockup rounded-4 shadow-lg overflow-hidden" role="img" aria-label="Example Haggerty OS schedule of values showing line-item budget and completion for each trade">
+                <div class="os-mockup-bar">
+                    <span class="os-dot"></span><span class="os-dot"></span><span class="os-dot"></span>
+                    <span class="os-mockup-title">Haggerty OS &mdash; Schedule of Values</span>
+                </div>
+                <div class="os-mockup-body">
+                    <div class="os-row os-row-head"><span>Trade</span><span>Budget</span><span>Complete</span></div>
+                    <div class="os-row"><span>Demolition</span><span>$4,450</span><span class="os-pct os-pct-done">100%</span></div>
+                    <div class="os-row"><span>Tile &amp; Stone</span><span>$8,807</span><span class="os-pct">75%</span></div>
+                    <div class="os-row"><span>Cabinets &amp; Vanities</span><span>$12,300</span><span class="os-pct os-pct-done">100%</span></div>
+                    <div class="os-row"><span>Plumbing</span><span>$6,540</span><span class="os-pct">60%</span></div>
+                    <div class="os-row"><span>Paint &amp; Finish</span><span>$3,200</span><span class="os-pct os-pct-low">20%</span></div>
+                    <div class="os-row os-row-total"><span>Project Total</span><span>$35,297</span><span class="os-pct">71%</span></div>
+                </div>
+                <p class="os-mockup-caption">Example view &mdash; every client gets line-item transparency like this.</p>
             </div>
             {% endif %}
         </div>
@@ -178,7 +190,8 @@ preloadCSS: '/css/local.css'
 <div class="container my-5 py-5">
     <div class="row text-center mb-5">
         <div class="col">
-            <h2 class="section-title animated-underline fw-bold mb-3">See Our Work</h2>
+            <h2 class="section-title animated-underline fw-bold mb-3">{{ galleryTitle or "See Our Work" }}</h2>
+            {% if gallerySubtitle %}<p class="text-muted fs-5">{{ gallerySubtitle }}</p>{% endif %}
         </div>
     </div>
     <div class="row g-3 justify-content-center">
@@ -453,8 +466,7 @@ preloadCSS: '/css/local.css'
         <div class="col-lg-8">
             <p class="trust-strip text-center text-muted mb-0">
                 <i class="bi bi-patch-check-fill me-2" style="color: var(--accent-warm);"></i>
-                <!-- PLACEHOLDER: Add the Utah contractor license number once Jayden provides it. -->
-                Licensed &amp; insured in Utah &mdash; Lic. #__________
+                Licensed &amp; insured in Utah &mdash; Lic. #12338912-5501
             </p>
             <!--
                 WORKMANSHIP WARRANTY (Priority 4.1): Only display if Haggerty actually offers one.

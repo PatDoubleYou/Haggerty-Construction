@@ -1021,11 +1021,84 @@ select.form-control option {
     font-size: 1.25rem;
 }
 
-/* Haggerty OS screenshot placeholder */
-.os-screenshot-placeholder {
-    background-color: var(--surface-card);
-    border-style: dashed !important;
-    min-height: 280px;
+/* Haggerty OS illustrative mockup (example data only) */
+.os-mockup {
+    background-color: #ffffff;
+    color: #1f2937;
+    border: 1px solid var(--border-emphasis);
+}
+.os-mockup-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #eef1f4;
+    border-bottom: 1px solid #d9dee3;
+    padding: 0.6rem 0.9rem;
+}
+.os-mockup-bar .os-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c7ccd1;
+}
+.os-mockup-title {
+    margin-left: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #56616c;
+}
+.os-mockup-body {
+    padding: 0.5rem 1.1rem 0.75rem;
+}
+.os-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.8fr;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #eef1f4;
+    font-size: 0.95rem;
+}
+.os-row span:nth-child(2),
+.os-row span:nth-child(3) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.os-row-head {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8a939c;
+}
+.os-row span:first-child {
+    font-weight: 600;
+    color: #2b3540;
+}
+.os-row-total {
+    border-bottom: none;
+    border-top: 2px solid #cfd5db;
+    margin-top: 0.25rem;
+    font-weight: 700;
+}
+.os-pct {
+    font-weight: 700;
+    color: #c77f1a;
+}
+.os-pct-done {
+    color: #1f9d57;
+}
+.os-pct-low {
+    color: #8a939c;
+}
+.os-mockup-caption {
+    margin: 0;
+    padding: 0.55rem 1.1rem 0.85rem;
+    background-color: #f6f8fa;
+    border-top: 1px solid #eef1f4;
+    font-size: 0.8rem;
+    color: #6b7682;
+    font-style: italic;
 }
 
 /* Trust strip — Licensed & insured */
