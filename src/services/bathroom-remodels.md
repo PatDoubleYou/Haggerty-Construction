@@ -67,6 +67,12 @@ galleryImages:
     alt: 'Haggerty Construction craftsman installing a new bathroom door'
   - src: '/assets/images/portfolio/towel-rack.jpg'
     alt: 'Haggerty Construction craftsman installing bathroom hardware'
+  - src: '/assets/images/gallery/freestanding-tub-glass-block.png'
+    alt: 'Freestanding soaking tub with gold fixtures and glass block window wall'
+  - src: '/assets/images/gallery/patterned-tile-shower.jpg'
+    alt: 'Custom geometric patterned tile shower by Haggerty Construction'
+  - src: '/assets/images/projects/bathroom-shower-tile-progress.jpg'
+    alt: 'Shower tile installation in progress showing Haggerty Construction attention to detail'
 testimonial:
   text: 'Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them.'
   name: 'Taylor Sanchez'

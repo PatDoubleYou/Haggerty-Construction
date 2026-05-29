@@ -58,6 +58,10 @@ galleryImages:
     alt: 'Kitchen remodel in progress with new cabinetry, island, and lighting'
   - src: '/images/kitchen-island-remodel-850w.webp'
     alt: 'Finished kitchen island remodel with custom cabinetry'
+  - src: '/assets/images/projects/kitchen-oak-cabinets-quartz.jpg'
+    alt: 'Natural oak kitchen cabinets with white quartz countertops and stainless appliances'
+  - src: '/assets/images/gallery/kitchen-cabinet-install-new.jpg'
+    alt: 'New kitchen cabinets being installed on site by Haggerty Construction'
 faqs:
   - question: 'How long does a kitchen remodel take in St. George?'
     answer: 'It depends on the scope. A cabinet-and-countertop refresh may take 2-3 weeks. A full gut-and-rebuild with layout changes typically runs 6-10 weeks. We give you a detailed timeline upfront so you know what to expect.'

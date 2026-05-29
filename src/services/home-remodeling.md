@@ -63,6 +63,14 @@ galleryImages:
     alt: 'New hardwood flooring installed during a whole-home remodel by Haggerty Construction'
   - src: '/assets/images/projects/home-bedroom-protected.jpg'
     alt: 'Bedroom furniture and floors carefully protected during a Haggerty Construction remodel'
+  - src: '/assets/images/gallery/office-built-in-dark.jpg'
+    alt: 'Custom dark blue office built-in with desk, shelving, and cabinet storage'
+  - src: '/assets/images/gallery/green-bookcase-wall.jpg'
+    alt: 'Floor-to-ceiling dark green built-in bookcase with shaker cabinet doors'
+  - src: '/assets/images/gallery/sauna-build-finished.png'
+    alt: 'Custom cedar sauna build with wood-fired stove — finished project'
+  - src: '/assets/images/gallery/flooring-install-progress.jpg'
+    alt: 'Hardwood flooring installation during whole-home remodel'
 
 testimonial:
   text: 'Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids and looks beautiful too! Very grateful!'
