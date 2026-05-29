@@ -1,34 +1,186 @@
 [
   {
+    "path": "src/assets/images/gallery/office-built-in-dark.jpg",
+    "alt": "Custom dark blue office built-in with desk, shelving, and cabinet storage"
+  },
+  {
+    "path": "src/assets/images/gallery/green-bookcase-wall.jpg",
+    "alt": "Floor-to-ceiling dark green built-in bookcase with shaker cabinet doors"
+  },
+  {
+    "path": "src/assets/images/gallery/patterned-tile-shower.jpg",
+    "alt": "Custom patterned tile shower with geometric design by Haggerty Construction"
+  },
+  {
+    "path": "src/assets/images/gallery/freestanding-tub-glass-block.png",
+    "alt": "Freestanding soaking tub with gold fixtures and glass block window wall"
+  },
+  {
+    "path": "src/assets/images/gallery/oak-kitchen-quartz-counters.jpg",
+    "alt": "Natural oak kitchen cabinets with white quartz countertops and stainless appliances"
+  },
+  {
+    "path": "src/assets/images/gallery/light-wood-bookcase-cabinets.jpg",
+    "alt": "Custom light wood built-in bookcase with shaker cabinet storage"
+  },
+  {
+    "path": "src/assets/images/gallery/sauna-build-finished.png",
+    "alt": "Custom cedar sauna build with wood-fired stove — finished project"
+  },
+  {
     "path": "src/assets/images/gallery/Book Case.jpg",
-    "alt": "Book case"
+    "alt": "Custom book case built-in cabinetry"
   },
   {
     "path": "src/assets/images/gallery/garage_cabinets.jpg",
-    "alt": "Garage cabinets"
+    "alt": "Custom garage cabinet installation"
+  },
+  {
+    "path": "src/assets/images/gallery/circular-saw-craftsmanship.jpg",
+    "alt": "Precision circular cut during custom cabinet construction in the Haggerty shop"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-face-frame-assembly.jpg",
+    "alt": "Cabinet face frame being assembled with precision joinery"
+  },
+  {
+    "path": "src/assets/images/gallery/garage-cabinets-new.jpg",
+    "alt": "Full garage cabinet system with workbench and overhead storage"
   },
   {
     "path": "src/assets/images/gallery/ledges pool room.jpg",
-    "alt": "Ledges pool room"
+    "alt": "Ledges pool room custom cabinetry and built-ins"
   },
   {
     "path": "src/assets/images/gallery/Living Room.jpg",
-    "alt": "Living room"
+    "alt": "Custom living room built-in cabinetry"
   },
   {
     "path": "src/assets/images/gallery/Martys bookcase final.jpg",
-    "alt": "Martys bookcase final"
+    "alt": "Marty's bookcase — custom floor-to-ceiling built-in"
   },
   {
-    "path": "src/assets/images/gallery/mudroom.jpg",
-    "alt": "Mudroom"
+    "path": "src/assets/images/gallery/haggerty-team-ceiling-repair.jpg",
+    "alt": "Haggerty Construction team member doing ceiling repair work in branded shirt and tool belt"
+  },
+  {
+    "path": "src/assets/images/gallery/team-ceiling-work.jpg",
+    "alt": "Haggerty Construction crew member installing a ceiling fan housing"
+  },
+  {
+    "path": "src/assets/images/gallery/patterned-tile-shower-2.jpg",
+    "alt": "Second angle of custom geometric patterned tile shower"
+  },
+  {
+    "path": "src/assets/images/gallery/kitchen-cabinet-install-new.jpg",
+    "alt": "New kitchen cabinets being installed on site"
+  },
+  {
+    "path": "src/assets/images/gallery/kitchen-cabinet-install-angle.jpg",
+    "alt": "Kitchen cabinet installation progress — another angle"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-drawer-slides.jpg",
+    "alt": "Custom cabinet drawer slide installation showing precision hardware"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-drawer-box-detail.jpg",
+    "alt": "Custom-built drawer box detail showing quality joinery"
+  },
+  {
+    "path": "src/assets/images/gallery/oak-kitchen-stovetop.jpg",
+    "alt": "Oak kitchen with gas range and quartz countertops — finished installation"
+  },
+  {
+    "path": "src/assets/images/gallery/sauna-cedar-interior.jpg",
+    "alt": "Cedar-lined sauna interior during construction with Harvia wood-fired heater"
+  },
+  {
+    "path": "src/assets/images/gallery/blake-carrying-cabinet-demo.jpg",
+    "alt": "Blake Haggerty carrying a cabinet during demolition"
+  },
+  {
+    "path": "src/assets/images/gallery/tile-shower-niche.jpg",
+    "alt": "Custom shower niche tile installation with precision cuts"
+  },
+  {
+    "path": "src/assets/images/gallery/tile-shower-install.jpg",
+    "alt": "Shower tile being installed with leveling system"
+  },
+  {
+    "path": "src/assets/images/gallery/tile-floor-install.jpg",
+    "alt": "Bathroom floor tile installation in progress"
+  },
+  {
+    "path": "src/assets/images/gallery/bathroom-vanity-install.jpg",
+    "alt": "Bathroom vanity and countertop installation in progress"
+  },
+  {
+    "path": "src/assets/images/gallery/bathroom-tile-closeup.jpg",
+    "alt": "Close-up of bathroom tile work with clean grout lines"
+  },
+  {
+    "path": "src/assets/images/gallery/bathroom-tile-install.jpg",
+    "alt": "Bathroom wall tile being set during renovation"
+  },
+  {
+    "path": "src/assets/images/gallery/flooring-install-progress.jpg",
+    "alt": "Hardwood flooring installation in progress during whole-home remodel"
+  },
+  {
+    "path": "src/assets/images/gallery/flooring-kitchen-progress.jpg",
+    "alt": "Kitchen flooring installation with new cabinets visible"
+  },
+  {
+    "path": "src/assets/images/gallery/flooring-hallway.jpg",
+    "alt": "Hallway flooring installation showing clean transitions"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-assembly-shop.jpg",
+    "alt": "Cabinet assembly in the Haggerty Construction shop"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-carcass-build.jpg",
+    "alt": "Cabinet carcass being built — raw construction quality"
+  },
+  {
+    "path": "src/assets/images/gallery/kitchen-cabinetry-install.jpg",
+    "alt": "Kitchen cabinetry installation with crown molding"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-parts-organized.jpg",
+    "alt": "Cabinet components organized for assembly in the shop"
   },
   {
     "path": "src/assets/images/gallery/conners-cabinets-larger.webp",
-    "alt": "Conners cabinets"
+    "alt": "Conners custom cabinet installation"
   },
   {
     "path": "src/assets/images/new-images/maxfields-office-final.jpg",
     "alt": "Maxfields office built-in final"
+  },
+  {
+    "path": "src/assets/images/gallery/mudroom.jpg",
+    "alt": "Custom mudroom cabinetry and storage"
+  },
+  {
+    "path": "src/assets/images/gallery/commercial-scoreboard.jpg",
+    "alt": "Commercial scoreboard installation project"
+  },
+  {
+    "path": "src/assets/images/gallery/outdoor-kitchen-build.jpg",
+    "alt": "Outdoor kitchen construction project"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-shop-setup.jpg",
+    "alt": "Cabinet shop setup with organized tools and workspace"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-assembly-clamps.jpg",
+    "alt": "Cabinet assembly with bar clamps — precision glue-up"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-edge-detail.jpg",
+    "alt": "Cabinet edge banding and detail work"
   }
 ]

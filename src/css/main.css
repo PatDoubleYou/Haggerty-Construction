@@ -1005,3 +1005,180 @@ select.form-control option {
         padding: 40px 0px;
     }
 }
+
+/* ============================================
+   Conversion / Landing Page Components
+   ============================================ */
+
+/* Surface-card utility (used by CTA cards and existing card components) */
+.bg-surface-card {
+    background-color: var(--surface-card) !important;
+}
+
+/* Haggerty OS benefit list */
+.haggerty-os-benefits .bi {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+}
+
+/* Haggerty OS illustrative mockup (example data only) */
+.os-mockup {
+    background-color: #ffffff;
+    color: #1f2937;
+    border: 1px solid var(--border-emphasis);
+}
+.os-mockup-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background-color: #eef1f4;
+    border-bottom: 1px solid #d9dee3;
+    padding: 0.6rem 0.9rem;
+}
+.os-mockup-bar .os-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #c7ccd1;
+}
+.os-mockup-title {
+    margin-left: 0.6rem;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #56616c;
+}
+.os-mockup-body {
+    padding: 0.5rem 1.1rem 0.75rem;
+}
+.os-row {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 0.8fr;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #eef1f4;
+    font-size: 0.95rem;
+}
+.os-row span:nth-child(2),
+.os-row span:nth-child(3) {
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+.os-row-head {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #8a939c;
+}
+.os-row span:first-child {
+    font-weight: 600;
+    color: #2b3540;
+}
+.os-row-total {
+    border-bottom: none;
+    border-top: 2px solid #cfd5db;
+    margin-top: 0.25rem;
+    font-weight: 700;
+}
+.os-pct {
+    font-weight: 700;
+    color: #c77f1a;
+}
+.os-pct-done {
+    color: #1f9d57;
+}
+.os-pct-low {
+    color: #8a939c;
+}
+.os-mockup-caption {
+    margin: 0;
+    padding: 0.55rem 1.1rem 0.85rem;
+    background-color: #f6f8fa;
+    border-top: 1px solid #eef1f4;
+    font-size: 0.8rem;
+    color: #6b7682;
+    font-style: italic;
+}
+
+/* Trust strip — Licensed & insured */
+.trust-strip {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+/* Labeled image placeholder for service cards (no real photo yet) */
+.card-img-placeholder {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    background-color: var(--surface-elevated);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Before & After */
+.before-after-item .ba-label,
+.before-after-placeholder .ba-label {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--radius-sm);
+}
+.before-after-item .ba-label-after,
+.before-after-placeholder .ba-label-after {
+    background-color: var(--accent-warm);
+}
+.before-after-placeholder {
+    position: relative;
+    background-color: var(--surface-card);
+    border: 1px dashed var(--border-emphasis);
+    aspect-ratio: 4 / 3;
+}
+
+/* Sticky mobile CTA bar */
+.sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    display: flex;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.45);
+}
+.sticky-cta-bar a {
+    flex: 1 1 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    min-height: 56px;
+}
+.sticky-cta-bar .sticky-cta-call {
+    background-color: var(--accent-warm);
+    color: #fff;
+}
+.sticky-cta-bar .sticky-cta-estimate {
+    background-color: var(--accent-primary);
+    color: #fff;
+}
+.sticky-cta-bar a:active {
+    filter: brightness(0.9);
+}
+
+/* Keep the sticky bar from covering page content on mobile */
+@media (max-width: 991.98px) {
+    body:has(.sticky-cta-bar) {
+        padding-bottom: 64px;
+    }
+}

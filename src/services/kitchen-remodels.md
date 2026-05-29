@@ -38,16 +38,30 @@ process:
   - title: 'Design & Estimate'
     text: 'You get a detailed estimate with real numbers — no surprises. We use our own software to keep it precise.'
   - title: 'Build'
-    text: 'Our crew handles demo, rough-in, cabinetry, counters, tile, and paint. We keep you updated every step.'
+    text: 'We coordinate demo, rough-in, cabinetry, counters, tile, and paint — every trade managed by our team. We keep you updated every step.'
   - title: 'Final Walkthrough'
     text: 'We walk the finished kitchen together. If something is not right, we fix it before we call it done.'
+galleryTitle: 'Recent Work'
+gallerySubtitle: 'Real kitchen projects around St. George — from demo to finished.'
 galleryImages:
   - src: '/images/after-850w.webp'
-    alt: 'Finished kitchen remodel in St. George'
+    alt: 'Finished kitchen remodel with custom cabinetry and granite counters in St. George'
+  - src: '/assets/images/projects/kitchen-oak-before.jpg'
+    alt: 'Original oak kitchen before a Haggerty Construction remodel'
+  - src: '/assets/images/projects/kitchen-demo-before.jpg'
+    alt: 'Kitchen mid-demolition with original cabinets being removed by Haggerty Construction'
+  - src: '/assets/images/projects/kitchen-cabinet-install-crew.jpg'
+    alt: 'Haggerty Construction craftsman installing kitchen cabinets'
+  - src: '/assets/images/projects/kitchen-install-progress-1.jpg'
+    alt: 'New white shaker cabinets being installed during a kitchen remodel'
+  - src: '/assets/images/projects/kitchen-install-progress-2.jpg'
+    alt: 'Kitchen remodel in progress with new cabinetry, island, and lighting'
   - src: '/images/kitchen-island-remodel-850w.webp'
-    alt: 'Kitchen island remodel with custom cabinetry'
-  - src: '/images/conners-cabinets-larger-850w.webp'
-    alt: 'Custom kitchen cabinets by Haggerty Construction'
+    alt: 'Finished kitchen island remodel with custom cabinetry'
+  - src: '/assets/images/projects/kitchen-oak-cabinets-quartz.jpg'
+    alt: 'Natural oak kitchen cabinets with white quartz countertops and stainless appliances'
+  - src: '/assets/images/gallery/kitchen-cabinet-install-new.jpg'
+    alt: 'New kitchen cabinets being installed on site by Haggerty Construction'
 faqs:
   - question: 'How long does a kitchen remodel take in St. George?'
     answer: 'It depends on the scope. A cabinet-and-countertop refresh may take 2-3 weeks. A full gut-and-rebuild with layout changes typically runs 6-10 weeks. We give you a detailed timeline upfront so you know what to expect.'
@@ -60,6 +74,9 @@ faqs:
 testimonial:
   text: 'This included flooring, moving an island, all new case and base, painting, new cabinet doors... I could go on and on. They do everything start to finish. It was a great experience.'
   name: 'Haley Benware'
+testimonial2:
+  text: 'These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty Construction!'
+  name: 'Mark Ziegler'
 relatedServices:
   - title: 'Bathroom Renovations'
     url: '/services/bathroom-remodels/'
@@ -78,7 +95,7 @@ So when it stops working for you — when the layout is fighting you, the cabine
 
 ## We handle kitchen remodels start to finish
 
-We're a full-service general contractor. That means you don't need to hire a separate demo crew, plumber, electrician, tile guy, and painter. We coordinate the entire project under one roof, with one point of contact, and one timeline you can actually trust.
+We're a full-service general contractor. That means you don't need to hire a separate demo crew, plumber, electrician, tile guy, and painter. We coordinate the entire project for you — one point of contact and one timeline you can actually trust — pulling in our hand-picked network of trusted local trades as each phase needs them.
 
 We've remodeled kitchens across St. George, Washington, and the greater Washington County area — from simple cabinet-and-countertop refreshes to full gut renovations with new layouts, islands, and custom millwork.
 
