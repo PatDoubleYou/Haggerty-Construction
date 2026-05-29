@@ -38,7 +38,7 @@ process:
   - title: 'Design & Estimate'
     text: 'You get a detailed estimate with real numbers — no surprises. We use our own software to keep it precise.'
   - title: 'Build'
-    text: 'Our crew handles demo, rough-in, cabinetry, counters, tile, and paint. We keep you updated every step.'
+    text: 'We coordinate demo, rough-in, cabinetry, counters, tile, and paint — every trade managed by our team. We keep you updated every step.'
   - title: 'Final Walkthrough'
     text: 'We walk the finished kitchen together. If something is not right, we fix it before we call it done.'
 galleryImages:
@@ -60,6 +60,9 @@ faqs:
 testimonial:
   text: 'This included flooring, moving an island, all new case and base, painting, new cabinet doors... I could go on and on. They do everything start to finish. It was a great experience.'
   name: 'Haley Benware'
+testimonial2:
+  text: 'These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty Construction!'
+  name: 'Mark Ziegler'
 relatedServices:
   - title: 'Bathroom Renovations'
     url: '/services/bathroom-remodels/'
@@ -78,7 +81,7 @@ So when it stops working for you — when the layout is fighting you, the cabine
 
 ## We handle kitchen remodels start to finish
 
-We're a full-service general contractor. That means you don't need to hire a separate demo crew, plumber, electrician, tile guy, and painter. We coordinate the entire project under one roof, with one point of contact, and one timeline you can actually trust.
+We're a full-service general contractor. That means you don't need to hire a separate demo crew, plumber, electrician, tile guy, and painter. We coordinate the entire project for you — one point of contact and one timeline you can actually trust — pulling in our hand-picked network of trusted local trades as each phase needs them.
 
 We've remodeled kitchens across St. George, Washington, and the greater Washington County area — from simple cabinet-and-countertop refreshes to full gut renovations with new layouts, islands, and custom millwork.
 

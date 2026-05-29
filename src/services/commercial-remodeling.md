@@ -38,7 +38,7 @@ process:
   - title: 'Proposal & Timeline'
     text: 'You get a detailed proposal with realistic milestones. We work around your business hours when possible.'
   - title: 'Construction'
-    text: 'Our crew manages all trades — framing, MEP, finishes. We keep the site clean and minimize disruption.'
+    text: 'We manage all trades — framing, MEP, finishes — coordinating our hand-picked network of local pros. We keep the site clean and minimize disruption.'
   - title: 'Turnover'
     text: 'Final inspection, punch list, and handover. Your space is ready for business.'
 faqs:

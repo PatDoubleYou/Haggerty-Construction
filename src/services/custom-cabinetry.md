@@ -76,7 +76,7 @@ We design and install custom cabinetry and built-in storage throughout St. Georg
 
 ## How it works
 
-We partner with a local manufacturer we trust to mill the boxes and doors to our exact specs. Our team handles the design, takes the measurements, coordinates delivery, and does the installation ourselves. That means one crew is accountable for the entire result — from the first measurement to the last door adjustment.
+We partner with a local manufacturer we trust to mill the boxes and doors to our exact specs. Our team handles the design, takes the measurements, coordinates delivery, and does the installation ourselves. That means our team is accountable for the entire result — from the first measurement to the last door adjustment.
 
 ## Why it matters
 

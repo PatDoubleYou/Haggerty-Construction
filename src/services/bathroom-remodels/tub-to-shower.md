@@ -31,7 +31,7 @@ capabilities:
     text: 'Frameless or semi-frameless glass, custom measured and installed for a clean, modern look.'
   - icon: 'bi-moisture'
     title: 'Plumbing Modifications'
-    text: 'Valve relocation, drain repositioning, new supply lines — all plumbing changes handled in-house.'
+    text: 'Valve relocation, drain repositioning, new supply lines — all plumbing changes coordinated by our team and done to code.'
   - icon: 'bi-shield-check'
     title: 'Full Waterproofing'
     text: 'Kerdi membrane, proper slope, sealed transitions. Built to last, not just to look good.'
@@ -78,7 +78,7 @@ We remove the tub entirely. The plumbing gets modified, the subfloor gets inspec
 
 ## What the conversion involves
 
-**Plumbing changes are almost always needed.** Valve position, drain location, and supply lines typically all change. We handle it all in-house.
+**Plumbing changes are almost always needed.** Valve position, drain location, and supply lines typically all change. We coordinate it all and make sure every change is done to code.
 
 **Waterproofing is not optional.** Every conversion gets a full membrane system to prevent moisture damage. We never skip this step.
 

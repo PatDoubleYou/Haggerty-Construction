@@ -38,7 +38,7 @@ process:
   - title: 'Design & Estimate'
     text: 'You get a clear scope of work with honest pricing. We use Haggerty OS to keep the project organized from day one.'
   - title: 'Build'
-    text: 'Framing, plumbing, electrical, drywall, flooring, paint — our crew handles every trade under one roof.'
+    text: 'Framing, plumbing, electrical, drywall, flooring, paint — every trade coordinated by our team from start to finish.'
   - title: 'Final Walkthrough'
     text: 'We walk the finished space together. Nothing is done until you are completely satisfied.'
 faqs:
@@ -73,7 +73,7 @@ We are a full-service general contractor in St. George, and basement finishing i
 
 ## What we bring to basement projects
 
-**We handle everything in-house.** Framing, plumbing, electrical, drywall, flooring, tile, paint, and trim — all under one crew with one point of contact. You do not need to coordinate separate trades yourself.
+**We coordinate every trade for you.** Framing, plumbing, electrical, drywall, flooring, tile, paint, and trim — handled by our hand-picked network of trusted local craftsmen and managed by our team through one point of contact. You do not need to coordinate separate trades yourself.
 
 **We know the code.** Basement bedrooms in Utah require egress windows of a specific size. Bathrooms need proper drainage and ventilation. Electrical requires dedicated circuits. We handle all of this — including permits and inspections — so you do not have to worry about it.
 

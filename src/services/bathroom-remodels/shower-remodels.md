@@ -41,7 +41,7 @@ process:
   - title: 'Design & Estimate'
     text: 'You get a detailed estimate with material selections, timeline, and real pricing. No guesswork.'
   - title: 'Build'
-    text: 'Demo, plumbing, waterproofing, tile, glass, fixtures — our crew handles every step.'
+    text: 'Demo, plumbing, waterproofing, tile, glass, fixtures — every step coordinated by our team.'
   - title: 'Final Walkthrough'
     text: 'We test everything, check every grout line, and make sure you are completely happy before we leave.'
 faqs:

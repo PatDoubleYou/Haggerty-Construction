@@ -38,7 +38,7 @@ process:
   - title: 'Design & Estimate'
     text: 'You get a detailed estimate with material selections, timeline, and real pricing. No guesswork.'
   - title: 'Build'
-    text: 'Demo, plumbing, tile, fixtures, paint — our crew handles every trade under one roof.'
+    text: 'Demo, plumbing, tile, fixtures, paint — every trade coordinated by our team from start to finish.'
   - title: 'Final Walkthrough'
     text: 'We walk the finished bathroom together and fix anything that is not exactly right.'
 faqs:
@@ -50,9 +50,13 @@ faqs:
     answer: 'Usually not. We contain the work area and keep things clean. If we are working on your only bathroom, we will plan the timeline carefully to minimize disruption — and we will be upfront about it.'
   - question: 'What is the average cost of a bathroom remodel in St. George?'
     answer: 'A guest bath refresh typically runs $8,000-$15,000. A full master bathroom renovation with custom tile and fixtures ranges from $20,000-$45,000 depending on materials and scope. We provide a free detailed estimate upfront.'
+beforeAfterPlaceholder: true
 testimonial:
   text: 'Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them.'
   name: 'Taylor Sanchez'
+testimonial2:
+  text: 'Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids and looks beautiful too! Very grateful!'
+  name: 'ULIV Skincare'
 spokeServices:
   - title: 'Shower Remodels'
     url: '/services/bathroom-remodels/shower-remodels/'
@@ -84,7 +88,7 @@ If your bathroom has dated tile, a vanity that's seen better days, or a layout t
 
 ## Full-service bathroom renovations
 
-We handle bathroom remodels from demo to final grout line. That means plumbing, electrical, tile, fixtures, paint, and trim — all under one crew with one point of contact. No chasing down separate trades yourself.
+We handle bathroom remodels from demo to final grout line. That means plumbing, electrical, tile, fixtures, paint, and trim — every trade coordinated by our team through one point of contact. No chasing down separate trades yourself.
 
 Whether it's a guest bath face-lift or a full master suite gut-and-rebuild, we've done it across St. George, Washington, Hurricane, and the surrounding area.
 
@@ -95,4 +99,15 @@ Bathrooms are where sloppy work shows. A tile line that's off by a quarter inch.
 **We sweat the details because we've learned the hard way that they matter.** Every tile gets checked for level. Every seam gets sealed. Every fixture gets tested before we leave.
 
 **You'll know what's happening the whole time.** Our project management runs through Haggerty OS — our proprietary software — so your timeline, budget, and progress are always transparent and tracked.
+
+## Safe, accessible bathrooms — beautifully done
+
+A bathroom should be easy and comfortable to use for years to come — and it can be safe without looking like a hospital. We design accessible bathrooms that are every bit as beautiful as they are practical.
+
+- **Curbless and walk-in showers** that are easy to step into, with a clean, modern, spa-like look.
+- **Tub-to-shower conversions** that reclaim space and remove the high step-over of an old tub.
+- **Grab bars done tastefully** — integrated into the design in finishes that match your fixtures, not bolted on as an afterthought.
+- **Comfort-height fixtures**, slip-resistant tile, and better lighting that make everyday use easier and more confident.
+
+Whether you're planning ahead or making your home work better right now, we'll help you build a bathroom that's safe, comfortable, and genuinely beautiful.
 

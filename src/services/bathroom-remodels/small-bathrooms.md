@@ -41,7 +41,7 @@ process:
   - title: 'Design & Estimate'
     text: 'A plan that maximizes your space, with honest pricing and a clear timeline.'
   - title: 'Build'
-    text: 'Demo, plumbing, tile, fixtures, paint — our crew handles everything.'
+    text: 'Demo, plumbing, tile, fixtures, paint — every trade coordinated by our team.'
   - title: 'Final Walkthrough'
     text: 'We make sure every detail is right before we call it done.'
 faqs:
