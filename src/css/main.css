@@ -1107,6 +1107,14 @@ select.form-control option {
     letter-spacing: 0.02em;
 }
 
+/* Labeled image placeholder for service cards (no real photo yet) */
+.card-img-placeholder {
+    aspect-ratio: 4 / 3;
+    width: 100%;
+    background-color: var(--surface-elevated);
+    border-bottom: 1px solid var(--border-subtle);
+}
+
 /* Before & After */
 .before-after-item .ba-label,
 .before-after-placeholder .ba-label {

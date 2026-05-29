@@ -8,10 +8,12 @@ preloadCSS: '/css/local.css'
 <!-- ============================================ -->
 
 <section class="hero-section hero-service">
+    {% if heroImage %}
     <picture class="hero-bg">
         <source media="(min-width: 768px)" srcset="{{ heroImage }}" type="image/webp">
         <img src="{{ heroImageMobile if heroImageMobile else heroImage }}" alt="{{ heroImageAlt }}" width="1920" height="800" fetchpriority="high">
     </picture>
+    {% endif %}
     <div class="container position-on-top text-center pt-5">
         <h1 class="hero-title fw-bold text-white mb-3">{{ title }}</h1>
         <p class="hero-subtitle text-light fs-4 fw-light">{{ subtitle }}</p>

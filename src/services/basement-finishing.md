@@ -5,8 +5,10 @@ subtitle: 'Turn unused square footage into your favorite room in the house.'
 tagTitle: 'Basement Finishing in St. George, Utah'
 description: 'Professional basement finishing and remodeling in St. George, Utah. Bedrooms, bathrooms, entertainment spaces. Haggerty Construction — licensed, family-owned. Free estimates.'
 metaTitle: 'Basement Finishing Contractors St. George | Haggerty Construction'
-heroImage: '/assets/images/basement-finishing-inspiration.jpg'
-heroImageAlt: 'Beautifully finished basement living space with warm lighting and modern design'
+# heroImage intentionally omitted — no real basement photo on file yet (avoid AI/stock).
+# Add a real Haggerty basement project photo here when available, e.g.:
+# heroImage: '/assets/images/<real-basement-photo>.jpg'
+heroImageAlt: 'Basement finishing by Haggerty Construction in St. George, Utah'
 permalink: '/services/basement-finishing/'
 serviceType: 'Basement Finishing'
 eleventyNavigation:
