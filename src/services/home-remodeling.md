@@ -63,8 +63,7 @@ galleryImages:
     alt: 'New hardwood flooring installed during a whole-home remodel by Haggerty Construction'
   - src: '/assets/images/projects/home-bedroom-protected.jpg'
     alt: 'Bedroom furniture and floors carefully protected during a Haggerty Construction remodel'
-  - src: '/assets/images/gallery/mudroom.jpg'
-    alt: 'Custom mudroom built-in with bench, lockers, and storage by Haggerty Construction'
+
 testimonial:
   text: 'Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids and looks beautiful too! Very grateful!'
   name: 'ULIV Skincare'
