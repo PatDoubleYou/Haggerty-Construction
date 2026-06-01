@@ -42,7 +42,7 @@ process:
   - title: 'Walkthrough'
     text: 'We make sure every door closes right, every drawer slides smooth, and you are completely happy.'
 galleryImages:
-  - src: '/images/Maxfields office built-in final-400w.webp'
+  - src: '/images/maxfields-office-final-400w.webp'
     alt: 'Custom built-in office cabinetry'
   - src: '/images/Book Case-850w.webp'
     alt: 'Custom built-in bookcase by Haggerty Construction'

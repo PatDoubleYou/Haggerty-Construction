@@ -16,10 +16,7 @@ eleventyNavigation:
 <!-- ============================================ -->
 
 <section class="hero-section hero-service" style="padding: 80px 0;">
-    <picture class="hero-bg">
-        <source media="(min-width: 768px)" srcset="/images/new-construction-blake-and-bill-1920w.webp" type="image/webp">
-        <img src="/images/new-construction-blake-and-bill-850w.webp" alt="Blake and William Haggerty on a construction site in St. George" width="1920" height="1080" fetchpriority="high">
-    </picture>
+    {% image './src/assets/images/portfolio/new-construction-blake-and-bill.jpg', 'Blake and William Haggerty on a construction site in St. George', 'hero-bg', 'eager', '100vw' %}
     <div class="container-fluid position-on-top">
         <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10 col-lg-8">
@@ -73,10 +70,7 @@ eleventyNavigation:
             </p>
         </div>
         <div class="col-lg-6">
-            <picture>
-                <source srcset="/images/blake and william balanced cabinets maxfields cover-850w.webp" type="image/webp">
-                <img src="/images/blake and william balanced cabinets maxfields cover-850w.jpeg" class="img-fluid rounded shadow" alt="Blake and William Haggerty installing custom cabinetry" loading="lazy" width="850" height="567" style="border-radius: var(--radius-lg);">
-            </picture>
+            {% image './src/assets/images/portfolio/blake and william balanced cabinets maxfields cover.jpg', 'Blake and William Haggerty installing custom cabinetry', 'img-fluid rounded shadow', 'lazy' %}
         </div>
     </div>
 </div>
