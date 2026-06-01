@@ -8,12 +8,19 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="bg-surface-card rounded-4 shadow-lg p-4 p-md-5 border border-secondary mb-5">
-                <form name="request-quote" data-netlify="true" method="POST" action="/success/">
-                
+                <form name="request-quote" data-netlify="true" netlify-honeypot="company-name" method="POST" action="/success/">
+
                 <input type="hidden" name="form-name" value="request-quote" />
                 <input type="hidden" name="source_page" value="{{ page.url }}">
                 <input type="hidden" name="form_identifier" value="Request for Estimate">
-                
+
+                <!-- Honeypot: hidden from humans, irresistible to bots. Real visitors leave it blank. -->
+                <p class="visually-hidden" aria-hidden="true">
+                    <label>Don't fill this out if you're human:
+                        <input name="company-name" tabindex="-1" autocomplete="off">
+                    </label>
+                </p>
+
                 <div class="mb-3">
                     <label for="customer_name" class="form-label">Name *</label>
                     <input type="text" class="form-control" id="customer_name" name="customer_name" required>
@@ -27,9 +34,9 @@
                     <input type="email" class="form-control" id="customer_email" name="customer_email" required>
                 </div>
                 <div class="mb-3">
-                    <label for="service_type" class="form-label">Service Type *</label>
-                    <select class="form-control" id="service_type" name="service_type" required>
-                        <option value="" selected disabled>Select a service *</option>
+                    <label for="service_type" class="form-label">Service Type</label>
+                    <select class="form-control" id="service_type" name="service_type">
+                        <option value="" selected>Select a service (optional)</option>
                         <option value="New Construction">New Construction</option>
                         <option value="Whole Home Renovation">Whole Home Renovation</option>
                         <option value="Kitchen Remodel">Kitchen Remodel</option>
@@ -42,9 +49,9 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="referral_source" class="form-label">How did you hear about us? *</label>
-                    <select class="form-control" id="referral_source" name="referral_source" required>
-                        <option value="" selected disabled>Please select an option</option>
+                    <label for="referral_source" class="form-label">How did you hear about us?</label>
+                    <select class="form-control" id="referral_source" name="referral_source">
+                        <option value="" selected>Please select an option (optional)</option>
                         <option value="Friend or Family Referral">Friend or Family Referral</option>
                         <option value="Professional Referral">Referral from another Professional</option>
                         <option value="Google / Online Search">Google / Online Search</option>
@@ -55,9 +62,9 @@
                     </select>
                 </div>
                 <div class="mb-3">
-                    <label for="project_description" class="form-label">Project Description *</label>
+                    <label for="project_description" class="form-label">Project Description</label>
                     <textarea class="form-control" id="project_description" rows="5" name="project_description"
-                        placeholder="Tell us more about your project..." required></textarea>
+                        placeholder="Tell us more about your project..."></textarea>
                 </div>
                 <p class="form-required">* Required fields</p>
                 <div class="d-grid gap-2 mt-4">
@@ -73,3 +80,37 @@
             </div>
         </div>
     </div>
+
+    <!-- Form funnel tracking: fires one GA4 event the first time each field is
+         completed, so we can see where people drop off. Sends field NAMES and a
+         step number only — never the values the visitor types. -->
+    <script defer>
+        (function () {
+            var form = document.querySelector('form[name="request-quote"]');
+            if (!form || typeof gtag !== 'function') return;
+
+            var order = [
+                'customer_name',
+                'customer_phone',
+                'customer_email',
+                'service_type',
+                'referral_source',
+                'project_description'
+            ];
+
+            order.forEach(function (fieldName, i) {
+                var field = form.elements[fieldName];
+                if (!field) return;
+                var fired = false;
+                field.addEventListener('blur', function () {
+                    if (fired || !field.value || !field.value.trim()) return;
+                    fired = true;
+                    gtag('event', 'form_field_complete', {
+                        field_name: fieldName,
+                        field_index: i + 1,
+                        form_id: 'request-quote'
+                    });
+                });
+            });
+        })();
+    </script>
