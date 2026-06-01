@@ -8,16 +8,16 @@
     <div class="row justify-content-center">
         <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="bg-surface-card rounded-4 shadow-lg p-4 p-md-5 border border-secondary mb-5">
-                <form name="request-quote" data-netlify="true" netlify-honeypot="company-name" method="POST" action="/success/">
+                <form name="request-quote" data-netlify="true" netlify-honeypot="website" method="POST" action="/success/">
 
                 <input type="hidden" name="form-name" value="request-quote" />
                 <input type="hidden" name="source_page" value="{{ page.url }}">
                 <input type="hidden" name="form_identifier" value="Request for Estimate">
 
-                <!-- Honeypot: hidden from humans, irresistible to bots. Real visitors leave it blank. -->
+                <!-- Honeypot: hidden from humans, irresistible to link-spam bots. Real visitors leave it blank. -->
                 <p class="visually-hidden" aria-hidden="true">
                     <label>Don't fill this out if you're human:
-                        <input name="company-name" tabindex="-1" autocomplete="off">
+                        <input name="website" tabindex="-1" autocomplete="off">
                     </label>
                 </p>
 
