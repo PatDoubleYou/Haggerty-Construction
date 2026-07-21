@@ -1,3 +1,9 @@
 # Removed weather-stripping landing page — send any old/ad traffic to the homepage
 /pages/weather-stripping-special/  /  301
 /pages/weather-stripping-special   /  301
+
+# Consolidate hosts: non-www and http were being indexed as separate pages,
+# splitting the homepage's ranking signals across three URLs (seen in GSC).
+http://haggertyutah.com/*      https://www.haggertyutah.com/:splat  301!
+https://haggertyutah.com/*     https://www.haggertyutah.com/:splat  301!
+http://www.haggertyutah.com/*  https://www.haggertyutah.com/:splat  301!
