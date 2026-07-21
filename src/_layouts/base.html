@@ -54,14 +54,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
 
 
-    <!-- For home page, use full title, including location for SEO. Other pages should just include the page name -->
-    <title>
-        {% if page.url == '/'%}
-        {{ client.name }} | {{ tagTitle }} | {{ client.address.city }}, {{ client.address.county }}
-        {% else %}
-        {{ tagTitle }} | {{ client.name }}
-        {% endif %}
-    </title>
+    <!-- metaTitle is the SERP headline: keyword + location first, brand last, ~60 chars max -->
+    <title>{% if metaTitle %}{{ metaTitle }}{% elif page.url == '/' %}{{ client.name }} | {{ tagTitle }} | {{ client.address.city }}, {{ client.address.state }}{% else %}{{ tagTitle }} | {{ client.name }}{% endif %}</title>
 
     <!--Put analytics tag here at the bottom to prevent it from render blocking-->
     <!-- Google tag (gtag.js) -->
@@ -143,37 +137,6 @@
       "sameAs": [
         "https://www.facebook.com/HaggertyUtah/",
         "https://www.instagram.com/haggerty.construction/"
-      ],
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "5.0",
-        "reviewCount": "4"
-      },
-      "review": [
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Taylor Sanchez" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "ULIV Skincare" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids & looks beautiful too! Very grateful!"
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Haley Benware" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "This included flooring, moving an island, all new case and base, painting, new cabinet doors... I could go on and on. They do everything start to finish. It was a great experience."
-        },
-        {
-          "@type": "Review",
-          "author": { "@type": "Person", "name": "Mark Ziegler" },
-          "reviewRating": { "@type": "Rating", "ratingValue": "5" },
-          "reviewBody": "These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty construction!"
-        }
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
