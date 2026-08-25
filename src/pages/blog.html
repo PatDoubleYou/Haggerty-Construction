@@ -5,10 +5,20 @@ metaTitle: 'Home Improvement Blog | Haggerty Construction'
 tagTitle: 'Blog'
 preloadImg: '/images/cabinets2-1920w.webp'
 preloadCSS: '/css/blog.css'
-permalink: 'blog/'
-eleventyNavigation:
-    key: Blog
-    order: 500
+# Unpublished 2026-08-25. The only two posts were generic AI-written filler
+# ("In this article, we will discuss...") with no local specifics and no
+# connection to work we actually did, so they were retired. That left this
+# index rendering "No Recent Posts", which is worse than no blog at all.
+#
+# TO RELAUNCH: set `permalink: 'blog/'`, restore the eleventyNavigation block
+# below, put the BLOG link back in _includes/header.html, and drop the
+# /blog/* redirects from _redirects. The layout, CSS, and post template are
+# all still here — src/blog/blog-template.md.txt is the starting point.
+permalink: false
+eleventyExcludeFromCollections: true
+# eleventyNavigation:
+#     key: Blog
+#     order: 500
 ---
 
 <!-- Enter html code below -->

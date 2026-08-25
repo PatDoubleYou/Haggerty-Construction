@@ -2,8 +2,26 @@
 /pages/weather-stripping-special/  /  301
 /pages/weather-stripping-special   /  301
 
-# Consolidate hosts: non-www and http were being indexed as separate pages,
-# splitting the homepage's ranking signals across three URLs (seen in GSC).
-http://haggertyutah.com/*      https://www.haggertyutah.com/:splat  301!
-https://haggertyutah.com/*     https://www.haggertyutah.com/:splat  301!
-http://www.haggertyutah.com/*  https://www.haggertyutah.com/:splat  301!
+# Old success page path (was /pages/success/ before it got a permalink)
+/pages/success/  /success/  301
+
+# Retired blog (2026-08-25) — the two posts were generic AI-written filler.
+# Specific rules must stay above the wildcard: Netlify uses first match wins.
+/blog/how-to-patch-a-drywall-hole/    /services/home-remodeling/  301
+/blog/diy-energy-efficient-upgrades/  /                           301
+/blog/*                               /                           301
+
+# ---------------------------------------------------------------------------
+# DO NOT add an apex -> www redirect here.
+#
+# Netlify's Domain management has haggertyutah.com (apex) set as the PRIMARY
+# domain, so Netlify itself 301s www -> apex at the domain layer, BEFORE this
+# file is consulted. A rule here sending apex -> www therefore creates an
+# infinite loop (www -> apex -> www -> ...) and takes the whole site down with
+# ERR_TOO_MANY_REDIRECTS. That is exactly what happened between 2026-07-21 and
+# 2026-08-25.
+#
+# The canonical host is now the apex (haggertyutah.com) — see src/_data/client.json.
+# If you ever want www to be canonical, change the PRIMARY DOMAIN in the Netlify
+# dashboard and update client.json to match. Change one place, never both.
+# ---------------------------------------------------------------------------

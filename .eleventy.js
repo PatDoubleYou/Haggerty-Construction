@@ -59,7 +59,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/_redirects');
   eleventyConfig.addPassthroughCopy({ './src/images': '/images' });
   eleventyConfig.addPassthroughCopy({ './src/robots.txt': '/robots.txt' });
-  eleventyConfig.addPassthroughCopy({ './public/assets/favicons/favicon.ico': '/favicon.ico' });
+  // Source must be src/, not public/ — public/ is the build OUTPUT and is
+  // gitignored, so this silently copied nothing on a clean checkout and
+  // /favicon.ico 404'd on every page.
+  eleventyConfig.addPassthroughCopy({ './src/assets/favicons/favicon.ico': '/favicon.ico' });
 
   // open on npm start and watch CSS files for changes - doesn't trigger 11ty rebuild
   eleventyConfig.setBrowserSyncConfig({
