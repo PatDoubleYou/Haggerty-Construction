@@ -1,0 +1,75 @@
+name: Uptime
+
+# The site was down for five weeks in 2026 and nobody noticed, because nothing
+# was watching it. This workflow watches it.
+#
+# Two caveats worth knowing:
+#   1. Scheduled workflows only run on the DEFAULT branch. This does nothing
+#      until it is merged to main.
+#   2. GitHub disables scheduled workflows after 60 days with no repo activity,
+#      and may delay them under load. Treat this as a good backstop, not a
+#      hard SLA. If uptime really matters, add an external monitor too.
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  smoke:
+    name: Is the site up?
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      # Netlify needs a moment to publish after a push to main.
+      - name: Wait for deploy
+        if: github.event_name == 'push'
+        run: sleep 90
+
+      - name: Smoke test production
+        run: node scripts/smoke.mjs 2>&1 | tee /tmp/smoke.log
+
+      - name: Open an outage issue
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          existing=$(gh issue list --state open --label outage --limit 1 --json number --jq '.[0].number // empty')
+          if [ -n "$existing" ]; then
+            echo "Outage issue #$existing is already open; not filing a duplicate."
+            exit 0
+          fi
+          gh label create outage --color b60205 --description "Production site is down" 2>/dev/null || true
+          {
+            echo "The scheduled uptime check failed."
+            echo
+            echo '```'
+            cat /tmp/smoke.log || echo "(no output captured)"
+            echo '```'
+            echo
+            echo "Run: $RUN_URL"
+            echo
+            echo "This issue closes itself automatically once the check passes again."
+          } > /tmp/issue.md
+          gh issue create --title "🚨 haggertyutah.com is DOWN" --label outage --body-file /tmp/issue.md
+
+      - name: Close the outage issue
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for n in $(gh issue list --state open --label outage --json number --jq '.[].number'); do
+            gh issue close "$n" --comment "Site is responding normally again as of $(date -u '+%Y-%m-%d %H:%M UTC'). Closed automatically by the uptime check."
+          done

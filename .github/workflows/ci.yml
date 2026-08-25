@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    name: Build and check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+
+      # Catches the class of mistake that took the site down in July 2026:
+      # redirect rules that fight the canonical host, form actions that point at
+      # pages the build does not produce, missing analytics tags, broken
+      # internal links. See scripts/check-build.mjs for the full list.
+      - name: Check build output
+        run: npm run check
