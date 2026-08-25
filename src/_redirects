@@ -5,6 +5,12 @@
 # Old success page path (was /pages/success/ before it got a permalink)
 /pages/success/  /success/  301
 
+# Retired blog (2026-08-25) — the two posts were generic AI-written filler.
+# Specific rules must stay above the wildcard: Netlify uses first match wins.
+/blog/how-to-patch-a-drywall-hole/    /services/home-remodeling/  301
+/blog/diy-energy-efficient-upgrades/  /                           301
+/blog/*                               /                           301
+
 # ---------------------------------------------------------------------------
 # DO NOT add an apex -> www redirect here.
 #
