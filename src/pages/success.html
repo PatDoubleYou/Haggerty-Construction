@@ -1,134 +1,50 @@
-<!doctype html>
-<html lang="en">
-<html>
+---
+layout: 'base.html'
+description: 'Thanks for reaching out to Haggerty Construction. We have received your estimate request and will be in touch shortly.'
+metaTitle: 'Thank You | Haggerty Construction'
+tagTitle: 'Thank You'
+preloadImg: ''
+preloadCSS: ''
+permalink: 'success/'
+eleventyExcludeFromCollections: true
+---
 
-<head>
+<!--
+    This page is the `action` target of the Netlify form in _includes/contact-form.html.
+    It MUST stay reachable at /success/ — it is where the Google Ads and GA4
+    conversion events fire. Before 2026-08-25 this file had no `permalink`, so
+    Eleventy published it at /pages/success/ while the form posted to /success/.
+    Every single form submission landed on a 404 and no conversion was ever recorded.
+-->
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JCE28PJHNE"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+<div class="container" style="min-height: 60vh;">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8 text-center my-5 py-5">
+            <i class="bi bi-check-circle-fill mb-4 d-block" style="font-size: 3rem; color: var(--accent-warm);"></i>
+            <h1 class="fw-bold text-white mb-3">Thank you.</h1>
+            <p class="lead text-muted mb-4">
+                We've received your request and will reach out shortly — usually within one business day.
+            </p>
+            <p class="text-muted mb-4">Need to talk sooner? Give us a call.</p>
+            <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                <a href="tel:+14354141974" class="btn btn-primary btn-lg px-4" id="success-phone-call">
+                    <i class="bi bi-telephone-fill me-2"></i>(435) 414-1974
+                </a>
+                <a href="/gallery/" class="btn btn-outline-light btn-lg px-4">See Our Recent Work</a>
+            </div>
+        </div>
+    </div>
+</div>
 
-        gtag('config', 'G-JCE28PJHNE');
+<!-- Conversion tracking. gtag() is defined in base.html; the Google Ads account
+     is only configured here because this page is the single conversion point. -->
+<script>
+    if (typeof gtag === 'function') {
         gtag('config', 'AW-2959607847');
-    </script>
-    <!-- Google Ads: Form submit conversion event -->
-    <script>
         gtag('event', 'form_submit');
-    </script>
-    <!-- GA4: Form submission event -->
-    <script>
         gtag('event', 'form_submission', {
             'event_category': 'lead_generation',
             'event_label': 'Request for Estimate'
         });
-    </script>
-
-
-
-    <title>Form Submitted</title>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description"
-        content="Thank you for submitting a form to request a quote from Haggerty Construction, a family-owned general contractor in St. George, Utah, 
-        specializes in high-quality home repairs, kitchen and bathroom remodels, custom cabinetry, 
-        and appliance installation. Experience our unmatched craftsmanship and customer service throughout Washington County.">
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="main.css">
-    <link rel="preload" href="https://use.typekit.net/pfv6oag.css" as="style">
-    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="icon" type="image/png" href="/assets/images/logo%20white.png">
-
-</head>
-
-<body class="pt-5">
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-
-    <nav class="navbar fixed-top navbar-dark bg-dark navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <span class="navbar-brand" href="#"><img class="img-fluid" src="images/logo white.png" width="40"
-                    height="36" style="border-radius: 15px;" alt="Haggerty Construction's 'H' logo."></span>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    <a class="nav-link" href="#services">SERVICES</a>
-                    <a class="nav-link" href="#about-us-section">ABOUT US</a>
-                    <a class="nav-link" href="gallery.html">GALLERY</a>
-                    <!--<a class="nav-link" href="commands.html">CHAT COMMANDS</a>-->
-                    <a class="nav-link" href="tel:+14354141974"><i class="bi bi-telephone-fill"></i> (435) 414-1974</a>
-                </div>
-            </div>
-        </div>
-    </nav>
-
-    <div class="container" style="height: 60vh;">
-        <div class="row">
-            <div class="col-12 text-center my-5 p-5">
-                <h1>Thank you.</h1>
-                <p>We have received your request <br>and will reach out to you shortly.</p>
-                <a href="index.html" class="btn btn-primary">Return to home page</a>
-            </div>
-        </div>
-    </div>
-
-    <footer class="pt-4 mt-md-5 py-md-5 border-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <img src="images/Full_Name500pxWhite.png" class="img-fluid" width="200"
-                        alt="Haggerty Construction's logo.">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Contact Us</h5>
-                    <p>
-                        <a href="tel:+14354141974">Phone: (435) 414 - 1974</a><br>
-                        Email: info@haggertyconstruction.com
-                    </p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="gallery.html">Gallery</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#contact">Request an Estimate</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Follow Us</h5>
-                    <a href="https://www.facebook.com/HaggertyUtah/" target="_blank" rel="noopener noreferrer" class="social-icon">Facebook</a>
-                    <a href="https://www.instagram.com/haggerty.construction/" target="_blank" rel="noopener noreferrer"
-                        class="social-icon">Instagram</a>
-                    <!-- Add more social media links as needed -->
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center">
-                    <small>This website was designed, developed and delivered by <a
-                            href="https://www.doubleyou.media">DoubleYou
-                            Media</a> in St.
-                        George, Utah.</small>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+    }
+</script>
