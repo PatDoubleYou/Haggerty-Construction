@@ -479,3 +479,7 @@
 /* Photos beside a "what we plan for" list: landscape, so a portrait shot
    doesn't stretch the column */
 .theme-light .plan-photo { aspect-ratio: 4 / 3; }
+
+/* A page that ends on a dark band runs straight into the (dark) footer;
+   the footer's top margin would otherwise show as a light stripe. */
+.theme-light main:has(> .band-dark:last-child) + footer { margin-top: 0 !important; }

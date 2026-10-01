@@ -368,20 +368,6 @@ h6 {
     text-decoration: underline;
 }
 
-.project-cta {
-    padding: 4rem 0;
-    background-color: var(--surface-card);
-}
-
-.project-cta h2 {
-    font-family: var(--font-heading);
-    color: var(--text-primary);
-}
-
-.project-cta p {
-    color: var(--text-secondary);
-}
-
 /* ============================================
    Animated Section Headers
    ============================================ */
