@@ -1,465 +1,403 @@
 ---
 layout: 'base.html'
-description: 'Family-owned St. George general contractor rated 5.0 on Google. Kitchen & bathroom remodels, custom cabinetry, whole-home renovations. Free estimates: (435) 414-1974.'
+theme: 'light'
+description: 'The smoothest remodel in St. George. Family-owned, 4.9 on Google. We plan every selection, the schedule and the budget before demo. Free detailed estimates: (435) 414-1974.'
 metaTitle: 'General Contractor in St. George, UT | Haggerty Construction'
 tagTitle: 'General Contractor & Home Remodeling'
 preloadImg: ''
 preloadCSS: ''
 permalink: '/'
 eleventyNavigation:
-key: Home
-order: 100
+    key: Home
+    order: 100
+# One list drives both the visible FAQ and the FAQPage schema, so they can't drift apart.
+faqs:
+  - q: 'Do you offer free estimates?'
+    a: 'Yes. We walk your space and send a detailed, line-item estimate at no cost, usually within a few days. If you want to move forward from there, the next step is pre-construction.'
+  - q: 'What is pre-construction, and what does it cost?'
+    a: 'Pre-construction is where we finish the plan before any work starts: every selection, the lead times, the risks, a realistic schedule and a budget dialed in close. It costs about 3% of your estimate, and that amount is credited toward the build if you go forward with us. At the end you get a Project Success Plan with the scope, budget, selections and schedule. It is yours to keep, with no obligation to build with us.'
+  - q: 'Why not just start building?'
+    a: 'Because that is where most remodel horror stories come from: change order after change order, selections nobody talked about, and six-week waits on cabinets that nobody ordered in time. Planning up front is what lets the build run smooth and finish on time.'
+  - q: 'Do you take on small projects?'
+    a: 'A single bathroom remodel is a great place to start. We also love bigger projects: a few bathrooms at once, a kitchen and baths together, or a whole-home refresh.'
+  - q: 'How long does a bathroom remodel take?'
+    a: 'A guest bath refresh with a new vanity, fixtures and paint typically takes 1-2 weeks. A full primary bathroom with custom tile and layout changes runs 3-6 weeks. You get a realistic schedule during pre-construction, before we start.'
+  - q: 'How long does a kitchen remodel take?'
+    a: 'A focused cabinet or appliance project may take 1-2 weeks, while a full kitchen remodel usually runs 4-8 weeks. Lead times on cabinets and counters are planned into the schedule up front.'
+  - q: 'Do you build custom cabinets?'
+    a: 'Yes. We partner with a trusted local manufacturer to mill the boxes and doors. We handle the design with them, the delivery and the installation, so your cabinets fit the rest of your remodel.'
+  - q: 'Are you licensed and insured?'
+    a: 'Yes. Haggerty Construction is licensed and insured in Utah, license #12338912-5501.'
+  - q: 'What areas do you serve?'
+    a: 'All of Washington County, Utah, including St. George, Washington, Hurricane, Ivins, Santa Clara, LaVerkin, Leeds and Toquerville.'
 ---
 
-<!-- Hero Section -->
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
 <section class="hero-section hero-home">
     <picture class="hero-bg">
         <source media="(min-width: 768px)" srcset="/assets/images/portfolio/hero-desktop.webp" type="image/webp">
-        <img src="/assets/images/portfolio/hero-mobile.webp" alt="Haggerty Construction residential remodel project" width="686" height="1024" fetchpriority="high">
+        <img src="/assets/images/portfolio/hero-mobile.webp" alt="A finished Haggerty Construction remodel in St. George" width="686" height="1024" fetchpriority="high">
     </picture>
-    <div class="container-fluid position-on-top pt-5">
-        <div class="row align-items-center justify-content-center text-center">
-            <div class="col-md-10 col-lg-8">
-                <img src="/assets/images/Full_Name500pxWhite.png" class="img-fluid mb-1" alt="Haggerty Construction" style="width: 100%; max-width: 500px; height: auto;">
-                <h1 class="hero-title fw-bold text-white mb-3">Know the price. Know the timeline. Love the remodel.</h1>
-                <h2 class="hero-subtitle text-light mb-5 fs-4 fw-light">High-end residential remodels in St. George, Utah.<br class="d-none d-md-inline"> Built on trust. Backed by craft.</h2>
-                <a href="#contact" class="btn btn-primary hero-cta btn-lg px-5 py-3 shadow-lg">Get a Free Estimate</a>
+    <div class="container position-on-top">
+        <div class="row">
+            <div class="col-lg-9 col-xl-8">
+                <span class="eyebrow">Custom home remodels &middot; Washington County, Utah</span>
+                <h1 class="hero-title">The smoothest remodel in St.&nbsp;George.</h1>
+                <p class="hero-tagline">Plan it slow. Build it smooth.</p>
+                <p class="hero-body">We take the time up front to plan every selection, the schedule, the budget, and what could go wrong. Once we start, your remodel runs smooth and finishes on time.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get your free estimate</a>
+                    <a href="tel:+14354141974" class="hero-phone" id="hero-phone-call">or call (435) 414-1974</a>
+                </div>
+                <p class="hero-trust mb-0">
+                    <a href="https://g.page/r/CQp_Xl6bZPOoEBE" target="_blank" rel="noopener noreferrer" class="hero-trust-link"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 on Google, 28 reviews</a>
+                    &nbsp;&middot;&nbsp; Licensed &amp; insured
+                    &nbsp;&middot;&nbsp; Disabled veteran-owned
+                </p>
             </div>
         </div>
     </div>
 </section>
 
-<div class="container px-3 my-5 py-5" id="services">
-    <div class="row text-center mb-5">
-        <div class="col">
-            <h2 class="section-title animated-underline fw-bold mb-3">Our Services</h2>
-        </div>
-    </div>
-    <div class="row g-4">
+<!-- ============================================ -->
+<!--            The other story                   -->
+<!-- ============================================ -->
 
-        <div class="col-lg-4">
-            <a href="/services/kitchen-remodels/" class="text-decoration-none">
-            <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                {% image './src/assets/images/kitchen-island-remodel.jpg', 'A high-end kitchen remodel in St. George.', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                <div class="card-body p-4">
-                    <h4 class="card-title text-white fw-bold mb-3">Kitchen Remodels</h4>
-                    <p class="card-text text-muted">
-                        Complete kitchen transformations — layout, cabinets, countertops, tile, appliances. We handle the whole thing so you don't have to.
-                    </p>
-                </div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-lg-4">
-            <a href="/services/bathroom-remodels/" class="text-decoration-none">
-            <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                {% image './src/assets/images/bathroom-door-renovation.jpg', 'Haggerty Construction craftsman at work on a bathroom renovation in St. George.', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                <div class="card-body p-4">
-                    <h4 class="card-title text-white fw-bold mb-3">Bathroom Renovations</h4>
-                    <p class="card-text text-muted">
-                        From guest baths to master suites. Custom tile, vanities, fixtures — designed around how you actually use the space.
-                    </p>
-                </div>
-            </div>
-            </a>
-        </div>
-
-        <div class="col-lg-4">
-            <a href="/services/home-remodeling/" class="text-decoration-none">
-            <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                {% image './src/assets/images/projects/home-flooring-living-room.jpg', 'Living room during a whole-home remodel — floors covered, furniture protected by Haggerty Construction', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                <div class="card-body p-4">
-                    <h4 class="card-title text-white fw-bold mb-3">Whole Home Remodels</h4>
-                    <p class="card-text text-muted">
-                        Multiple rooms, one timeline, one point of contact. We coordinate every trade so you don't have to.
-                    </p>
-                </div>
-            </div>
-            </a>
-        </div>
-    </div>
-    <div class="row mt-4">
-        <div class="col text-center">
-            <a href="/services/" class="btn btn-outline-light btn-lg px-4">View All Services &rarr;</a>
-        </div>
-    </div>
-</div>
-
-<div class="container my-5 py-5">
-    <div class="row text-center mb-5">
-        <div class="col">
-            <h2 class="section-title animated-underline fw-bold mb-3">See the Work</h2>
-        </div>
-    </div>
-    <div class="bento-grid mt-4">
-        <div class="bento-item bento-item-1 shadow-sm">
-            {% image './src/assets/images/gallery/latest-remodel/after.jpg', 'Finished kitchen remodel', '', 'lazy', '(max-width: 768px) 100vw, 50vw' %}
-        </div>
-        <div class="bento-item bento-item-2 shadow-sm">
-            {% image './src/assets/images/new-images/maxfields-office-final.jpg', 'Custom built-in cabinetry', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
-        </div>
-        <div class="bento-item bento-item-3 shadow-sm">
-            {% image './src/assets/images/portfolio/PXL_20251218_185856357.MP.jpg', 'Custom tile installation', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
-        </div>
-        <div class="bento-item bento-item-4 shadow-sm">
-            {% image './src/assets/images/portfolio/towel-rack.jpg', 'Bathroom towel rack installation', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
-        </div>
-        <div class="bento-item bento-item-5 shadow-sm">
-            {% image './src/assets/images/gallery/conners-cabinets-larger.webp', 'Living room custom shelves', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
-        </div>
-        <div class="bento-item bento-item-6 shadow-sm">
-            {% image './src/assets/images/portfolio/PXL_20260106_185520750.MP.jpg', 'Bathroom renovation details', '', 'lazy', '(max-width: 768px) 50vw, 25vw' %}
-        </div>
-    </div>
-    <div class="row mt-5">
-        <div class="col text-center">
-            <a href="/gallery" class="btn btn-outline-light btn-lg px-4">View Full Gallery &rarr;</a>
-        </div>
-    </div>
-</div>
-
-<!-- Why Choose Haggerty -->
-<div class="container px-3 my-5 py-5">
-    <div class="row text-center mb-5">
-        <div class="col">
-            <h2 class="section-title animated-underline fw-bold mb-3">Why Choose Haggerty</h2>
-        </div>
-    </div>
-    <div class="row g-4 justify-content-center">
-        <div class="col-md-6 col-lg-4">
-            <div class="capability-card h-100 p-4 text-center">
-                <i class="bi bi-chat-dots d-block text-center mb-3" style="font-size: 2rem; color: var(--accent-warm);"></i>
-                <h4 class="text-white fw-bold text-center mb-3">Radical Transparency</h4>
-                <p class="text-muted text-center mb-0">We don't hide behind vague estimates and surprise change orders. You see the numbers, the timeline, and the plan — before we pick up a hammer.</p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="capability-card h-100 p-4 text-center">
-                <i class="bi bi-cpu d-block text-center mb-3" style="font-size: 2rem; color: var(--accent-warm);"></i>
-                <h4 class="text-white fw-bold text-center mb-3">Haggerty OS</h4>
-                <p class="text-muted text-center mb-0">We built our own project management software. Not because we're tech nerds (we are), but because nothing on the market was good enough for how we run jobs.</p>
-            </div>
-        </div>
-        <div class="col-md-6 col-lg-4">
-            <div class="capability-card h-100 p-4 text-center">
-                <i class="bi bi-people d-block text-center mb-3" style="font-size: 2rem; color: var(--accent-warm);"></i>
-                <h4 class="text-white fw-bold text-center mb-3">One Team. One Point of Contact.</h4>
-                <p class="text-muted text-center mb-0">You talk to us directly — the people running your project. No call centers, no project coordinators who've never swung a hammer. We hand-pick and coordinate every trade ourselves.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container my-5 py-5" style="background-color: var(--surface-card); border-radius: var(--radius-lg);">
-    <div class="row align-items-center p-4 p-md-5">
-        <div class="col-lg-6 mb-4 mb-lg-0">
-            <h2 class="section-title animated-underline fw-bold text-white mb-4">The Haggerty Difference</h2>
-            <p class="section-description text-muted fs-5 lh-lg">
-                We're honest, we're real, and we're St. George natives. We aren't hiding anything—we show you the details because we want you to be thrilled with the final result.
-            </p>
-            <p class="text-muted fs-5 lh-lg mb-4">
-                To deliver on that promise, we built our own proprietary management software from the ground up: <strong>Haggerty OS</strong>. While other contractors are scrawling notes on cardboard scraps or fighting with stale spreadsheets, we use our custom-built app to manage your project with unparalleled precision.
-            </p>
-            <p class="text-muted fs-5 lh-lg text-white">
-                Nobody else in the world uses our software, and it allows us to deliver accurate estimates and final <strong>Project Success Plans</strong> that you can bank on. See exactly what you get before you sign anything.
-            </p>
-        </div>
-        <div class="col-lg-6">
-             {% include "components/lead-magnet.html" %}
-        </div>
-    </div>
-</div>
-
-    <!-- About Us Section -->
-    <section class="about-us-section section-spacing-lg mb-5" id="about-us-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title animated-underline fw-bold text-white mb-4">Built by Family. Backed by Legacy.</h2>
-                    <p class="section-description text-muted fs-5 lh-lg mb-4">
-                        Haggerty Construction is a St. George family business with serious roots in the trade. Our grandfather, Patrick R. Haggerty, managed construction for the U.S. Antarctic Program — they even named Haggerty Hill after him.
-                    </p>
-                    <p class="text-muted fs-5 lh-lg mb-4">
-                        Our founder, William, served 20+ years in the National Guard and cut his teeth at Baker Concrete, working on massive projects like the Cincinnati Reds Stadium. Today, the team is tighter: William leads the vision, Blake runs Project Management, and Jayden builds the custom software that keeps our jobs running like clockwork.
-                    </p>
-                    <p class="text-muted fs-5 lh-lg">
-                        We take on high-end residential projects that matter to the people who live in them. If you want a builder who values communication, details, and doing it right the first time — we're your guys.
-                    </p>
-                </div>
-            </div>
-            <div class="row g-4 mt-5 justify-content-center">
-                <div class="col-6 col-md-3 text-center">
-                    <picture>
-                        <source srcset="/assets/images/portfolio/bill-headshot-300w.webp" type="image/webp">
-                        <img src="/assets/images/portfolio/bill-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="William Haggerty" loading="lazy" width="300" height="300" style="width: 150px; height: 150px; object-fit: cover;">
-                    </picture>
-                    <h5 class="text-white fw-bold">William Haggerty</h5>
-                    <p class="text-muted small">Founder & Vision</p>
-                </div>
-                <div class="col-6 col-md-3 text-center">
-                    <picture>
-                        <source srcset="/assets/images/portfolio/blake-headshot-300w.webp" type="image/webp">
-                        <img src="/assets/images/portfolio/blake-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="Blake Haggerty" loading="lazy" width="300" height="300" style="width: 150px; height: 150px; object-fit: cover;">
-                    </picture>
-                    <h5 class="text-white fw-bold">Blake Haggerty</h5>
-                    <p class="text-muted small">Project Management</p>
-                </div>
-                <div class="col-6 col-md-3 text-center">
-                    <picture>
-                        <source srcset="/assets/images/portfolio/jayden-headshot-300w.webp" type="image/webp">
-                        <img src="/assets/images/portfolio/jayden-headshot-300w.jpeg" class="img-fluid rounded-circle mb-3 shadow" alt="Jayden Haggerty" loading="lazy" width="300" height="300" style="width: 150px; height: 150px; object-fit: cover;">
-                    </picture>
-                    <h5 class="text-white fw-bold">Jayden Haggerty</h5>
-                    <p class="text-muted small">Systems & Tech</p>
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <span class="eyebrow">The usual way</span>
+                <h2 class="mb-4">You've probably heard the other story.</h2>
+                <div class="prose">
+                    <p>Somebody takes the cheap bid. Then it's change order, change order, change order. Nobody asked what finish level they wanted. Nobody mentioned the cabinets take six weeks. Some of those remodels still aren't finished years later.</p>
+                    <p class="mb-0">Usually the problem isn't bad work. It's that nobody made a plan.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Reviews / Testimonials Section -->
-    <section class="reviews-section section-spacing-lg" id="reviews">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="section-title animated-underline">Client Reviews</h2>
+<!-- ============================================ -->
+<!--               How it works                   -->
+<!-- ============================================ -->
+
+{% include "components/how-it-works.html" %}
+
+<!-- ============================================ -->
+<!--          What smooth looks like              -->
+<!-- ============================================ -->
+
+<section class="section">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-7">
+                <span class="eyebrow">The promise</span>
+                <h2 class="mb-4">What "smooth" actually looks like.</h2>
+                <ul class="smooth-list">
+                    <li>
+                        <h3>A real contract</h3>
+                        <p>Every big job starts with one. It's come in handy more than once.</p>
+                    </li>
+                    <li>
+                        <h3>Lead times planned in</h3>
+                        <p>If your cabinets take six weeks, we know before demo, not halfway through.</p>
+                    </li>
+                    <li>
+                        <h3>Changes in writing</h3>
+                        <p>Want to change something mid-project? You'll see what it does to the schedule and budget before it happens.</p>
+                    </li>
+                    <li>
+                        <h3>One person running it</h3>
+                        <p>Blake builds the schedule, keeps you and every sub updated, and has the tough conversations early. On one job he stuck notes on the walls marking the exact scope for the electrician, so nothing got missed on the days he couldn't be there.</p>
+                    </li>
+                    <li>
+                        <h3>A real closeout</h3>
+                        <p>A punch list, plus a written list of anything still open. On our last big remodel, a countertop issue took a couple of months to sort out. It stayed on the list until we delivered.</p>
+                    </li>
+                </ul>
+                {# TODO: add the client's name and link their review once it's posted. #}
+                <p class="proof-note mb-0">Our last big remodel, a whole-home refresh, finished on schedule. The only extensions were changes the owners asked for, and every one of them was written down.</p>
             </div>
-            <div class="row g-4 justify-content-center">
-                
-                <div class="col-md-6 col-lg-3">
-                    <div class="review-card shadow-sm">
-                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        <p class="review-text">"Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them."</p>
-                        <p class="client-name mb-0 mt-3">&mdash; Taylor Sanchez</p>
+            <div class="col-lg-5">
+                <div class="smooth-photo">
+                <div class="photo-frame">
+                    {% image './src/assets/images/projects/home-bedroom-protected.jpg', 'A bedroom during a Haggerty Construction remodel with the floor covered in Ram Board and every piece of furniture wrapped in plastic', '', 'lazy', '(max-width: 992px) 100vw, 40vw' %}
+                </div>
+                <p class="photo-caption">A client's bedroom mid-remodel. Floors covered, furniture wrapped, before anyone starts working.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Services                     -->
+<!-- ============================================ -->
+
+<section class="section section-alt" id="services">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <span class="eyebrow">What we remodel</span>
+                <h2 class="mb-0">Kitchens, bathrooms, and whole homes.</h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <a href="/services/kitchen-remodels/" class="text-decoration-none">
+                <div class="card service h-100 border-0">
+                    {% image './src/assets/images/projects/whole-home-kitchen-pantry-wall.jpg', 'Floor-to-ceiling pantry cabinets around a built-in fridge in a St. George-area kitchen remodel', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="h4 card-title fw-bold mb-3">Kitchen Remodels</h3>
+                        <p class="card-text text-muted mb-0">Layout, cabinets, countertops, tile and appliances, with every lead time planned before demo.</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="review-card shadow-sm">
-                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        <p class="review-text">"Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids &amp; looks beautiful too! Very grateful!"</p>
-                        <p class="client-name mb-0 mt-3">&mdash; ULIV Skincare</p>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/services/bathroom-remodels/" class="text-decoration-none">
+                <div class="card service h-100 border-0">
+                    {% image './src/assets/images/projects/guest-bath-finished.jpg', 'Finished guest bathroom with a patterned-tile walk-in shower by Haggerty Construction', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="h4 card-title fw-bold mb-3">Bathroom Remodels</h3>
+                        <p class="card-text text-muted mb-0">From one guest bath to a full primary suite. If it's custom at all, it's our kind of job.</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="review-card shadow-sm">
-                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        <p class="review-text">"This included flooring, moving an island, all new case and base, painting, new cabinet doors... I could go on and on. They do everything start to finish. It was a great experience."</p>
-                        <p class="client-name mb-0 mt-3">&mdash; Haley Benware</p>
+                </a>
+            </div>
+            <div class="col-lg-4">
+                <a href="/services/home-remodeling/" class="text-decoration-none">
+                <div class="card service h-100 border-0">
+                    {% image './src/assets/images/projects/home-flooring-living-room.jpg', 'Living room during a whole-home remodel, floors covered and furniture protected by Haggerty Construction', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
+                    <div class="card-body p-4">
+                        <h3 class="h4 card-title fw-bold mb-3">Whole-Home Remodels</h3>
+                        <p class="card-text text-muted mb-0">Several rooms, one plan, one schedule, and one person to call.</p>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="review-card shadow-sm">
-                        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-                        <p class="review-text">"These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty construction!"</p>
-                        <p class="client-name mb-0 mt-3">&mdash; Mark Ziegler</p>
-                    </div>
-                </div>
-
+                </a>
             </div>
         </div>
-    </section>
+        <p class="mt-4 mb-0"><a href="/services/" class="text-link">All services &rarr;</a></p>
+    </div>
+</section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section section-spacing-lg mb-5" id="faq">
-        <div class="container">
-            <div class="text-center mb-4">
-                <h2 class="section-title animated-underline text-white">Frequently Asked Questions</h2>
+<!-- ============================================ -->
+<!--                 The work                     -->
+<!-- ============================================ -->
+
+<section class="section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <span class="eyebrow">Recent work</span>
+                <h2 class="mb-0">See the work.</h2>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq1-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
-                                    What services does Haggerty Construction offer in St. George?
-                                </button>
-                            </h4>
-                            <div id="faq1" class="accordion-collapse collapse" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">We are a full-service General Contractor specializing in custom kitchen remodels, bathroom renovations, basement finishing, bespoke cabinetry, home additions, and a wide range of general contracting services. We serve the entire Washington County area including St. George, Hurricane, Ivins, Santa Clara, Washington, LaVerkin, and Leeds.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq2-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
-                                    Do you build custom cabinets?
-                                </button>
-                            </h4>
-                            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">We specialize in designing and installing custom cabinet solutions. We partner with a trusted local manufacturer to mill the boxes and doors, but our team handles the detailed design (alongside them), delivery, and meticulous installation — ensuring your cabinets fit perfectly into the larger scope of your remodel.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq3-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                                    Are you a licensed and insured contractor?
-                                </button>
-                            </h4>
-                            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Absolutely. Haggerty Construction is fully licensed and insured in the state of Utah. We prioritize safety, quality, and transparency in every project we undertake.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq4-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                                    How do I get an estimate?
-                                </button>
-                            </h4>
-                            <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Simply fill out the estimate request form on this page, call us at (435) 414-1974, or email us at haggertyconstruction@gmail.com. We'll schedule a time to discuss your project and provide a detailed estimate.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq5-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
-                                    How long does a kitchen remodel take?
-                                </button>
-                            </h4>
-                            <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Timelines vary depending on the scope of the project. A focused cabinet renovation or appliance installation may take 1-2 weeks, while a full kitchen remodel can take 4-8 weeks. We'll provide a detailed timeline during the estimate process.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq6-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
-                                    What areas do you serve?
-                                </button>
-                            </h4>
-                            <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">We proudly serve all of Washington County, Utah, including St. George, Washington, Hurricane, Ivins, Santa Clara, LaVerkin, and Leeds. If you're in the greater St. George area, we'd love to hear from you.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq7-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7">
-                                    Do you offer free estimates?
-                                </button>
-                            </h4>
-                            <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Yes, we offer free initial consultations and estimates for all projects. Contact us to schedule a walkthrough of your space so we can understand your vision and provide an accurate quote.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq8-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8">
-                                    What makes Haggerty Construction different from other contractors?
-                                </button>
-                            </h4>
-                            <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq8-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">We're a family-owned, disabled veteran-founded business — run by William Haggerty and his sons Jayden and Blake. As St. George natives, our reputation in this community matters to us. We combine 30+ years of experience with radical transparency. Instead of scrap-paper notes, we manage projects using our own proprietary software, <strong>Haggerty OS</strong>, allowing us to deliver precise estimates and a level of communication that nobody else offers.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq9-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9" aria-expanded="false" aria-controls="faq9">
-                                    Can you help with appliance installation?
-                                </button>
-                            </h4>
-                            <div id="faq9" class="accordion-collapse collapse" aria-labelledby="faq9-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Yes. We specialize in complex appliance installations, including built-in refrigerators with custom panels, pro range and vent hood installations, and custom appliance garages with retractable doors and rollout drawers.</div>
-                            </div>
-                        </div>
-                        <div class="accordion-item">
-                            <h4 class="accordion-header" id="faq10-heading">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10" aria-expanded="false" aria-controls="faq10">
-                                    Do you handle the entire remodel process?
-                                </button>
-                            </h4>
-                            <div id="faq10" class="accordion-collapse collapse" aria-labelledby="faq10-heading" data-bs-parent="#faqAccordion">
-                                <div class="accordion-body">Yes. As a general contractor, we manage the entire project from start to finish — design, permits, demolition, construction, finishing, and cleanup. You'll have a single point of contact throughout the entire process.</div>
-                            </div>
-                        </div>
+        </div>
+        <div class="bento-grid">
+            <div class="bento-item bento-item-1">
+                {% image './src/assets/images/projects/whole-home-kitchen-finished.jpg', 'Finished kitchen with white shaker cabinets to the ceiling and a dark island', '', 'lazy', '(max-width: 767px) 100vw, 50vw' %}
+            </div>
+            <div class="bento-item bento-item-2">
+                {% image './src/assets/images/new-images/maxfields-office-final.jpg', 'Dark blue home office built-in with a desk and shelving', '', 'lazy', '(max-width: 767px) 100vw, 25vw' %}
+            </div>
+            <div class="bento-item bento-item-3">
+                {% image './src/assets/images/portfolio/PXL_20251218_185856357.MP.jpg', 'Prepping an old kitchen for new cabinets, with dust extraction running', '', 'lazy', '(max-width: 767px) 100vw, 25vw' %}
+            </div>
+            <div class="bento-item bento-item-4">
+                {% image './src/assets/images/projects/primary-bath-freestanding-tub.jpg', 'Freestanding soaking tub in a remodeled primary bathroom', '', 'lazy', '(max-width: 767px) 100vw, 25vw' %}
+            </div>
+            <div class="bento-item bento-item-5">
+                {% image './src/assets/images/gallery/conners-cabinets-larger.webp', 'White living room built-ins with floating shelves around a fireplace', '', 'lazy', '(max-width: 767px) 100vw, 25vw' %}
+            </div>
+            <div class="bento-item bento-item-6">
+                {% image './src/assets/images/portfolio/PXL_20260106_185520750.MP.jpg', 'Unloading an appliance from the truck at a job site', '', 'lazy', '(max-width: 767px) 100vw, 25vw' %}
+            </div>
+        </div>
+        <p class="mt-4 mb-0"><a href="/gallery/" class="text-link">Full gallery &rarr;</a></p>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--               Who we're for                  -->
+<!-- ============================================ -->
+
+<section class="section band-dark">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <span class="eyebrow">Who we're for</span>
+                <h2 class="mb-4">If you want the cheapest bid, we're probably not your contractor.</h2>
+                <p class="lede mb-4">We don't start a big remodel without a contract and a pre-construction plan. If you want your remodel run right, let's talk.</p>
+                <a href="#contact" class="btn btn-primary">Get your free estimate</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--               Smooth is fast                 -->
+<!-- ============================================ -->
+
+<section class="section" id="about-us-section">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-7">
+                <span class="eyebrow">Why we work this way</span>
+                <h2 class="mb-4">Smooth is fast.</h2>
+                <div class="prose">
+                    <p>Dad has a saying: <em>slow is smooth, smooth is fast.</em> I first heard it hanging cabinets with him in a townhouse when I was learning the trade. Rush it and you hang one wrong, or drop it, and now you're slower than if you'd just taken your time.</p>
+                    <p>I've relearned it the hard way. Once, rushing to finish a closet, I stood on a shelf instead of grabbing a stepladder and snapped it clean in half.</p>
+                    <p class="mb-0">That's how we run remodels now. Take your time, think it through, do it right.</p>
+                </div>
+                <p class="signature">Jayden Haggerty <span>Haggerty Construction</span></p>
+
+                <div class="row team-row g-3 mt-4 text-center text-sm-start">
+                    <div class="col-4">
+                        <picture>
+                            <source srcset="/assets/images/portfolio/bill-headshot-300w.webp" type="image/webp">
+                            <img src="/assets/images/portfolio/bill-headshot-300w.jpeg" alt="William Haggerty" loading="lazy" width="300" height="300">
+                        </picture>
+                        <div class="name">William</div>
+                        <div class="role">Founder, Dad</div>
                     </div>
+                    <div class="col-4">
+                        <picture>
+                            <source srcset="/assets/images/portfolio/blake-headshot-300w.webp" type="image/webp">
+                            <img src="/assets/images/portfolio/blake-headshot-300w.jpeg" alt="Blake Haggerty" loading="lazy" width="300" height="300">
+                        </picture>
+                        <div class="name">Blake</div>
+                        <div class="role">Runs your project</div>
+                    </div>
+                    <div class="col-4">
+                        <picture>
+                            <source srcset="/assets/images/portfolio/jayden-headshot-300w.webp" type="image/webp">
+                            <img src="/assets/images/portfolio/jayden-headshot-300w.jpeg" alt="Jayden Haggerty" loading="lazy" width="300" height="300">
+                        </picture>
+                        <div class="name">Jayden</div>
+                        <div class="role">Office &amp; systems</div>
+                    </div>
+                </div>
+                <p class="mt-4 mb-0"><a href="/about/" class="text-link">More about our family &rarr;</a></p>
+            </div>
+            <div class="col-lg-5">
+                <div class="photo-frame story-photo">
+                    {% image './src/assets/images/projects/kitchen-cabinet-install-crew.jpg', 'A Haggerty Construction crew member on a stepladder hanging an upper kitchen cabinet', '', 'lazy', '(max-width: 992px) 100vw, 40vw' %}
+                </div>
+                <p class="photo-caption">Stepladder, not shelf.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                  Reviews                     -->
+<!-- ============================================ -->
+
+<section class="section section-alt" id="reviews">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <span class="eyebrow">Reviews</span>
+                <h2 class="mb-0">What clients say.</h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="review-card">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-text">"Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them."</p>
+                    <p class="client-name mb-0 mt-3">&mdash; Taylor Sanchez</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="review-card">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-text">"This included flooring, moving an island, all new case and base, painting, new cabinet doors... I could go on and on. They do everything start to finish. It was a great experience."</p>
+                    <p class="client-name mb-0 mt-3">&mdash; Haley Benware</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="review-card">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-text">"These gentlemen have done two jobs for me now and I will not hesitate to contact them in the future. They are fast, clean, friendly, and professional... 5 stars, I highly recommend Haggerty construction!"</p>
+                    <p class="client-name mb-0 mt-3">&mdash; Mark Ziegler</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="review-card">
+                    <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+                    <p class="review-text">"Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids &amp; looks beautiful too! Very grateful!"</p>
+                    <p class="client-name mb-0 mt-3">&mdash; ULIV Skincare</p>
                 </div>
             </div>
         </div>
-    </section>
+        <p class="mt-4 mb-0"><a href="https://g.page/r/CQp_Xl6bZPOoEBE" target="_blank" rel="noopener noreferrer" class="text-link">Read all 28 reviews on Google &rarr;</a></p>
+    </div>
+</section>
 
-    <!-- FAQPage Schema -->
-    <script type="application/ld+json">
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section class="section" id="faq">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <span class="eyebrow">Questions</span>
+                <h2 class="mb-4">Frequently asked questions.</h2>
+                <div class="accordion" id="faqAccordion">
+                    {% for item in faqs %}
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="faq{{ loop.index }}-heading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq{{ loop.index }}" aria-expanded="false" aria-controls="faq{{ loop.index }}">
+                                {{ item.q }}
+                            </button>
+                        </h3>
+                        <div id="faq{{ loop.index }}" class="accordion-collapse collapse" aria-labelledby="faq{{ loop.index }}-heading" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">{{ item.a }}</div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for item in faqs %}
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What services does Haggerty Construction offer in St. George?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We are a full-service General Contractor specializing in custom kitchen remodels, bespoke cabinetry, bathroom renovations, home additions, and a wide range of general contracting services. We serve the entire Washington County area including St. George, Hurricane, Ivins, Santa Clara, Washington, LaVerkin, and Leeds." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you build custom cabinets?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We specialize in designing and installing custom cabinet solutions. We partner with a trusted local manufacturer to mill the boxes and doors, but our team handles the detailed design, delivery, and meticulous installation — ensuring your cabinets fit perfectly into the larger scope of your remodel." }
-        },
-        {
-          "@type": "Question",
-          "name": "Are you a licensed and insured contractor?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. Haggerty Construction is fully licensed and insured in the state of Utah. We prioritize safety, quality, and transparency in every project we undertake." }
-        },
-        {
-          "@type": "Question",
-          "name": "How do I get an estimate?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Simply fill out the estimate request form on our website, call us at (435) 414-1974, or email us at haggertyconstruction@gmail.com. We'll schedule a time to discuss your project and provide a detailed estimate." }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does a kitchen remodel take?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Timelines vary depending on the scope. A focused cabinet renovation may take 1-2 weeks, while a full kitchen remodel can take 4-8 weeks. We provide a detailed timeline during the estimate process." }
-        },
-        {
-          "@type": "Question",
-          "name": "What areas do you serve?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We proudly serve all of Washington County, Utah, including St. George, Washington, Hurricane, Ivins, Santa Clara, LaVerkin, and Leeds." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you offer free estimates?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes, we offer free initial consultations and estimates for all projects. Contact us to schedule a walkthrough of your space." }
-        },
-        {
-          "@type": "Question",
-          "name": "What makes Haggerty Construction different from other contractors?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We're a family-owned business founded by William Haggerty and run by his three sons. We've grown up in St. George, and our reputation matters to us personally. We combine 30+ years of experience with transparent communication and a commitment to getting it right." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can you help with appliance installation?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. We specialize in complex appliance installations, including built-in refrigerators with custom panels, pro range and vent hood installations, and custom appliance garages with retractable doors and rollout drawers." }
-        },
-        {
-          "@type": "Question",
-          "name": "Do you handle the entire remodel process?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. As a general contractor, we manage the entire project from start to finish — design, permits, demolition, construction, finishing, and cleanup. You'll have a single point of contact throughout." }
-        }
-      ]
-    }
-    </script>
+      "@type": "Question",
+      "name": {{ item.q | dump | safe }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | dump | safe }} }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
 
-    <script defer>
-        document.addEventListener("DOMContentLoaded", () => {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('is-visible');
-                    } else {
-                        // Remove class so it animates back out when off-screen
-                        entry.target.classList.remove('is-visible');
-                    }
-                });
-            }, { 
-                threshold: 0.5,
-                rootMargin: "0px 0px -100px 0px" // Triggers slightly before the element is exactly in the middle 
-            });
+<!-- ============================================ -->
+<!--                  Contact                     -->
+<!-- ============================================ -->
 
-            document.querySelectorAll('.animated-underline').forEach((el) => {
-                observer.observe(el);
-            });
-        });
-    </script>
-    
-    <div class="section-spacing-lg pb-5">
+<section class="section section-alt">
+    <div class="container">
         {% include "contact-form.html" %}
     </div>
-    
+</section>
+
+<!-- Mobile: keep the two ways to reach us one tap away -->
+<div class="sticky-cta-bar d-lg-none" aria-label="Quick contact options">
+    <a href="tel:+14354141974" class="sticky-cta-call" id="sticky-cta-phone">
+        <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Call
+    </a>
+    <a href="#contact" class="sticky-cta-estimate">Free estimate</a>
 </div>

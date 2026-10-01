@@ -5,6 +5,22 @@
 # Old success page path (was /pages/success/ before it got a permalink)
 /pages/success/  /success/  301
 
+# Niched down to residential remodels (2026-10-01). Neither page earned a
+# click in the prior 3 months of Search Console data.
+/services/commercial-remodeling/  /services/                 301
+/services/commercial-remodeling   /services/                 301
+/services/basement-finishing/     /services/home-remodeling/ 301
+/services/basement-finishing      /services/home-remodeling/ 301
+
+# Bathroom sub-pages folded into the main bathroom page (2026-10-01). They
+# were old template copy with unverified prices and had ~0 impressions.
+/services/bathroom-remodels/shower-remodels/   /services/bathroom-remodels/ 301
+/services/bathroom-remodels/shower-remodels    /services/bathroom-remodels/ 301
+/services/bathroom-remodels/small-bathrooms/   /services/bathroom-remodels/ 301
+/services/bathroom-remodels/small-bathrooms    /services/bathroom-remodels/ 301
+/services/bathroom-remodels/tub-to-shower/     /services/bathroom-remodels/ 301
+/services/bathroom-remodels/tub-to-shower      /services/bathroom-remodels/ 301
+
 # Retired blog (2026-08-25) — the two posts were generic AI-written filler.
 # Specific rules must stay above the wildcard: Netlify uses first match wins.
 /blog/how-to-patch-a-drywall-hole/    /services/home-remodeling/  301

@@ -1,186 +1,242 @@
 [
   {
-    "path": "src/assets/images/gallery/office-built-in-dark.jpg",
-    "alt": "Custom dark blue office built-in with desk, shelving, and cabinet storage"
+    "path": "src/assets/images/projects/whole-home-kitchen-finished.jpg",
+    "alt": "Finished kitchen with white shaker cabinets to the ceiling, glass-front uppers and a dark island",
+    "category": "kitchens"
   },
   {
-    "path": "src/assets/images/gallery/green-bookcase-wall.jpg",
-    "alt": "Floor-to-ceiling dark green built-in bookcase with shaker cabinet doors"
+    "path": "src/assets/images/projects/whole-home-kitchen-pantry-wall.jpg",
+    "alt": "Floor-to-ceiling pantry cabinets built around the fridge",
+    "category": "kitchens"
   },
   {
-    "path": "src/assets/images/gallery/patterned-tile-shower.jpg",
-    "alt": "Custom patterned tile shower with geometric design by Haggerty Construction"
+    "path": "src/assets/images/projects/whole-home-kitchen-coffee-bar.jpg",
+    "alt": "Coffee bar with open shelves on a beadboard back, beside the pantry cabinets",
+    "category": "kitchens"
   },
   {
-    "path": "src/assets/images/gallery/freestanding-tub-glass-block.png",
-    "alt": "Freestanding soaking tub with gold fixtures and glass block window wall"
+    "path": "src/assets/images/projects/whole-home-kitchen-farmhouse-sink.jpg",
+    "alt": "White farmhouse sink in shaker base cabinets with black countertops",
+    "category": "kitchens"
   },
   {
-    "path": "src/assets/images/gallery/oak-kitchen-quartz-counters.jpg",
-    "alt": "Natural oak kitchen cabinets with white quartz countertops and stainless appliances"
-  },
-  {
-    "path": "src/assets/images/gallery/light-wood-bookcase-cabinets.jpg",
-    "alt": "Custom light wood built-in bookcase with shaker cabinet storage"
-  },
-  {
-    "path": "src/assets/images/gallery/sauna-build-finished.png",
-    "alt": "Custom cedar sauna build with wood-fired stove — finished project"
-  },
-  {
-    "path": "src/assets/images/gallery/Book Case.jpg",
-    "alt": "Custom book case built-in cabinetry"
-  },
-  {
-    "path": "src/assets/images/gallery/garage_cabinets.jpg",
-    "alt": "Custom garage cabinet installation"
-  },
-  {
-    "path": "src/assets/images/gallery/circular-saw-craftsmanship.jpg",
-    "alt": "Precision circular cut during custom cabinet construction in the Haggerty shop"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-face-frame-assembly.jpg",
-    "alt": "Cabinet face frame being assembled with precision joinery"
-  },
-  {
-    "path": "src/assets/images/gallery/garage-cabinets-new.jpg",
-    "alt": "Full garage cabinet system with workbench and overhead storage"
-  },
-  {
-    "path": "src/assets/images/gallery/ledges pool room.jpg",
-    "alt": "Ledges pool room custom cabinetry and built-ins"
-  },
-  {
-    "path": "src/assets/images/gallery/Living Room.jpg",
-    "alt": "Custom living room built-in cabinetry"
-  },
-  {
-    "path": "src/assets/images/gallery/Martys bookcase final.jpg",
-    "alt": "Marty's bookcase — custom floor-to-ceiling built-in"
-  },
-  {
-    "path": "src/assets/images/gallery/haggerty-team-ceiling-repair.jpg",
-    "alt": "Haggerty Construction team member doing ceiling repair work in branded shirt and tool belt"
-  },
-  {
-    "path": "src/assets/images/gallery/team-ceiling-work.jpg",
-    "alt": "Haggerty Construction crew member installing a ceiling fan housing"
-  },
-  {
-    "path": "src/assets/images/gallery/patterned-tile-shower-2.jpg",
-    "alt": "Second angle of custom geometric patterned tile shower"
-  },
-  {
-    "path": "src/assets/images/gallery/kitchen-cabinet-install-new.jpg",
-    "alt": "New kitchen cabinets being installed on site"
-  },
-  {
-    "path": "src/assets/images/gallery/kitchen-cabinet-install-angle.jpg",
-    "alt": "Kitchen cabinet installation progress — another angle"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-drawer-slides.jpg",
-    "alt": "Custom cabinet drawer slide installation showing precision hardware"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-drawer-box-detail.jpg",
-    "alt": "Custom-built drawer box detail showing quality joinery"
-  },
-  {
-    "path": "src/assets/images/gallery/oak-kitchen-stovetop.jpg",
-    "alt": "Oak kitchen with gas range and quartz countertops — finished installation"
-  },
-  {
-    "path": "src/assets/images/gallery/sauna-cedar-interior.jpg",
-    "alt": "Cedar-lined sauna interior during construction with Harvia wood-fired heater"
-  },
-  {
-    "path": "src/assets/images/gallery/blake-carrying-cabinet-demo.jpg",
-    "alt": "Blake Haggerty carrying a cabinet during demolition"
-  },
-  {
-    "path": "src/assets/images/gallery/tile-shower-niche.jpg",
-    "alt": "Custom shower niche tile installation with precision cuts"
-  },
-  {
-    "path": "src/assets/images/gallery/tile-shower-install.jpg",
-    "alt": "Shower tile being installed with leveling system"
-  },
-  {
-    "path": "src/assets/images/gallery/tile-floor-install.jpg",
-    "alt": "Bathroom floor tile installation in progress"
-  },
-  {
-    "path": "src/assets/images/gallery/bathroom-vanity-install.jpg",
-    "alt": "Bathroom vanity and countertop installation in progress"
-  },
-  {
-    "path": "src/assets/images/gallery/bathroom-tile-closeup.jpg",
-    "alt": "Close-up of bathroom tile work with clean grout lines"
-  },
-  {
-    "path": "src/assets/images/gallery/bathroom-tile-install.jpg",
-    "alt": "Bathroom wall tile being set during renovation"
-  },
-  {
-    "path": "src/assets/images/gallery/flooring-install-progress.jpg",
-    "alt": "Hardwood flooring installation in progress during whole-home remodel"
-  },
-  {
-    "path": "src/assets/images/gallery/flooring-kitchen-progress.jpg",
-    "alt": "Kitchen flooring installation with new cabinets visible"
-  },
-  {
-    "path": "src/assets/images/gallery/flooring-hallway.jpg",
-    "alt": "Hallway flooring installation showing clean transitions"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-assembly-shop.jpg",
-    "alt": "Cabinet assembly in the Haggerty Construction shop"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-carcass-build.jpg",
-    "alt": "Cabinet carcass being built — raw construction quality"
-  },
-  {
-    "path": "src/assets/images/gallery/kitchen-cabinetry-install.jpg",
-    "alt": "Kitchen cabinetry installation with crown molding"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-parts-organized.jpg",
-    "alt": "Cabinet components organized for assembly in the shop"
-  },
-  {
-    "path": "src/assets/images/gallery/conners-cabinets-larger.webp",
-    "alt": "Conners custom cabinet installation"
-  },
-  {
-    "path": "src/assets/images/new-images/maxfields-office-final.jpg",
-    "alt": "Maxfields office built-in final"
-  },
-  {
-    "path": "src/assets/images/gallery/mudroom.jpg",
-    "alt": "Custom mudroom cabinetry and storage"
-  },
-  {
-    "path": "src/assets/images/gallery/commercial-scoreboard.jpg",
-    "alt": "Commercial scoreboard installation project"
-  },
-  {
-    "path": "src/assets/images/gallery/outdoor-kitchen-build.jpg",
-    "alt": "Outdoor kitchen construction project"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-shop-setup.jpg",
-    "alt": "Cabinet shop setup with organized tools and workspace"
-  },
-  {
-    "path": "src/assets/images/gallery/cabinet-assembly-clamps.jpg",
-    "alt": "Cabinet assembly with bar clamps — precision glue-up"
+    "path": "src/assets/images/gallery/latest-remodel/after.jpg",
+    "alt": "Knotty alder kitchen with a pro range, granite counters and a travertine backsplash",
+    "category": "kitchens"
   },
   {
     "path": "src/assets/images/gallery/cabinet-edge-detail.jpg",
-    "alt": "Cabinet edge banding and detail work"
+    "alt": "The same knotty alder kitchen, looking across the island to the range wall",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/oak-kitchen-quartz-counters.jpg",
+    "alt": "Hickory cabinets with white quartz counters and a gas range",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/tile-shower-install.jpg",
+    "alt": "Gray shaker kitchen with granite counters and a dark glass-tile backsplash",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/tile-shower-niche.jpg",
+    "alt": "Gray subway-tile backsplash behind a new range hood",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-assembly-clamps.jpg",
+    "alt": "White glass-front uppers and a hood cabinet over a herringbone backsplash",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-kitchen-uppers-install.jpg",
+    "alt": "Installing tall white upper cabinets under new pendant lights",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-shop-setup.jpg",
+    "alt": "Hanging pendant lights over the new island",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/projects/built-in-shelves-install.jpg",
+    "alt": "Installing tall cabinets beside the beadboard coffee bar",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-sage-cabinets-install.jpg",
+    "alt": "Sage-green base cabinets going in, floor covered",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/flooring-install-progress.jpg",
+    "alt": "New white cabinets going in down a long kitchen",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/flooring-hallway.jpg",
+    "alt": "White shaker cabinets set and leveled, before counters",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-drawer-slides.jpg",
+    "alt": "Modifying an existing oak upper cabinet to fit a new appliance",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/kitchen-cabinetry-install.jpg",
+    "alt": "Reworking existing cabinets under the crown molding",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/circular-saw-craftsmanship.jpg",
+    "alt": "Prepping the wall above an existing range hood, dust extraction running",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-face-frame-assembly.jpg",
+    "alt": "Cabinet doors off and boxes masked for a refinish",
+    "category": "kitchens"
+  },
+  {
+    "path": "src/assets/images/projects/primary-bath-tub-and-vanity.jpg",
+    "alt": "Remodeled primary bathroom with a freestanding tub, double vanity and frameless glass shower",
+    "category": "bathrooms"
+  },
+  {
+    "path": "src/assets/images/projects/primary-bath-freestanding-tub.jpg",
+    "alt": "Freestanding soaking tub with a floor-mounted tub filler",
+    "category": "bathrooms"
+  },
+  {
+    "path": "src/assets/images/gallery/freestanding-tub-glass-block.png",
+    "alt": "Freestanding tub with a floor-mounted filler under a glass-block window wall",
+    "category": "bathrooms"
+  },
+  {
+    "path": "src/assets/images/gallery/patterned-tile-shower.jpg",
+    "alt": "Setting fixtures in a white subway-tile bathroom",
+    "category": "bathrooms"
+  },
+  {
+    "path": "src/assets/images/gallery/bathroom-tile-closeup.jpg",
+    "alt": "Shower walls waterproofed with a red membrane, before tile",
+    "category": "bathrooms"
+  },
+  {
+    "path": "src/assets/images/gallery/green-bookcase-wall.jpg",
+    "alt": "Floor-to-ceiling dark green built-in bookcase with shaker cabinet doors",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/office-built-in-dark.jpg",
+    "alt": "Dark blue home office built-in with a desk, shelving and cabinet storage",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/sauna-cedar-interior.jpg",
+    "alt": "Looking over a finished home office built-in",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/light-wood-bookcase-cabinets.jpg",
+    "alt": "Full-wall bookcase and cabinets in a light finish, before move-in",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/mudroom.jpg",
+    "alt": "Rift-cut white oak mudroom with a bench, hooks, cubbies and a tall cabinet",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/conners-cabinets-larger.webp",
+    "alt": "White living room built-ins with floating shelves around a linear fireplace",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/Living Room.jpg",
+    "alt": "Green living room cabinets around a tile fireplace with wood floating shelves",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/garage-cabinets-new.jpg",
+    "alt": "White garage cabinets with a butcher-block top",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/ledges pool room.jpg",
+    "alt": "Teak slat benches and corner shelves in a pool-house changing room at The Ledges",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/gallery/sauna-build-finished.png",
+    "alt": "A finished cedar sauna, bench tested",
+    "category": "built-ins"
+  },
+  {
+    "path": "src/assets/images/projects/home-bedroom-protected.jpg",
+    "alt": "A bedroom protected with Ram Board and plastic before work starts",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/projects/home-flooring-living-room.jpg",
+    "alt": "New flooring covered and furniture wrapped during a whole-home remodel",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/commercial-scoreboard.jpg",
+    "alt": "Great room with new flooring in, before the cabinets",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/bathroom-tile-install.jpg",
+    "alt": "Subfloor screwed down and leveled before new flooring",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-carcass-build.jpg",
+    "alt": "Patching drywall before paint",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/haggerty-team-ceiling-repair.jpg",
+    "alt": "Patching a ceiling after moving a fixture",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/team-ceiling-work.jpg",
+    "alt": "Installing a bathroom exhaust fan",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/cabinet-parts-organized.jpg",
+    "alt": "Fastening a cabinet frame from below",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/gallery/outdoor-kitchen-build.jpg",
+    "alt": "Fitting a new door into an outdoor kitchen",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/projects/framing-mountain-view.jpg",
+    "alt": "Framing an opening with snowy mountains in the distance",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/projects/crew-truck-jobsite.jpg",
+    "alt": "Staking out a job site, with the truck and caution tape up",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/projects/hockey-scoreboard-footing.jpg",
+    "alt": "Pouring the concrete footing for the new scoreboard at the Red Rock Hockey rink",
+    "category": "on-the-job"
+  },
+  {
+    "path": "src/assets/images/projects/hockey-scoreboard-posts.jpg",
+    "alt": "Setting the steel scoreboard posts from a lift at the rink",
+    "category": "on-the-job"
   }
 ]

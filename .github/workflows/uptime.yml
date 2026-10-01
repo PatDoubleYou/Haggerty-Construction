@@ -30,7 +30,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version-file: '.nvmrc'
 
       # Netlify needs a moment to publish after a push to main.
       - name: Wait for deploy

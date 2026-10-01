@@ -27,6 +27,35 @@
     --accent-warm:      #A07D5A;
     --accent-warm-muted: rgba(160, 125, 90, 0.2);
 
+    /* Text on a filled accent (buttons, badges) */
+    --on-accent:        #FFFFFF;
+
+    /* Review stars — Google's gold */
+    --star:             #FABB05;
+
+    /* Scrims for text over photos */
+    --scrim-top:        rgba(26, 26, 26, 0.6);
+    --scrim-bottom:     rgba(26, 26, 26, 0.85);
+    --scrim-solid:      rgba(26, 26, 26, 0.8);
+    --scrim-caption:    rgba(0, 0, 0, 0.75);
+    --scrim-label:      rgba(0, 0, 0, 0.7);
+    --on-photo:         #FFFFFF;
+    --on-photo-muted:   rgba(255, 255, 255, 0.7);
+
+    /* Elevation */
+    --shadow-sm:        0 4px 12px rgba(0, 0, 0, 0.4);
+    --shadow-md:        0 6px 16px rgba(0, 0, 0, 0.5);
+    --shadow-lg:        0 8px 24px rgba(0, 0, 0, 0.4);
+    --shadow-card:      0 4px 20px rgba(0, 0, 0, 0.2);
+    --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.35);
+    --shadow-up:        0 -2px 12px rgba(0, 0, 0, 0.45);
+    --shadow-raise:     0 8px 24px rgba(0, 0, 0, 0.3);
+    --shadow-tile:      0 4px 16px rgba(0, 0, 0, 0.2);
+
+    /* Type */
+    --font-heading:     apotek-extrawide, sans-serif;
+    --font-body:        "articulat-cf", sans-serif;
+
     /* Radius */
     --radius-sm:   4px;
     --radius-md:   8px;
@@ -50,7 +79,7 @@ html, body {
     background-color: var(--surface-base);
     color: var(--text-primary);
 
-    font-family: "articulat-cf", sans-serif;
+    font-family: var(--font-body);
     font-weight: 500;
     font-style: normal;
     font-size: 1.1rem;
@@ -68,6 +97,26 @@ h6 {
    Utilities & Overrides
    ============================================ */
 
+/* Keyboard users' "skip to content" link: off-screen until it has focus.
+   (The old rule lived in the deleted root.css, so the link was briefly
+   visible at the top of every page.) */
+.skip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    background-color: var(--surface-card);
+    color: var(--text-primary);
+    font-weight: 600;
+    transform: translateY(-200%);
+    transition: transform 0.15s ease;
+}
+.skip:focus {
+    transform: none;
+    outline: 2px solid var(--accent-primary);
+}
+
 .text-muted { color: var(--text-muted) !important; }
 .text-secondary { color: var(--text-secondary) !important; }
 .text-primary { color: var(--text-primary) !important; }
@@ -84,10 +133,10 @@ h6 {
 .btn-primary {
     --bs-btn-bg: var(--accent-primary);
     --bs-btn-border-color: var(--accent-primary);
-    --bs-btn-color: #fff;
+    --bs-btn-color: var(--on-accent);
     --bs-btn-hover-bg: var(--accent-hover);
     --bs-btn-hover-border-color: var(--accent-hover);
-    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-color: var(--on-accent);
     --bs-btn-active-bg: var(--accent-hover);
     --bs-btn-active-border-color: var(--accent-hover);
 }
@@ -101,7 +150,7 @@ h6 {
 .btn-outline-light:hover, .btn-outline-light:focus {
     background-color: var(--accent-primary) !important;
     border-color: var(--accent-primary) !important;
-    color: #fff !important;
+    color: var(--on-accent) !important;
 }
 .btn-outline-light:active {
     background-color: var(--accent-hover) !important;
@@ -160,79 +209,6 @@ h6 {
 }
 
 /* ============================================
-   Project Cards (Gallery Page)
-   ============================================ */
-
-.project-card-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-    height: 100%;
-}
-
-.project-card {
-    background-color: var(--surface-card);
-    border-radius: var(--radius-md);
-    overflow: hidden;
-    height: 100%;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(0,0,0,0.35);
-}
-
-.project-card-img {
-    width: 100%;
-    height: 250px;
-    overflow: hidden;
-}
-
-.project-card-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-}
-
-.project-card:hover .project-card-img img {
-    transform: scale(1.05);
-}
-
-.project-card-body {
-    padding: 1.25rem 1.5rem 1.5rem;
-}
-
-.project-card-title {
-    font-family: var(--font-heading);
-    font-size: 1.2rem;
-    color: var(--text-primary);
-    margin-bottom: 0.25rem;
-}
-
-.project-card-subtitle {
-    display: block;
-    font-size: 0.85rem;
-    color: var(--accent-warm);
-    margin-bottom: 0.75rem;
-}
-
-.project-card-summary {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1rem;
-}
-
-.project-card-cta {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--accent-warm);
-}
-
-/* ============================================
    Simple Photo Gallery Grid
    ============================================ */
 
@@ -240,7 +216,7 @@ h6 {
     border-radius: var(--radius-md);
     overflow: hidden;
     height: 280px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-tile);
 }
 
 .gallery-tile video {
@@ -264,93 +240,6 @@ h6 {
 
 .gallery-tile:hover .gallery-img img {
     transform: scale(1.05);
-}
-
-/* ============================================
-   Project Story Page
-   ============================================ */
-
-.project-hero {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-}
-
-.project-hero-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.project-hero-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 3rem 0;
-    background: linear-gradient(transparent, rgba(0,0,0,0.75));
-}
-
-.project-title {
-    font-family: var(--font-heading);
-    color: #fff;
-    font-size: 2.5rem;
-    margin-bottom: 0.25rem;
-}
-
-.project-subtitle {
-    color: var(--accent-warm);
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.project-date {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
-}
-
-.project-content {
-    max-width: 800px;
-    margin: 3rem auto;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: var(--text-secondary);
-}
-
-.project-content img {
-    width: 100%;
-    border-radius: var(--radius-md);
-    margin: 2rem 0;
-}
-
-.project-back {
-    text-align: center;
-    margin: 2rem 0 4rem;
-}
-
-.btn-project-back {
-    color: var(--accent-warm);
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.btn-project-back:hover {
-    text-decoration: underline;
-}
-
-.project-cta {
-    padding: 4rem 0;
-    background-color: var(--surface-card);
-}
-
-.project-cta h2 {
-    font-family: var(--font-heading);
-    color: var(--text-primary);
-}
-
-.project-cta p {
-    color: var(--text-secondary);
 }
 
 /* ============================================
@@ -407,7 +296,7 @@ h6 {
 }
 
 .review-card .stars {
-    color: #FABB05; /* Google Gold */
+    color: var(--star);
     font-size: 14px;
     letter-spacing: 2px;
     margin-bottom: 12px;
@@ -456,7 +345,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(26, 26, 26, 0.6), rgba(26, 26, 26, 0.85));
+    background: linear-gradient(var(--scrim-top), var(--scrim-bottom));
     z-index: 1;
     pointer-events: none;
 }
@@ -466,8 +355,8 @@ h6 {
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: var(--accent-warm, #c8a96e);
-    color: var(--surface-base, #1a1a1a);
+    background: var(--accent-warm);
+    color: var(--surface-base);
     font-size: 1.5rem;
     font-weight: 700;
     display: inline-flex;
@@ -486,21 +375,21 @@ h6 {
 
 /* Capability Cards */
 .capability-card {
-    background: var(--surface-card, #222);
-    border-radius: var(--radius-lg, 12px);
+    background: var(--surface-card);
+    border-radius: var(--radius-lg);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .capability-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-raise);
 }
 
 /* Service Icon (Bootstrap Icons) */
 .service-icon {
     display: block;
     font-size: 2rem;
-    color: var(--accent-warm, #c8a96e);
+    color: var(--accent-warm);
     line-height: 1;
 }
 
@@ -516,7 +405,7 @@ h6 {
     color: var(--accent-warm);
     margin-bottom: 20px;
     font-weight: 500;
-    font-family: "articulat-cf", sans-serif;
+    font-family: var(--font-body);
 }
 
 .hero-description {
@@ -534,7 +423,7 @@ h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(26, 26, 26, 0.8); /* Charcoal dark overlay */
+    background-color: var(--scrim-solid);
     z-index: 0;
 }
 
@@ -548,7 +437,7 @@ h6 {
    ============================================ */
 
 .nav-link {
-    font-family: apotek-extrawide, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 200;
     font-style: normal;
 }
@@ -563,18 +452,18 @@ a {
 
 .btn {
     display: inline-block;
-    color: #efefef;
+    color: var(--on-accent);
     padding: 14px 32px;
     font-size: 1.6rem;
     border-radius: var(--radius-md);
     border: none;
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
 
-    font-family: apotek-extrawide, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-style: normal;
 
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-primary {
@@ -583,7 +472,7 @@ a {
 
 .btn-primary:hover {
     background-color: var(--accent-hover);
-    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-md);
     transform: translateY(-1px);
 }
 
@@ -592,7 +481,7 @@ a {
    ============================================ */
 
 h1, h2, h3, h4, h5 {
-    font-family: apotek-extrawide, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-style: normal;
 }
@@ -664,7 +553,7 @@ h1, h2, h3, h4, h5 {
    ============================================ */
 
 .title {
-    font-family: apotek-extrawide, sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-style: normal;
     text-align: center;
@@ -724,7 +613,7 @@ h1, h2, h3, h4, h5 {
 
 .service:hover {
     border-color: var(--border-emphasis);
-    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-lg);
     transform: translateY(-2px);
 }
 
@@ -806,7 +695,7 @@ footer a:hover {
 .accordion-button {
     background-color: var(--surface-card);
     color: var(--text-primary);
-    font-family: "articulat-cf", sans-serif;
+    font-family: var(--font-body);
     font-weight: 600;
     font-size: 1.05rem;
     padding: 20px 24px;
@@ -833,7 +722,7 @@ footer a:hover {
 .accordion-body {
     background-color: var(--surface-elevated);
     color: var(--text-secondary);
-    font-family: "articulat-cf", sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     padding: 20px 24px;
     border-top: 1px solid var(--border-subtle);
@@ -844,7 +733,8 @@ footer a:hover {
    Contact Form
    ============================================ */
 
-.form-control {
+.form-control,
+.form-select {
     background-color: var(--surface-base);
     border: 1px solid var(--border-emphasis);
     color: var(--text-primary);
@@ -853,7 +743,8 @@ footer a:hover {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     background-color: var(--surface-base);
     border-color: var(--accent-primary);
     color: var(--text-primary);
@@ -864,7 +755,7 @@ footer a:hover {
     color: var(--text-muted);
 }
 
-select.form-control option {
+.form-select option {
     background-color: var(--surface-base);
     color: var(--text-primary);
 }
@@ -960,7 +851,7 @@ select.form-control option {
 
 .spoke-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--shadow-raise);
     border-color: var(--accent-warm-muted);
 }
 
@@ -972,11 +863,6 @@ select.form-control option {
     .hero-title {
         font-size: 38px;
     }
-    .nav-link {
-        padding-top: 3rem;
-        font-size: 1.7rem;
-        padding-bottom: 1rem;
-    }
     h1 {
         border-radius: 10px;
         text-align: center;
@@ -987,6 +873,17 @@ select.form-control option {
         background-color: var(--surface-card);
         border-radius: var(--radius-md);
         padding: 40px 20px;
+    }
+}
+
+/* The collapsed (hamburger) menu only. Bootstrap collapses the nav below
+   992px; applying this any wider made the horizontal bar 120px tall on
+   laptops. */
+@media (max-width: 991.98px) {
+    .nav-link {
+        padding-top: 3rem;
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
     }
 }
 
@@ -1023,29 +920,45 @@ select.form-control option {
 
 /* Haggerty OS illustrative mockup (example data only) */
 .os-mockup {
-    background-color: #ffffff;
-    color: #1f2937;
+    /* A picture of the app, so it keeps the app's own light palette
+       regardless of the site theme. */
+    --os-bg:        #ffffff;
+    --os-ink:       #1f2937;
+    --os-ink-strong: #2b3540;
+    --os-ink-muted: #56616c;
+    --os-ink-faint: #8a939c;
+    --os-chrome:    #eef1f4;
+    --os-line:      #d9dee3;
+    --os-line-strong: #cfd5db;
+    --os-dot:       #c7ccd1;
+    --os-footer:    #f6f8fa;
+    --os-caption:   #6b7682;
+    --os-warn:      #c77f1a;
+    --os-ok:        #1f9d57;
+
+    background-color: var(--os-bg);
+    color: var(--os-ink);
     border: 1px solid var(--border-emphasis);
 }
 .os-mockup-bar {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    background-color: #eef1f4;
-    border-bottom: 1px solid #d9dee3;
+    background-color: var(--os-chrome);
+    border-bottom: 1px solid var(--os-line);
     padding: 0.6rem 0.9rem;
 }
 .os-mockup-bar .os-dot {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #c7ccd1;
+    background-color: var(--os-dot);
 }
 .os-mockup-title {
     margin-left: 0.6rem;
     font-size: 0.85rem;
     font-weight: 700;
-    color: #56616c;
+    color: var(--os-ink-muted);
 }
 .os-mockup-body {
     padding: 0.5rem 1.1rem 0.75rem;
@@ -1056,7 +969,7 @@ select.form-control option {
     align-items: center;
     gap: 0.5rem;
     padding: 0.55rem 0;
-    border-bottom: 1px solid #eef1f4;
+    border-bottom: 1px solid var(--os-chrome);
     font-size: 0.95rem;
 }
 .os-row span:nth-child(2),
@@ -1069,35 +982,35 @@ select.form-control option {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: #8a939c;
+    color: var(--os-ink-faint);
 }
 .os-row span:first-child {
     font-weight: 600;
-    color: #2b3540;
+    color: var(--os-ink-strong);
 }
 .os-row-total {
     border-bottom: none;
-    border-top: 2px solid #cfd5db;
+    border-top: 2px solid var(--os-line-strong);
     margin-top: 0.25rem;
     font-weight: 700;
 }
 .os-pct {
     font-weight: 700;
-    color: #c77f1a;
+    color: var(--os-warn);
 }
 .os-pct-done {
-    color: #1f9d57;
+    color: var(--os-ok);
 }
 .os-pct-low {
-    color: #8a939c;
+    color: var(--os-ink-faint);
 }
 .os-mockup-caption {
     margin: 0;
     padding: 0.55rem 1.1rem 0.85rem;
-    background-color: #f6f8fa;
-    border-top: 1px solid #eef1f4;
+    background-color: var(--os-footer);
+    border-top: 1px solid var(--os-chrome);
     font-size: 0.8rem;
-    color: #6b7682;
+    color: var(--os-caption);
     font-style: italic;
 }
 
@@ -1122,8 +1035,8 @@ select.form-control option {
     top: 0.5rem;
     left: 0.5rem;
     z-index: 2;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: #fff;
+    background-color: var(--scrim-label);
+    color: var(--on-photo);
     font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -1150,7 +1063,7 @@ select.form-control option {
     right: 0;
     z-index: 1040;
     display: flex;
-    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.45);
+    box-shadow: var(--shadow-up);
 }
 .sticky-cta-bar a {
     flex: 1 1 50%;
@@ -1166,11 +1079,11 @@ select.form-control option {
 }
 .sticky-cta-bar .sticky-cta-call {
     background-color: var(--accent-warm);
-    color: #fff;
+    color: var(--on-accent);
 }
 .sticky-cta-bar .sticky-cta-estimate {
     background-color: var(--accent-primary);
-    color: #fff;
+    color: var(--on-accent);
 }
 .sticky-cta-bar a:active {
     filter: brightness(0.9);
@@ -1182,3 +1095,30 @@ select.form-control option {
         padding-bottom: 64px;
     }
 }
+
+/* ============================================
+   Small utilities (replace one-off inline styles)
+   ============================================ */
+
+.icon-accent { color: var(--accent-warm); }
+.icon-lg { font-size: 2rem; }
+.icon-xl { font-size: 3rem; }
+.icon-faded { opacity: 0.4; }
+
+/* A raised block of content on the page background */
+.panel {
+    background-color: var(--surface-card);
+    border-radius: var(--radius-lg);
+}
+
+.img-cover-4x3 {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* Text that must stand out from the surrounding copy: emphasis inside
+   muted paragraphs, subtitles over photos. Follows the theme. */
+.text-strong { color: var(--text-primary) !important; }
+
+/* Card titles often sit inside a link; keep them ink, not link-blue. */
+.card-title { color: var(--text-primary); }

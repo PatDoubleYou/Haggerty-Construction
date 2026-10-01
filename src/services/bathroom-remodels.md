@@ -1,58 +1,84 @@
 ---
 layout: 'service.html'
-title: 'Bathroom Renovations'
-subtitle: 'A bathroom that actually feels like yours.'
+title: 'Bathroom Remodels'
+subtitle: "Custom tile, walk-in showers, new layouts. Planned for what's behind the wall before we open it."
+eyebrow: 'Bathroom remodels &middot; Washington County, Utah'
 tagTitle: 'Bathroom Remodeling in St. George, Utah'
-description: 'Bathroom remodeling in St. George, UT by a 5.0-rated, family-owned contractor. Custom tile, walk-in showers, vanities & fixtures. Free estimate: (435) 414-1974.'
-metaTitle: 'Bathroom Remodeling St. George | Haggerty Construction'
-heroImage: '/assets/images/bathroom-door-renovation.jpg'
-heroImageAlt: 'Haggerty Construction craftsman at work on a bathroom renovation in St. George, Utah'
+description: "Custom bathroom remodels in St. George: tile showers, tub-to-shower conversions, new layouts. Mold and water damage planned for up front, not discovered mid-job."
+metaTitle: 'Bathroom Remodeling in St. George, UT | Haggerty Construction'
+heroImage: '/assets/images/projects/primary-bath-tub-and-vanity.jpg'
+heroImageAlt: 'Remodeled primary bathroom with a freestanding tub, double vanity and frameless glass shower by Haggerty Construction'
 permalink: '/services/bathroom-remodels/'
 serviceType: 'Bathroom Remodeling'
 eleventyNavigation:
-    key: Bathroom Renovations
+    key: Bathroom Remodels
     parent: Services
     order: 300
+planForTitle: "What's behind the wall."
+planForIntro: "You never really know what's behind a shower wall until it's open. You can still plan for it."
+planForImages:
+  - src: '/assets/images/projects/shower-wall-tearout.jpg'
+    alt: 'Haggerty Construction pulling old plaster and lath off a bathroom wall during a remodel'
+    caption: 'Old plaster and lath coming off a bathroom wall.'
+  - src: '/assets/images/projects/bathroom-subfloor-repair.jpg'
+    alt: 'Bathroom floor opened up to the joists, with new plumbing going in'
+    caption: 'Floor opened up to the joists for new plumbing.'
+planFor:
+  - title: 'Water damage and mold'
+    text: "If there's a good chance of it, we tell you before we start, along with roughly what fixing it costs. If we open the wall and it's there, it's not a surprise. We already talked about it, and we fix it the way we agreed."
+  - title: 'The subfloor'
+    text: 'Same idea under the floor. Years of leaks (or a dog) can soak through to the subfloor. We price the likely fix up front: replace it, or prime and seal it if that does the job.'
+  - title: 'Selections that change the build'
+    text: "Which shower system, which tile and what size, which fixtures and hardware. Those decide how the walls and plumbing get built, so we settle them before demo instead of mid-project."
+feature:
+  title: 'A guest bath, start to finish.'
+  text: 'From our most recent whole-home remodel: patterned tile floor to ceiling, a dark mosaic shower floor, a frameless glass door and brass fixtures, plus a new vanity to match.'
+  images:
+    - src: '/assets/images/projects/bathroom-patterned-tile-shower.jpg'
+      alt: 'Patterned wall tile going up in a guest shower, before fixtures and glass'
+      caption: 'Tile going up.'
+    - src: '/assets/images/projects/guest-bath-finished.jpg'
+      alt: 'Finished guest bathroom with a patterned-tile walk-in shower, frameless glass door and brass fixtures'
+      caption: 'Same shower, finished.'
+    - src: '/assets/images/projects/guest-bath-shower-closeup.jpg'
+      alt: 'Close-up of patterned shower tile with a brass shower head and valve behind frameless glass'
+    - src: '/assets/images/projects/guest-bath-vanity.jpg'
+      alt: 'New walnut-tone vanity with a black countertop and brass faucet in a remodeled guest bathroom'
+capabilitiesTitle: 'What it can include.'
 capabilities:
-  - icon: 'bi-droplet-half'
-    title: 'Shower & Tub'
-    text: 'Walk-in showers, tiled tub surrounds, glass enclosures, custom niches — designed for how you actually use the space.'
-  - icon: 'bi-symmetry-horizontal'
-    title: 'Vanities & Mirrors'
-    text: 'Custom or pre-built vanities with the countertop, sink, and hardware that fit your style.'
-  - icon: 'bi-grid-3x3'
-    title: 'Tile & Flooring'
-    text: 'Floor-to-ceiling tile, heated floors, decorative accents. Precise cuts and clean grout lines every time.'
-  - icon: 'bi-moisture'
-    title: 'Plumbing & Fixtures'
-    text: 'Rerouted plumbing, new fixtures, rain heads, freestanding faucets — all done to code.'
-  - icon: 'bi-lightbulb'
-    title: 'Lighting & Ventilation'
-    text: 'Sconces, recessed lighting, exhaust fans — the things that make a bathroom feel finished and function properly.'
-  - icon: 'bi-box-seam'
-    title: 'Storage Solutions'
-    text: 'Medicine cabinets, linen closets, floating shelves. Smart storage designed into the space from day one.'
-process:
-  - title: 'Free Consultation'
-    text: 'We visit your bathroom, hear your vision, and talk through options that fit your space and budget.'
-  - title: 'Design & Estimate'
-    text: 'You get a detailed estimate with material selections, timeline, and real pricing. No guesswork.'
-  - title: 'Build'
-    text: 'Demo, plumbing, tile, fixtures, paint — every trade coordinated by our team from start to finish.'
-  - title: 'Final Walkthrough'
-    text: 'We walk the finished bathroom together and fix anything that is not exactly right.'
+  - title: 'Showers and tubs'
+    text: 'Walk-in tile showers, tub-to-shower conversions, tiled tub surrounds, niches and glass.'
+  - title: 'Waterproofing'
+    text: "The part you never see once it's tiled. You can see ours in the photos below."
+  - title: 'Vanities and storage'
+    text: 'Custom or pre-built vanities, linen storage and built-ins.'
+  - title: 'Tile and flooring'
+    text: 'Floor and wall tile, from simple to floor-to-ceiling patterns.'
+  - title: 'Plumbing and fixtures'
+    text: 'Moved plumbing for new layouts, new fixtures and faucets.'
+  - title: 'Lighting and ventilation'
+    text: 'Fixtures, recessed lights and exhaust fans.'
 faqs:
+  # Timeline and cost answers carried over from the old page; Blake to confirm.
   - question: 'How long does a bathroom remodel take?'
-    answer: 'A guest bath refresh with new vanity, fixtures, and paint typically takes 1-2 weeks. A full master bathroom renovation with custom tile work and layout changes runs 3-6 weeks. We give you a clear timeline before we start.'
-  - question: 'Can you make my small bathroom feel bigger?'
-    answer: 'Absolutely. Strategic tile choices, glass shower enclosures, better lighting, and smart layout adjustments can make a small bathroom feel significantly more open. We do this regularly and love the challenge.'
-  - question: 'Do I need to be out of my house during the renovation?'
-    answer: 'Usually not. We contain the work area and keep things clean. If we are working on your only bathroom, we will plan the timeline carefully to minimize disruption — and we will be upfront about it.'
-  - question: 'What is the average cost of a bathroom remodel in St. George?'
-    answer: 'A guest bath refresh typically runs $8,000-$15,000. A full master bathroom renovation with custom tile and fixtures ranges from $20,000-$45,000 depending on materials and scope. We provide a free detailed estimate upfront.'
-galleryTitle: 'Recent Work'
-gallerySubtitle: 'Real bathroom projects around St. George — including the waterproofing most contractors hide.'
+    answer: 'A guest bath refresh with a new vanity, fixtures and paint typically takes 1-2 weeks. A full primary bathroom with custom tile and layout changes runs 3-6 weeks. You get a realistic schedule during pre-construction, before we start.'
+  - question: 'What does a bathroom remodel cost in St. George?'
+    answer: 'A guest bath refresh typically runs $8,000-$15,000. A full primary bathroom with custom tile and fixtures ranges from $20,000-$45,000 depending on materials and scope. Your free estimate is line-item, so you see where the money goes.'
+  - question: 'How are you different from the one-day bathroom companies?'
+    answer: 'If you just want a liner dropped over your old tub, those companies can do it fast. If you want anything custom (real tile, a new layout, a walk-in shower) that is our kind of job. We also plan for what is behind the wall, like water damage and mold, before we open it.'
+  - question: 'Do I need to move out during the remodel?'
+    answer: 'Usually not. If we are working on your only bathroom, we plan the schedule around that and tell you up front what to expect.'
+galleryTitle: 'Bathrooms we have done.'
+gallerySubtitle: 'Real bathroom projects around St. George, including the waterproofing most people never see.'
 galleryImages:
+  - src: '/assets/images/projects/primary-bath-tub-and-vanity.jpg'
+    alt: 'Remodeled primary bathroom with a freestanding tub, double vanity and frameless glass shower'
+  - src: '/assets/images/projects/primary-bath-freestanding-tub.jpg'
+    alt: 'Freestanding soaking tub with a floor-mounted tub filler in a remodeled primary bathroom'
+  - src: '/assets/images/projects/guest-bath-finished.jpg'
+    alt: 'Finished guest bathroom with a patterned-tile walk-in shower and frameless glass door'
+  - src: '/assets/images/projects/guest-bath-vanity.jpg'
+    alt: 'Remodeled guest bathroom vanity with a black countertop and brass fixtures'
   - src: '/assets/images/projects/bathroom-freestanding-tub.jpg'
     alt: 'Freestanding soaking tub with glass-block windows in a Haggerty Construction master bath'
   - src: '/assets/images/projects/bathroom-patterned-tile-shower.jpg'
@@ -70,66 +96,31 @@ galleryImages:
   - src: '/assets/images/gallery/freestanding-tub-glass-block.png'
     alt: 'Freestanding soaking tub with gold fixtures and glass block window wall'
   - src: '/assets/images/gallery/patterned-tile-shower.jpg'
-    alt: 'Custom geometric patterned tile shower by Haggerty Construction'
-  - src: '/assets/images/projects/bathroom-shower-tile-progress.jpg'
-    alt: 'Shower tile installation in progress showing Haggerty Construction attention to detail'
+    alt: 'Setting fixtures in a white subway-tile bathroom'
 testimonial:
   text: 'Our interaction with the Haggerty brothers has been so positive! They are very professional, prompt, clear, and polite in their communication and I recommend getting in touch with them.'
   name: 'Taylor Sanchez'
 testimonial2:
   text: 'Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids and looks beautiful too! Very grateful!'
   name: 'ULIV Skincare'
-spokeServices:
-  - title: 'Shower Remodels'
-    url: '/services/bathroom-remodels/shower-remodels/'
-    icon: 'bi-border-all'
-    description: 'Custom tile showers, walk-ins, glass enclosures, and fixture upgrades.'
-  - title: 'Tub-to-Shower Conversions'
-    url: '/services/bathroom-remodels/tub-to-shower/'
-    icon: 'bi-arrows-angle-expand'
-    description: 'Remove the tub, gain a modern walk-in shower. Real tile, real craftsmanship.'
-  - title: 'Small Bathroom Remodels'
-    url: '/services/bathroom-remodels/small-bathrooms/'
-    icon: 'bi-arrows-angle-contract'
-    description: 'Smart layouts and space-saving solutions for tight bathrooms.'
 relatedServices:
   - title: 'Kitchen Remodels'
     url: '/services/kitchen-remodels/'
-    description: 'Complete kitchen transformations with the same attention to detail.'
+    description: 'Same planning, with appliances and cabinets in the mix.'
   - title: 'Custom Cabinetry'
     url: '/services/custom-cabinetry/'
-    description: 'Vanities, linen storage, and built-ins designed for your space.'
-  - title: 'Home Remodeling'
+    description: 'Vanities, linen storage and built-ins designed for your space.'
+  - title: 'Whole-Home Remodels'
     url: '/services/home-remodeling/'
-    description: 'Transform multiple rooms or your entire home.'
+    description: 'Several rooms, one plan, one schedule.'
 ---
 
-Your bathroom should be more than just functional — it should feel like the one room in the house that's actually yours. A place where the tile is beautiful, the fixtures work perfectly, and everything was chosen on purpose.
+If you just want a liner dropped over your old tub, there are companies in town that will do it in a day. If you want anything custom (real tile, a new layout, a walk-in shower), that's where we come in.
 
-If your bathroom has dated tile, a vanity that's seen better days, or a layout that makes no sense, we can fix all of that.
+Custom bathrooms are where the surprises live. Old leaks, soft subfloors, plumbing that isn't where anyone expected. Most of it can't be seen until the wall is open, but almost all of it can be planned for.
 
-## Full-service bathroom renovations
+So we plan for it. Before demo, we talk through what we're likely to find and what it would cost, and we settle your shower, tile and fixtures, because those decide how everything behind the tile gets built. Then the remodel runs smooth, even when the wall has something to say.
 
-We handle bathroom remodels from demo to final grout line. That means plumbing, electrical, tile, fixtures, paint, and trim — every trade coordinated by our team through one point of contact. No chasing down separate trades yourself.
+## Safe and easy to use, without looking like a hospital
 
-Whether it's a guest bath face-lift or a full master suite gut-and-rebuild, we've done it across St. George, Washington, Hurricane, and the surrounding area.
-
-## The details matter here
-
-Bathrooms are where sloppy work shows. A tile line that's off by a quarter inch. Grout that's not sealed. A shower niche that doesn't drain properly. These are the things most homeowners don't think about until something goes wrong — and by then it's expensive to fix.
-
-**We sweat the details because we've learned the hard way that they matter.** Every tile gets checked for level. Every seam gets sealed. Every fixture gets tested before we leave.
-
-**You'll know what's happening the whole time.** Our project management runs through Haggerty OS — our proprietary software — so your timeline, budget, and progress are always transparent and tracked.
-
-## Safe, accessible bathrooms — beautifully done
-
-A bathroom should be easy and comfortable to use for years to come — and it can be safe without looking like a hospital. We design accessible bathrooms that are every bit as beautiful as they are practical.
-
-- **Curbless and walk-in showers** that are easy to step into, with a clean, modern, spa-like look.
-- **Tub-to-shower conversions** that reclaim space and remove the high step-over of an old tub.
-- **Grab bars done tastefully** — integrated into the design in finishes that match your fixtures, not bolted on as an afterthought.
-- **Comfort-height fixtures**, slip-resistant tile, and better lighting that make everyday use easier and more confident.
-
-Whether you're planning ahead or making your home work better right now, we'll help you build a bathroom that's safe, comfortable, and genuinely beautiful.
-
+Walk-in and curbless showers, tub-to-shower conversions that get rid of the high step, grab bars in finishes that match your fixtures, comfort-height fixtures and better lighting. A bathroom can be safer for the people who use it and still be the nicest room in the house.

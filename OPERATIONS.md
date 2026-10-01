@@ -47,14 +47,17 @@ silently, which is the dangerous kind.
 
 | Command | What it does | Where it runs |
 | --- | --- | --- |
-| `npm run verify` | Build, then check the output | Locally, before you push |
+| `npm run verify` | Lint, build, then check the output | Locally, before you push |
+| `npm run lint` | Source conventions (below) — no build needed | CI, on every PR, first step |
 | `npm run check` | Build-output checks only | CI, on every PR (`.github/workflows/ci.yml`) |
 | `npm run smoke` | Hits the **live site** and fails if it is broken | Every 15 min (`.github/workflows/uptime.yml`) |
 
 `npm run check` (`scripts/check-build.mjs`) catches: redirect rules that fight
 the canonical host, unreachable rules shadowed by an earlier wildcard, missing
 or wrong-host canonical tags, pages missing the GA4 tag, form actions pointing
-at pages the build does not produce, and broken internal links.
+at pages the build does not produce, broken internal links, images that do
+not exist in the build, and `srcset` URLs containing spaces (browsers drop
+them and fall back to the smallest image).
 
 `npm run smoke` (`scripts/smoke.mjs`) is the one that would have caught the
 July outage. The bug existed only in the interaction between this repo and a
@@ -65,6 +68,28 @@ present in the served HTML.
 
 On failure the uptime workflow opens a single issue labelled `outage` (it will
 not file duplicates) and closes it automatically when the site recovers.
+
+## Conventions
+
+`npm run lint` (`scripts/check-conventions.mjs`) enforces these on the source.
+Each one is there because breaking it already cost something in this repo.
+
+| Rule | What it means | Why |
+| --- | --- | --- |
+| `colors-in-tokens` | A raw color (`#hex`, `rgb()`) may only appear as the value of a `--token` in CSS. Everything else uses `var(--token)`. | A theme should be one block of tokens. Light mode meant hunting down hardcoded colors across 1,000+ lines. |
+| `theme-utilities` | No `text-white`, `text-light`, `bg-dark`, etc. in templates. Text inherits the theme; use `.text-strong` for emphasis. | ~50 of these had to be removed before any page could go light. |
+| `inline-colors` | No colors in `style=""`. Use a class (`.icon-accent`, `.panel`, …). | Same as above, in the markup. |
+| `image-shortcode` | Never link to generated `/images/<name>-850w.webp` files. Point at the original in `/assets/images/` and render it with `{% image %}`. | Those files exist only if some *other* template happens to generate them. The About page hero 404'd on the live site because of this. |
+| `unused-file` | Every stylesheet in `src/css/` is loaded by a template, and there are no `.less`/`.scss` files. | Twelve `.less` files sat here for years; nothing compiled them, so editing them did nothing. |
+| `build-output` | Nothing under `public/` is committed. | `public/` is regenerated; committed files there get deleted by a clean build. |
+| `photo-location` | No photo under `src/` contains GPS coordinates. Run `npm run strip-photo-metadata` before committing new photos. | Phone photos record where they were taken, usually a client's home. 64 published originals exposed those coordinates until 2026-10-01. |
+
+Only what visitors can reach is checked: published pages, the layouts those
+pages actually use, includes, and the stylesheets any of them load. Pages
+switched off with `permalink: false`, and layouts or stylesheets only they use
+(the blog's `blog-post.html` and `blog.css`; `reviews.css`; `projects.css`),
+are skipped. Switch one back on, or add a blog post, and its stylesheet has to
+pass, so it gets moved onto the tokens at the moment it goes live.
 
 ## Recommended, not yet done
 
@@ -80,8 +105,9 @@ not file duplicates) and closes it automatically when the site recovers.
 
 ## Gotchas
 
-- `public/` is the build output and is gitignored — **except** `public/images/blog/`,
-  which is committed. A `rm -rf public` before rebuilding will delete those
-  tracked files. Restore with `git checkout -- public/images/blog/`.
+- `public/` is the build output and is gitignored; nothing in it is committed.
+  The site editor at `/admin` (Decap/Netlify CMS) saves uploads to
+  `src/assets/images/uploads/`, so they go through the image optimizer like
+  every other photo.
 - Netlify `_redirects` is **first match wins**. Specific rules must appear above
   wildcards. `npm run check` enforces this.

@@ -14,11 +14,17 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version-file: '.nvmrc'
           cache: npm
 
       - name: Install dependencies
         run: npm ci
+
+      # Source conventions: colors in tokens, no theme-locked utility classes,
+      # images through {% image %}, no dead stylesheets, no build output in
+      # git, no GPS coordinates in photos.
+      - name: Check conventions
+        run: npm run lint
 
       - name: Build site
         run: npm run build

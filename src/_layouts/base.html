@@ -30,12 +30,19 @@
     <meta name="msapplication-TileColor" content="#1B3A4B">
     <meta name="theme-color" content="#1B3A4B">
 
-    <!-- Preload -->
-    <!--<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>-->
+    <!-- Third-party origins we always hit: warm the connections before the CSS asks for them -->
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
 
-    <!--<link rel="stylesheet" href="/css/root.css">
-    <link rel="stylesheet" href="/css/dark.css">-->
+    <!-- The two brand faces used above the fold (headings 700, body 500), fetched
+         in parallel with the kit CSS instead of after it. URLs come from
+         https://use.typekit.net/pfv6oag.css; if the kit is republished with new
+         font files these become harmless extra requests, so re-copy them then. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://use.typekit.net/af/e83408/00000000000000007735e043/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n7&amp;v=3">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://use.typekit.net/af/c2fe50/00000000000000007735faea/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n5&amp;v=3">
+
 
     {% if preloadImg %}
     <link rel="preload" as="image" href="{{ preloadImg }}" fetchpriority="high" />
@@ -50,7 +57,12 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
         
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css" media="print" onload="this.media='all'">
+    {% if theme == 'light' %}
+    <link rel="stylesheet" href="/css/light.css">
+    {% endif %}
+    <!-- Loaded normally on purpose: the async "print" trick painted every page in
+         Arial first and then swapped to Apotek, which was visible on every load. -->
+    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
 
 
@@ -112,7 +124,7 @@
       "name": "{{ client.name }}",
       "url": "https://{{ client.domain }}",
       "logo": "https://{{ client.domain }}/assets/images/FullName500pxDarkBlue.png",
-      "image": "https://{{ client.domain }}/assets/images/landing-1920w.webp",
+      "image": "https://{{ client.domain }}/images/social.jpg",
       "description": "{{ description }}",
       "address": {
         "@type": "PostalAddress",
@@ -132,6 +144,7 @@
         { "@type": "City", "name": "Santa Clara" },
         { "@type": "City", "name": "LaVerkin" },
         { "@type": "City", "name": "Leeds" },
+        { "@type": "City", "name": "Toquerville" },
         { "@type": "AdministrativeArea", "name": "Washington County, Utah" }
       ],
       "sameAs": [
@@ -140,21 +153,19 @@
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Construction Services",
+        "name": "Home Remodeling Services",
         "itemListElement": [
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Remodels" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Cabinetry" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Renovations" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Basement Finishing" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Home Additions" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "General Contracting" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bathroom Remodels" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Whole-Home Remodels" } }
         ]
       }
     }
     </script>
 </head>
 
-<body>
+<body{% if theme %} class="theme-{{ theme }}"{% endif %}>
     <!--Screen reader skip main nav-->
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 
@@ -163,7 +174,6 @@
     {% include "footer.html" %}
 
     <script src="/assets/js/bootstrap.bundle.min.js" defer></script>
-    <script defer src="/assets/js/dark.js"></script>
 
     <!--
         This script adds a class to the body after scrolling 100px
