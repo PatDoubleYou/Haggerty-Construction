@@ -20,6 +20,9 @@ until it's been read out loud by one of us and sounds like us.
 | Smallest job the site should invite: a single bathroom remodel. Ideal: multi-bath, bath + kitchen, whole-home (~$150K job is the target). | Decided |
 | Light theme as the only theme (no toggle). Do it *after* copy is settled. | Proposed |
 | Haggerty OS supports the promise (it's how we plan fast and document everything) — it's not the headline. | Proposed |
+| About story is first person, signed **Jayden Haggerty**. | Decided |
+| Publish the pre-construction price: ~3% down, **credited toward the build**. | Decided |
+| Bathroom-company contrast stays light: no names, one line. Our edge is anything custom. | Decided |
 
 ---
 
@@ -88,7 +91,8 @@ Keep this section. It's the source every draft pulls from.
 ### How the process actually works
 1. **Detailed ballpark estimate** — free. Haggerty OS lets us turn it
    around fast (usually same/next day — *don't promise that publicly*).
-2. **Pre-construction** — paid, about **3% down** (priced off the estimate).
+2. **Pre-construction** — paid, about **3% down** (priced off the estimate),
+   **credited toward the build** if they go forward.
    Filters out tire-kickers. Signed via the Pre-Construction Service
    Agreement.
 3. **Project Success Plan** — the deliverable: scope, overview, budget,
@@ -127,9 +131,10 @@ Keep this section. It's the source every draft pulls from.
 > **1. Free detailed estimate.** We walk your space and send a real,
 > line-item estimate — usually fast.
 >
-> **2. Pre-construction.** For about 3% down, we sit down together and
-> finish the plan: every selection, the risks, the lead times, a realistic
-> schedule, and a budget dialed in close.
+> **2. Pre-construction.** For about 3% of your estimate — credited toward
+> the build if you go forward — we sit down together and finish the plan:
+> every selection, the risks, the lead times, a realistic schedule, and a
+> budget dialed in close.
 >
 > **3. Your Project Success Plan.** Scope, budget, selections, schedule —
 > all in one document. It's yours to keep. No obligation to build with us.
@@ -137,7 +142,6 @@ Keep this section. It's the source every draft pulls from.
 > **4. We build it.** You sign the contract, we launch, and the plan does
 > what plans are supposed to do.
 >
-> `[Is the 3% credited toward the build if they go forward?]`
 
 Why this section matters for conversions: it tells a visitor exactly what
 happens after they click, puts a price on the first real commitment, and
@@ -171,12 +175,12 @@ right here.
 
 ### Bathroom pages — vs. the fast bathroom companies
 
-> Some bathroom companies can swap a tub liner in a day. That's great until
-> they open the wall and find mold, or you want anything other than the
-> standard package. We plan for what's behind the wall before we open it.
+> If you just want a liner dropped over your old tub, there are companies
+> that'll do it in a day. If you want anything custom — tile, a new layout,
+> a real walk-in shower — that's where we come in. And we plan for what's
+> behind the wall, mold included, before we open it.
 
-`[Want to name the liner companies' approach this directly? It's honest and
-it's what bathroom shoppers are comparing us against.]`
+Kept light on purpose: no names, no bashing. Our edge is "anything custom."
 
 ### Who we're for
 
@@ -186,7 +190,7 @@ it's what bathroom shoppers are comparing us against.]`
 
 ### About page — "Smooth is fast"
 
-Written in first person, signed by `[name]`. See open question below.
+First person, signed by Jayden.
 
 > Dad has a saying: *slow is smooth, smooth is fast.* I first heard it
 > hanging cabinets with him in a townhouse when I was learning the trade.
@@ -199,17 +203,17 @@ Written in first person, signed by `[name]`. See open question below.
 > That's how we run remodels now. Take your time, think it through, do it
 > right. `[+ Dad's own words on what it means — see below]`
 >
-> — `[name]`
+> — Jayden Haggerty
 
 ---
 
 ## 4. Open questions
 
-- [ ] Whose name signs the About story? (Recommendation: yours.)
-- [ ] Is the ~3% pre-construction fee credited toward construction?
-- [ ] OK to publish the 3% number? (Recommendation: yes — it pre-qualifies leads.)
+- [x] Whose name signs the About story? → Jayden
+- [x] Is the ~3% pre-construction fee credited toward construction? → Yes
+- [x] OK to publish the 3% number? → Yes
 - [ ] Client name, photos, and review for the $150K job (when ready).
-- [ ] How directly do we contrast with the fast bathroom/liner companies?
+- [x] How directly do we contrast with the fast bathroom/liner companies? → Lightly; "if it's custom at all, we've got them beat"
 - [ ] Ask 3–5 past clients: "Why did you pick us over the other bids?"
 
 ## 5. Questions for Dad
