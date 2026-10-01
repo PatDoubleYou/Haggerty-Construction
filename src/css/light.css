@@ -485,6 +485,33 @@
    page background. */
 .theme-light main + footer { margin-top: 0 !important; }
 
+/* Project pages: the short facts list beside the story */
+.theme-light .project-facts {
+    margin: 0;
+    border-top: 2px solid var(--text-primary);
+    padding-top: 1.25rem;
+}
+.theme-light .project-facts dt {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-warm-text);
+    margin-bottom: 0.25rem;
+}
+.theme-light .project-facts dd {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+.theme-light .project-facts dd:last-child { margin-bottom: 0; }
+
+/* Gallery tiles: same frame as every other photo on the site */
+.theme-light .gallery-tile { height: auto; aspect-ratio: 4 / 3; box-shadow: var(--shadow-soft); }
+
+/* Footer: the Utah Veteran-Owned Business registry decal */
+.veteran-badge-img { width: 88px; height: auto; margin: 0 auto; }
+
 /* The star rating in the hero links out to the Google profile */
 .theme-light .hero-trust-link {
     color: inherit;

@@ -66,7 +66,7 @@ galleryImages:
   - src: '/assets/images/gallery/latest-remodel/after.jpg'
     alt: 'Finished kitchen remodel with custom cabinetry and granite counters in St. George'
   - src: '/assets/images/projects/kitchen-oak-before.jpg'
-    alt: 'Original oak kitchen before a Haggerty Construction remodel'
+    alt: 'Hickory cabinets with white quartz counters and a gas range'
   - src: '/assets/images/projects/kitchen-demo-before.jpg'
     alt: 'Kitchen mid-demolition with original cabinets being removed by Haggerty Construction'
   - src: '/assets/images/projects/kitchen-cabinet-install-crew.jpg'

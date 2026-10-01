@@ -1,106 +1,129 @@
 ---
 layout: 'base.html'
 theme: 'light'
-description: 'See real kitchen, bathroom, and custom cabinetry projects completed by Haggerty Construction in St. George, Utah — before, during, and after.'
-metaTitle: 'St. George Remodeling Gallery | Haggerty Construction'
-tagTitle: 'Portfolio'
+description: 'Kitchens, bathrooms, built-ins and whole-home remodels by Haggerty Construction around St. George, Utah. Finished rooms and the work in progress, mostly our own photos from the job.'
+metaTitle: 'Remodeling Gallery, St. George, UT | Haggerty Construction'
+tagTitle: 'Gallery'
 preloadImg: ''
 preloadCSS: ''
 permalink: 'gallery/'
 eleventyNavigation:
-    key: Portfolio
+    key: Gallery
     order: 300
+# Photo groups, in the order they appear. Each gallery.json entry has a
+# matching `category`.
+groups:
+  - key: kitchens
+    eyebrow: Kitchens
+    title: 'Kitchens.'
+    text: 'Cabinets to the ceiling, islands, pantry walls, and the days in between.'
+  - key: bathrooms
+    eyebrow: Bathrooms
+    title: 'Bathrooms.'
+    text: 'Tile showers, freestanding tubs, and the waterproofing you never see once it is done.'
+  - key: built-ins
+    eyebrow: Built-ins
+    title: 'Built-ins and cabinetry.'
+    text: 'Bookcases, offices, mudrooms, a garage. Where we started.'
+  - key: on-the-job
+    eyebrow: On the job
+    title: 'On the job.'
+    text: 'Floors covered, walls opened, and the rink. The part most people never see.'
 ---
 
-<!-- Hero Section -->
-<section class="hero-section">
-    <div class="overlay"></div>
-    <div class="container-fluid position-on-top">
+<section class="hero-section hero-home hero-short">
+    {% image '/assets/images/gallery/Living Room.jpg', 'Green living room cabinets around a tile fireplace with wood floating shelves, built by Haggerty Construction', 'hero-bg', 'eager', '100vw' %}
+    <div class="container position-on-top">
         <div class="row">
-            <div class="col-12 text-center">
-                <img src="/assets/images/Full_Name500pxWhite.png" class="img-fluid" alt="Haggerty Construction">
-            </div>
-        </div>
-        <div class="row align-items-center mt-4">
-            <div class="col-md-10 mx-auto text-center">
-                <h1 class="hero-title">The Work Speaks for Itself.</h1>
-                <p class="hero-description mx-auto" style="max-width: 800px;">
-                    Take a look at some of our recent custom builds and remodels across St. George and Washington County. 
-                    From intricate custom cabinetry to full-scale home renovations, if it demands precision, we build it.
-                </p>
+            <div class="col-lg-9 col-xl-8">
+                <span class="eyebrow">Gallery &middot; Washington County, Utah</span>
+                <h1 class="hero-title">The work.</h1>
+                <p class="hero-body">Kitchens, bathrooms, built-ins and whole homes around St. George. Mostly our own phone photos, taken on the job, so you see it the way we do.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get your free estimate</a>
+                    <a href="tel:+14354141974" class="hero-phone" id="hero-phone-call">or call (435) 414-1974</a>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-
-<div class="container my-5">
-
-    <!-- ============================================ -->
-    <!--          Section 1: Featured Projects        -->
-    <!-- ============================================ -->
-
-    {% if collections.project.length > 0 %}
-    <section class="featured-projects mb-5" id="projects">
-        <h2 class="section-heading text-center mb-2">Recent Projects</h2>
-        <p class="text-center text-muted mb-4">Click any project to see the full story.</p>
-
+{% if collections.project.length > 0 %}
+<section class="section" id="projects">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-8">
+                <span class="eyebrow">Projects</span>
+                <h2 class="mb-3">A few, with the story.</h2>
+                <p class="lede mb-0">What it was, what we planned for, and how it turned out.</p>
+            </div>
+        </div>
         <div class="row g-4">
             {% asyncEach project in collections.project | reverse %}
-                <div class="col-md-6 col-lg-4">
-                    <a href="{{ project.url }}" class="project-card-link">
-                        <div class="project-card">
-                            <div class="project-card-img">
-                                {% image project.data.heroImage, project.data.heroImageAlt, '', 'lazy', '(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw' %}
-                            </div>
-                            <div class="project-card-body">
-                                <h3 class="project-card-title">{{ project.data.title }}</h3>
-                                {% if project.data.subtitle %}
-                                    <span class="project-card-subtitle">{{ project.data.subtitle }}</span>
-                                {% endif %}
-                                <p class="project-card-summary">{{ project.data.summary }}</p>
-                                <span class="project-card-cta">View Project →</span>
-                            </div>
+            <div class="col-md-6 col-lg-4">
+                <a href="{{ project.url }}" class="text-decoration-none">
+                    <div class="card service h-100 border-0">
+                        {% image project.data.heroImage, project.data.heroImageAlt, 'card-img-top', 'lazy', '(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw' %}
+                        <div class="card-body p-4">
+                            <h3 class="h4 card-title fw-bold mb-2">{{ project.data.title }}</h3>
+                            <p class="card-text text-muted mb-3">{{ project.data.summary }}</p>
+                            <span class="text-link">Read the story &rarr;</span>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
+            </div>
             {% endeach %}
         </div>
-    </section>
+    </div>
+</section>
+{% endif %}
 
-    <hr class="my-5">
-    {% endif %}
-
-    <!-- ============================================ -->
-    <!--          Section 2: Photo Grid               -->
-    <!-- ============================================ -->
-
-    <section class="photo-grid-section mb-5" id="gallery">
-        <h2 class="section-heading text-center mb-2">Gallery</h2>
-        <p class="text-center text-muted mb-4">More of our work across Southern Utah.</p>
-
-        <div class="row g-3">
-            {% for item in gallery %}
-                {% if item.type != 'text' %}
-                <div class="col-6 col-md-4">
-                    <div class="gallery-tile">
-                        {% if item.type == 'video' %}
-                            <video src="{{ item.path }}" autoplay loop muted playsinline></video>
-                        {% else %}
-                            {% image item.path, item.alt, "gallery-img", "lazy", "(min-width: 768px) 33vw, 50vw" %}
-                        {% endif %}
-                    </div>
-                </div>
-                {% endif %}
-            {% endfor %}
+{% for group in groups %}
+<section class="section {% if loop.index is odd %}section-alt{% endif %}" id="{{ group.key }}">
+    <div class="container">
+        <div class="row mb-4">
+            <div class="col-lg-8">
+                <span class="eyebrow">{{ group.eyebrow }}</span>
+                <h2 class="mb-2">{{ group.title }}</h2>
+                <p class="lede mb-0">{{ group.text }}</p>
+            </div>
         </div>
-    </section>
+        <div class="row g-3">
+            {% asyncEach item in gallery %}
+            {% if item.category == group.key %}
+            <div class="col-6 col-md-4">
+                <div class="gallery-tile photo-frame">
+                    {% image item.path, item.alt, "gallery-img", "lazy", "(min-width: 768px) 33vw, 50vw" %}
+                </div>
+            </div>
+            {% endif %}
+            {% endeach %}
+        </div>
+    </div>
+</section>
+{% endfor %}
 
-    <hr class="my-5">
+<section class="section band-dark">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <span class="eyebrow">Free estimate</span>
+                <h2 class="mb-4">Want one like these?</h2>
+                <p class="lede mb-0">We'll walk your space and send a detailed, line-item estimate. Licensed &amp; insured in Utah, license #12338912-5501.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <!-- Contact Form -->
-    <div id="contact-form">
+<section class="section section-alt">
+    <div class="container">
         {% include "contact-form.html" %}
     </div>
+</section>
 
+<div class="sticky-cta-bar d-lg-none" aria-label="Quick contact options">
+    <a href="tel:+14354141974" class="sticky-cta-call" id="sticky-cta-phone">
+        <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Call
+    </a>
+    <a href="#contact" class="sticky-cta-estimate">Free estimate</a>
 </div>
