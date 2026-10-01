@@ -34,7 +34,7 @@ pricing:
   text: "A solid, middle-of-the-road kitchen remodel usually lands around $50,000, and it's easy to reach $100,000 or more. In higher-end homes you can spend that much on cabinets or appliances alone. The range is wide because kitchens are that different. Your free estimate gives you the real number for yours."
 feature:
   title: 'A kitchen, start to finish.'
-  text: 'From our most recent whole-home remodel, which took in the kitchen, the laundry room and two bathrooms. Cabinets to the ceiling, the fridge built into a full wall of pantry storage, a coffee bar with open shelves, and a farmhouse sink. One we're proud of.'
+  text: "From our most recent whole-home remodel, which took in the kitchen, the laundry room and two bathrooms. Cabinets to the ceiling, the fridge built into a full wall of pantry storage, a coffee bar with open shelves, and a farmhouse sink. One we're proud of."
   images:
     - src: '/assets/images/projects/whole-home-kitchen-uppers-install.jpg'
       alt: 'Tall white upper cabinets being installed during a whole-home remodel'
