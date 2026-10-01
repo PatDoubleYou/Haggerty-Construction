@@ -480,9 +480,10 @@
    doesn't stretch the column */
 .theme-light .plan-photo { aspect-ratio: 4 / 3; }
 
-/* A page that ends on a dark band runs straight into the (dark) footer;
-   the footer's top margin would otherwise show as a light stripe. */
-.theme-light main:has(> .band-dark:last-child) + footer { margin-top: 0 !important; }
+/* Sections carry their own padding and background, so the footer sits
+   right under the last one; its top margin otherwise shows as a stripe of
+   page background. */
+.theme-light main + footer { margin-top: 0 !important; }
 
 /* The star rating in the hero links out to the Google profile */
 .theme-light .hero-trust-link {
