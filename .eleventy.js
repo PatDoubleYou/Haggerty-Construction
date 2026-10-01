@@ -1,7 +1,8 @@
 // imports for the various eleventy plugins (navigation & image)
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const { DateTime } = require('luxon');
-const Image = require('@11ty/eleventy-img');
+// eleventy-img v7 is ESM-only; Node 22 can require() it, and the function is the default export.
+const Image = require('@11ty/eleventy-img').default;
 const path = require('path');
 
 // allows the use of {% image... %} to create responsive, optimised images
@@ -71,11 +72,9 @@ module.exports = function (eleventyConfig) {
   // /favicon.ico 404'd on every page.
   eleventyConfig.addPassthroughCopy({ './src/assets/favicons/favicon.ico': '/favicon.ico' });
 
-  // open on npm start and watch CSS files for changes - doesn't trigger 11ty rebuild
-  eleventyConfig.setBrowserSyncConfig({
-    open: true,
-    files: './public/css/**/*.css',
-  });
+  // `npm start` serves the site with live reload. CSS is passthrough-copied,
+  // so watch it explicitly to reload on stylesheet edits.
+  eleventyConfig.addWatchTarget('./src/css/');
 
   // allows the {% image %} shortcode to be used for optimised iamges (in webp if possible)
   eleventyConfig.addNunjucksAsyncShortcode('image', imageShortcode);

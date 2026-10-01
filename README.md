@@ -6,10 +6,12 @@ deployed by Netlify from `main`.
 
 ## Working on it
 
+Needs Node 22 (pinned in `.nvmrc`, which CI and Netlify both read).
+
 ```sh
 npm ci
 npm start          # dev server with live reload
-npm run verify     # clean build + output checks — run before you push
+npm run verify     # conventions, build, output checks — run before you push
 ```
 
 Work on a branch and open a pull request. CI runs the checks on every PR, and
