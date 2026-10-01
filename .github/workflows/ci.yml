@@ -17,14 +17,14 @@ jobs:
           node-version-file: '.nvmrc'
           cache: npm
 
-      # Source conventions: colors in tokens, no theme-locked utility classes,
-      # images through {% image %}, no dead stylesheets, no build output in
-      # git. No dependencies needed, so it runs first and fails fast.
-      - name: Check conventions
-        run: npm run lint
-
       - name: Install dependencies
         run: npm ci
+
+      # Source conventions: colors in tokens, no theme-locked utility classes,
+      # images through {% image %}, no dead stylesheets, no build output in
+      # git, no GPS coordinates in photos.
+      - name: Check conventions
+        run: npm run lint
 
       - name: Build site
         run: npm run build

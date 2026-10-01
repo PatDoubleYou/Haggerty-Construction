@@ -82,6 +82,7 @@ Each one is there because breaking it already cost something in this repo.
 | `image-shortcode` | Never link to generated `/images/<name>-850w.webp` files. Point at the original in `/assets/images/` and render it with `{% image %}`. | Those files exist only if some *other* template happens to generate them. The About page hero 404'd on the live site because of this. |
 | `unused-file` | Every stylesheet in `src/css/` is loaded by a template, and there are no `.less`/`.scss` files. | Twelve `.less` files sat here for years; nothing compiled them, so editing them did nothing. |
 | `build-output` | Nothing under `public/` is committed. | `public/` is regenerated; committed files there get deleted by a clean build. |
+| `photo-location` | No photo under `src/` contains GPS coordinates. Run `npm run strip-photo-metadata` before committing new photos. | Phone photos record where they were taken, usually a client's home. 64 published originals exposed those coordinates until 2026-10-01. |
 
 Only what visitors can reach is checked: published pages, the layouts those
 pages actually use, includes, and the stylesheets any of them load. Pages

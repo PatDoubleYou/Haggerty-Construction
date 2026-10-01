@@ -14,6 +14,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
 import { execSync } from 'node:child_process';
+import exifr from 'exifr';
 
 const SRC = 'src';
 const failures = [];
@@ -157,6 +158,21 @@ try {
   }
 } catch {
   /* not a git checkout (e.g. a tarball build) — nothing to check */
+}
+
+/* ------------------------------------------------------------------ */
+/* 7. No location data in photos.                                      */
+/*    Phone photos carry GPS coordinates of where they were taken,     */
+/*    usually a client's home. Everything under src/assets is served   */
+/*    as-is, so the coordinates were downloadable from the live site.  */
+/*    Strip them before committing (see OPERATIONS.md).                */
+/* ------------------------------------------------------------------ */
+for (const f of files.filter((f) => /\.(jpe?g|png|webp|tiff?|heic|avif)$/i.test(f))) {
+  let gps = null;
+  try { gps = await exifr.gps(f); } catch { /* unreadable or no EXIF */ }
+  if (gps && gps.latitude != null) {
+    fail('photo-location', f, 'contains GPS coordinates — strip them before committing (npm run strip-photo-metadata)');
+  }
 }
 
 /* ------------------------------------------------------------------ */
