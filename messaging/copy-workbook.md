@@ -241,3 +241,54 @@ gold, not a summary.
   smooth is fast (Jayden) → reviews → FAQ → contact.
 - Still a placeholder on the homepage: client name + review for the
   whole-home job (see TODO in `src/index.html`).
+
+---
+
+## 7. Round 4 — About page (raw, lightly cleaned)
+
+### Who does what on a remodel
+- **Dad (William):** usually not on site, but always available. 30+ years in
+  construction: started in drywall, worked up to construction project
+  management, multi-million-dollar government projects. He's the one
+  overseeing the work and ultimately responsible. "You don't really see him,
+  but he is the guy."
+- **Blake:** shows up, sells the job, and runs it start to finish.
+  Superintendent and estimator. "He's your dude."
+- **Jayden:** admin and project support: books, keeping everyone organized
+  behind the scenes, building the software, photos and video. On site:
+  painting (his strength), cabinets, drywall (Blake's stronger there).
+  *(Possible separate painting division later; not for this page.)*
+
+### How it started
+- Turned five on **April 20, 2026** → started April 2021.
+- First real job with Dad: a custom built-in bookcase, painted **green**,
+  sprayed in the driveway. "We were just making it happen."
+- Built things in Dad's garage; flipped the house Dad lived in; remodeled Dad
+  and his partner's houses. Learned cabinets, repairs, small jobs from him.
+- Trial by fire: about two months into construction, Jayden managed a project
+  for Dad while Dad was away in Alaska for a couple of weeks.
+
+### Roots
+- Mom's side: the Blickenstorfer line, a Swiss pioneer family. Search result
+  attributes to the Washington County Historical Society's Santa Clara
+  pioneer list: Solomon and Anna Barbara Meier Blickensturfer, and Gottlieb
+  Blickensturfer, arriving with the Swiss company on Nov 28, 1861.
+  **Not yet verified first-hand** (wchsutah.org was down). Check against
+  Mom's genealogy books before publishing.
+- A Blickenstorfer ancestor built the house Jayden lives in (there's a
+  plaque). **Keep private** — don't say where.
+- Swiss Days (the poster) is Santa Clara's pioneer festival.
+
+### Working with a family company
+- Great chemistry, funny, good at problem solving and collaborating.
+  There have been challenges too.
+- Be frank: we've had bad projects and made mistakes. A bad reputation travels
+  fast in this town. We live here; our kids go to school here. We're not
+  faceless and we're not giant. We care about our community and our
+  reputation.
+
+### Photos / site upkeep
+- Needs more photos. Bus factor is high: Blake can't update the site today.
+- Found: the editor at `/admin` already has a **Projects** collection. Fixed
+  its uploads so posted projects build (they would have failed). Next: make
+  sure Blake has a login and knows how to use it.

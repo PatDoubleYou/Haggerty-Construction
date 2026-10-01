@@ -405,3 +405,55 @@
 
 .theme-light .hero-home .hero-title,
 .theme-light .hero-home .hero-body { text-align: left; margin-left: 0; }
+
+/* Inner pages: same hero treatment as the homepage, shorter */
+.theme-light .hero-short { min-height: min(64vh, 620px); }
+
+/* ============================================
+   Team — who does what
+   ============================================ */
+
+.theme-light .team-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+@media (min-width: 992px) {
+    .theme-light .team-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+}
+
+.theme-light .team-member img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--surface-card);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.25rem;
+}
+.theme-light .team-member h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+.theme-light .team-member .role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-warm-text);
+    margin-bottom: 1rem;
+}
+.theme-light .team-member p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+/* A short pull quote from a client */
+.theme-light .pull-quote {
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin: 0 0 1rem;
+}
+.theme-light .pull-quote-by {
+    color: var(--text-muted);
+    font-weight: 600;
+}
