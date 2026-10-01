@@ -338,3 +338,12 @@ Construction / Commercial / General Contracting in the estimate form.
 - Same with mold. And we plan selections up front (shower liner, tile and its
   size, hardware) because the build depends on them.
 
+
+### Decision (2026-10-01): niche down
+Search Console, last 3 months: 41 clicks on 12.6K impressions. 23 of those
+clicks came through the Google Business Profile listing. The commercial
+(208 impressions) and basement (87) pages earned **0 clicks**, so they were
+cut and 301-redirected. Kitchen searches rank well ("kitchen renovation near
+me" #2, "kitchen remodeler" #1) but get ~no clicks, so better titles and
+snippets are the lever there. Custom-cabinet searches have real demand (2K
+impressions) but rank ~#35, so that page is worth strengthening.
