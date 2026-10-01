@@ -469,3 +469,9 @@
 .theme-light .service-content h2 { margin: 2.5rem 0 1rem; }
 .theme-light .service-content h2:first-child { margin-top: 0; }
 .theme-light .service-content strong { color: var(--text-primary); }
+
+/* Card titles stay card-sized even when they're h2s inside a .section */
+.theme-light .section .card-title { font-size: 1.3rem; line-height: 1.3; }
+
+/* Showcase photos: same portrait shape so a mixed set lines up */
+.theme-light .feature-photo { aspect-ratio: 3 / 4; }

@@ -1,8 +1,9 @@
 ---
 layout: 'base.html'
+theme: 'light'
 title: 'Our Services'
 tagTitle: 'Remodeling Services'
-description: 'Custom home remodels in Washington County, Utah: kitchens, bathrooms, whole-home remodels and custom cabinetry. Family-owned. Free detailed estimates.'
+description: 'Custom home remodels in Washington County, Utah: kitchens, bathrooms, whole-home remodels and custom cabinetry, planned before demo. Family-owned. Free detailed estimates.'
 metaTitle: 'Remodeling Services in St. George, UT | Haggerty Construction'
 preloadCSS: ''
 preloadImg: ''
@@ -10,115 +11,89 @@ permalink: '/services/'
 eleventyNavigation:
     key: Services
     order: 200
+services:
+  - title: 'Kitchen Remodels'
+    url: '/services/kitchen-remodels/'
+    image: '/assets/images/kitchen-island-remodel.jpg'
+    alt: 'A kitchen island remodel by Haggerty Construction in St. George'
+    text: 'Cabinets, counters, appliances and layout, with every appliance spec checked against the openings and the power before demo.'
+  - title: 'Bathroom Remodels'
+    url: '/services/bathroom-remodels/'
+    image: '/assets/images/projects/guest-bath-finished.jpg'
+    alt: 'Finished guest bathroom with a patterned-tile walk-in shower by Haggerty Construction'
+    text: "Custom tile, walk-in showers and vanities. We plan for what's behind the wall before we open it."
+  - title: 'Whole-Home Remodels'
+    url: '/services/home-remodeling/'
+    image: '/assets/images/projects/home-flooring-living-room.jpg'
+    alt: 'Living room during a whole-home remodel, floors covered and furniture protected'
+    text: 'Several rooms, one plan, one schedule, and one person to call.'
+  - title: 'Custom Cabinetry & Built-Ins'
+    url: '/services/custom-cabinetry/'
+    image: '/assets/images/gallery/green-bookcase-wall.jpg'
+    alt: 'Floor-to-ceiling dark green built-in bookcase by Haggerty Construction'
+    text: "Built-ins, bookcases and storage designed for your home. It's where we started."
 ---
 
-<!-- Hero Section -->
-<section class="hero-section hero-service">
-    <picture class="hero-bg">
-        <source media="(min-width: 768px)" srcset="/assets/images/portfolio/hero-desktop.webp" type="image/webp">
-        <img src="/assets/images/portfolio/hero-mobile.webp" alt="Haggerty Construction team at work" width="1920" height="800" fetchpriority="high">
-    </picture>
-    <div class="container position-on-top text-center pt-5">
-        <h1 class="hero-title fw-bold mb-3">What We Do</h1>
-        <p class="hero-subtitle fs-4 fw-light text-strong">Custom home remodels in Washington County, Utah.</p>
-    </div>
-</section>
-
-<!-- Services Grid -->
-<div class="container px-3 my-5 py-5">
-    <div class="row text-center mb-5">
-        <div class="col-lg-8 mx-auto">
-            <h2 class="section-title animated-underline fw-bold mb-4">Our Services</h2>
-            <p class="text-muted fs-5 lh-lg">
-                We do one thing: custom remodels of people's homes in Washington County. Kitchens, bathrooms, whole homes, and the custom cabinetry that ties them together. One point of contact, one plan, one honest estimate.
-            </p>
-        </div>
-    </div>
-
-    <div class="row g-4">
-        <div class="col-md-6 col-lg-4">
-            <a href="/services/kitchen-remodels/" class="text-decoration-none">
-                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                    {% image './src/assets/images/kitchen-island-remodel.jpg', 'Kitchen remodel in St. George', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                    <div class="card-body p-4">
-                        <h3 class="card-title fw-bold mb-3 fs-5">Kitchen Remodels</h3>
-                        <p class="card-text text-muted">Complete kitchen transformations — layout, cabinets, countertops, tile, appliances. We handle the whole thing.</p>
-                    </div>
+<section class="hero-section hero-home hero-short">
+    {% image '/assets/images/portfolio/hero-desktop.webp', 'Haggerty Construction installing cabinets during a remodel', 'hero-bg', 'eager', '100vw' %}
+    <div class="container position-on-top">
+        <div class="row">
+            <div class="col-lg-9 col-xl-8">
+                <span class="eyebrow">Our services</span>
+                <h1 class="hero-title">We do one thing.</h1>
+                <p class="hero-body">Custom remodels of people's homes in Washington County, Utah. Kitchens, bathrooms, whole homes, and the cabinetry that ties them together.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get your free estimate</a>
+                    <a href="tel:+14354141974" class="hero-phone" id="hero-phone-call">or call (435) 414-1974</a>
                 </div>
-            </a>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-            <a href="/services/bathroom-remodels/" class="text-decoration-none">
-                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                    {% image './src/assets/images/bathroom-door-renovation.jpg', 'Haggerty Construction craftsman at work on a bathroom renovation in St. George', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                    <div class="card-body p-4">
-                        <h3 class="card-title fw-bold mb-3 fs-5">Bathroom Renovations</h3>
-                        <p class="card-text text-muted">From guest baths to master suites. Custom tile, vanities, fixtures — designed around how you use the space.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-            <a href="/services/custom-cabinetry/" class="text-decoration-none">
-                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                    {% image './src/assets/images/new-images/maxfields-office-final.jpg', 'Custom built-in office cabinetry', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                    <div class="card-body p-4">
-                        <h3 class="card-title fw-bold mb-3 fs-5">Custom Cabinetry & Built-Ins</h3>
-                        <p class="card-text text-muted">Custom cabinets, shelving, and storage that fit your home — not the other way around.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-md-6 col-lg-4">
-            <a href="/services/home-remodeling/" class="text-decoration-none">
-                <div class="card service h-100 bg-surface-card border-0 shadow-sm">
-                    {% image './src/assets/images/conners-living-room.webp', 'Custom living room built-ins and fireplace by Haggerty Construction', 'card-img-top', 'lazy', '(max-width: 600px) 100vw, 400px' %}
-                    <div class="card-body p-4">
-                        <h3 class="card-title fw-bold mb-3 fs-5">Home Remodeling</h3>
-                        <p class="card-text text-muted">One room or the whole house. We coordinate every trade so you don't have to.</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="col-12">
-            <div class="capability-card d-flex flex-column flex-md-row align-items-center justify-content-between p-5 text-center text-md-start">
-                <div class="mb-3 mb-md-0">
-                    <h3 class="fw-bold mb-2 fs-5">Not Sure Where to Start?</h3>
-                    <p class="text-muted mb-0">Tell us about your project and we'll help you figure out the best approach. No pressure, no obligation.</p>
-                </div>
-                <a href="#contact" class="btn btn-primary px-5 py-3 fw-bold text-nowrap ms-md-4">Get a Free Estimate</a>
             </div>
         </div>
     </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+            {% asyncEach svc in services %}
+            <div class="col-md-6">
+                <a href="{{ svc.url }}" class="text-decoration-none">
+                    <div class="card service h-100 border-0">
+                        {% image svc.image, svc.alt, 'card-img-top', 'lazy', '(min-width: 768px) 50vw, 100vw' %}
+                        <div class="card-body p-4">
+                            <h2 class="h4 card-title fw-bold mb-2">{{ svc.title }}</h2>
+                            <p class="card-text text-muted mb-0">{{ svc.text }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endeach %}
+        </div>
+    </div>
+</section>
+
+{% include "components/how-it-works.html" %}
+
+<section class="section band-dark">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <span class="eyebrow">Not sure where yours fits?</span>
+                <h2 class="mb-4">Tell us about it anyway.</h2>
+                <p class="lede mb-0">If it's a remodel of your home in Washington County and you want it run right, let's talk.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        {% include "contact-form.html" %}
+    </div>
+</section>
+
+<div class="sticky-cta-bar d-lg-none" aria-label="Quick contact options">
+    <a href="tel:+14354141974" class="sticky-cta-call" id="sticky-cta-phone">
+        <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Call
+    </a>
+    <a href="#contact" class="sticky-cta-estimate">Free estimate</a>
 </div>
-
-<!-- CTA / Contact -->
-<div class="section-spacing-lg pb-5">
-    {% include "contact-form.html" %}
-</div>
-
-<script defer>
-    document.addEventListener("DOMContentLoaded", () => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                } else {
-                    entry.target.classList.remove('is-visible');
-                }
-            });
-        }, { 
-            threshold: 0.5,
-            rootMargin: "0px 0px -100px 0px"
-        });
-
-        document.querySelectorAll('.animated-underline').forEach((el) => {
-            observer.observe(el);
-        });
-    });
-</script>
-

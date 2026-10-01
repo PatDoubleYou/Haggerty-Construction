@@ -10,6 +10,7 @@ theme: 'light'
     heroImage(Alt)        hero photo, a /assets/images/... path
     content               the markdown body: the page's story, in our words
     planFor[]             { title, text }  "What we plan for up front"
+    feature               { eyebrow, title, text, images[{ src, alt, caption }] }  a showcase
     pricing               { title, text }  "What it costs"
     capabilities[]        { title, text }  "What it can include"
     galleryImages[]       { src, alt }     plus galleryTitle / gallerySubtitle
@@ -110,6 +111,36 @@ theme: 'light'
                     </li>
                     {% endfor %}
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<!-- ============================================ -->
+<!--            One of ours (a showcase)          -->
+<!-- ============================================ -->
+
+{% if feature %}
+<section class="section">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-4">
+                <span class="eyebrow">{{ feature.eyebrow or "One of ours" }}</span>
+                <h2 class="mb-4">{{ feature.title }}</h2>
+                <p class="lede mb-0">{{ feature.text }}</p>
+            </div>
+            <div class="col-lg-8">
+                <div class="row g-3">
+                    {% asyncEach img in feature.images %}
+                    <div class="col-6">
+                        <div class="photo-frame feature-photo">
+                            {% image img.src, img.alt, 'd-block', 'lazy', '(min-width: 992px) 33vw, 50vw', 'img-fluid w-100' %}
+                        </div>
+                        {% if img.caption %}<p class="photo-caption mb-0">{{ img.caption }}</p>{% endif %}
+                    </div>
+                    {% endeach %}
+                </div>
             </div>
         </div>
     </div>
