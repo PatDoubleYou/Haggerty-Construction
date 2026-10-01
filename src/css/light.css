@@ -483,3 +483,11 @@
 /* A page that ends on a dark band runs straight into the (dark) footer;
    the footer's top margin would otherwise show as a light stripe. */
 .theme-light main:has(> .band-dark:last-child) + footer { margin-top: 0 !important; }
+
+/* The star rating in the hero links out to the Google profile */
+.theme-light .hero-trust-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline-on-photo);
+}
+.theme-light .hero-trust-link:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }

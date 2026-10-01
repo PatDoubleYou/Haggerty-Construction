@@ -97,6 +97,26 @@ h6 {
    Utilities & Overrides
    ============================================ */
 
+/* Keyboard users' "skip to content" link: off-screen until it has focus.
+   (The old rule lived in the deleted root.css, so the link was briefly
+   visible at the top of every page.) */
+.skip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    background-color: var(--surface-card);
+    color: var(--text-primary);
+    font-weight: 600;
+    transform: translateY(-200%);
+    transition: transform 0.15s ease;
+}
+.skip:focus {
+    transform: none;
+    outline: 2px solid var(--accent-primary);
+}
+
 .text-muted { color: var(--text-muted) !important; }
 .text-secondary { color: var(--text-secondary) !important; }
 .text-primary { color: var(--text-primary) !important; }
@@ -859,7 +879,8 @@ footer a:hover {
    Contact Form
    ============================================ */
 
-.form-control {
+.form-control,
+.form-select {
     background-color: var(--surface-base);
     border: 1px solid var(--border-emphasis);
     color: var(--text-primary);
@@ -868,7 +889,8 @@ footer a:hover {
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.form-control:focus {
+.form-control:focus,
+.form-select:focus {
     background-color: var(--surface-base);
     border-color: var(--accent-primary);
     color: var(--text-primary);
@@ -879,7 +901,7 @@ footer a:hover {
     color: var(--text-muted);
 }
 
-select.form-control option {
+.form-select option {
     background-color: var(--surface-base);
     color: var(--text-primary);
 }
@@ -987,11 +1009,6 @@ select.form-control option {
     .hero-title {
         font-size: 38px;
     }
-    .nav-link {
-        padding-top: 3rem;
-        font-size: 1.7rem;
-        padding-bottom: 1rem;
-    }
     h1 {
         border-radius: 10px;
         text-align: center;
@@ -1002,6 +1019,17 @@ select.form-control option {
         background-color: var(--surface-card);
         border-radius: var(--radius-md);
         padding: 40px 20px;
+    }
+}
+
+/* The collapsed (hamburger) menu only. Bootstrap collapses the nav below
+   992px; applying this any wider made the horizontal bar 120px tall on
+   laptops. */
+@media (max-width: 991.98px) {
+    .nav-link {
+        padding-top: 3rem;
+        font-size: 1.7rem;
+        padding-bottom: 1rem;
     }
 }
 

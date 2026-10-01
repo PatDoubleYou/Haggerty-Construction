@@ -30,9 +30,18 @@
     <meta name="msapplication-TileColor" content="#1B3A4B">
     <meta name="theme-color" content="#1B3A4B">
 
-    <!-- Preload -->
-    <!--<link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-regular.woff2" crossorigin>
-    <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/roboto-v29-latin-700.woff2" crossorigin>-->
+    <!-- Third-party origins we always hit: warm the connections before the CSS asks for them -->
+    <link rel="preconnect" href="https://use.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://p.typekit.net" crossorigin>
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+
+    <!-- The two brand faces used above the fold (headings 700, body 500), fetched
+         in parallel with the kit CSS instead of after it. URLs come from
+         https://use.typekit.net/pfv6oag.css; if the kit is republished with new
+         font files these become harmless extra requests, so re-copy them then. -->
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://use.typekit.net/af/e83408/00000000000000007735e043/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n7&amp;v=3">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://use.typekit.net/af/c2fe50/00000000000000007735faea/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&amp;fvd=n5&amp;v=3">
 
 
     {% if preloadImg %}
@@ -51,7 +60,9 @@
     {% if theme == 'light' %}
     <link rel="stylesheet" href="/css/light.css">
     {% endif %}
-    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css" media="print" onload="this.media='all'">
+    <!-- Loaded normally on purpose: the async "print" trick painted every page in
+         Arial first and then swapped to Apotek, which was visible on every load. -->
+    <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
 
 

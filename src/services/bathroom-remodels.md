@@ -105,16 +105,6 @@ testimonial:
 testimonial2:
   text: 'Thank you Haggerty Construction! Top notch work! Thanks for making it more safe for the grandkids and looks beautiful too! Very grateful!'
   name: 'ULIV Skincare'
-spokeServices:
-  - title: 'Shower Remodels'
-    url: '/services/bathroom-remodels/shower-remodels/'
-    description: 'Custom tile showers, walk-ins, glass enclosures, and fixture upgrades.'
-  - title: 'Tub-to-Shower Conversions'
-    url: '/services/bathroom-remodels/tub-to-shower/'
-    description: 'Remove the tub, gain a modern walk-in shower. Real tile, real craftsmanship.'
-  - title: 'Small Bathroom Remodels'
-    url: '/services/bathroom-remodels/small-bathrooms/'
-    description: 'Smart layouts and space-saving solutions for tight bathrooms.'
 relatedServices:
   - title: 'Kitchen Remodels'
     url: '/services/kitchen-remodels/'

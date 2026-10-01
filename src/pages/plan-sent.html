@@ -1,0 +1,45 @@
+---
+layout: 'base.html'
+theme: 'light'
+description: 'Thanks. Your example estimate and Project Success Plan from Haggerty Construction is on its way.'
+metaTitle: 'On Its Way | Haggerty Construction'
+tagTitle: 'On Its Way'
+preloadImg: ''
+preloadCSS: ''
+permalink: 'plan-sent/'
+eleventyExcludeFromCollections: true
+---
+
+<!--
+    The `action` target of the lead-magnet form (_includes/components/lead-magnet.html).
+    The packet is emailed by hand today, so this page promises one business day,
+    not "instantly". If that ever gets automated, say so here.
+-->
+
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8 text-center py-5">
+                <i class="bi bi-envelope-check-fill mb-4 d-block icon-xl icon-accent" aria-hidden="true"></i>
+                <h1 class="hero-title">It's on its way.</h1>
+                <p class="lede mb-4">We'll email you the example estimate and Project Success Plan within one business day. It comes from a real person at Haggerty Construction, so check your spam folder if you don't see it.</p>
+                <p class="mb-4">Want to talk about your project in the meantime?</p>
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                    <a href="tel:+14354141974" class="btn btn-primary" id="plan-sent-phone-call">
+                        <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>(435) 414-1974
+                    </a>
+                    <a href="/#contact" class="btn btn-outline-light">Request a free estimate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    if (typeof gtag === 'function') {
+        gtag('event', 'lead_magnet_submit', {
+            'event_category': 'lead_generation',
+            'event_label': 'Project Success Plan example'
+        });
+    }
+</script>

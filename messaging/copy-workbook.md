@@ -347,3 +347,18 @@ cut and 301-redirected. Kitchen searches rank well ("kitchen renovation near
 me" #2, "kitchen remodeler" #1) but get ~no clicks, so better titles and
 snippets are the lever there. Custom-cabinet searches have real demand (2K
 impressions) but rank ~#35, so that page is worth strengthening.
+
+### Decisions (2026-10-01, review round)
+- Google profile: **28 reviews, 4.9 stars** (confirmed by Jayden). Hero and reviews
+  section now say "4.9 on Google, 28 reviews" and link to the profile.
+  Review link for clients: https://g.page/r/CQp_Xl6bZPOoEBE/review
+- Estimate turnaround: usually same/next day, but the site promises
+  **"usually within a few days"** so we never over-promise.
+- Bathroom sub-pages (shower, small bath, tub-to-shower) folded into the
+  bathroom page with 301s. They were old template copy with unverified
+  prices and had ~0 impressions; they diluted the niche.
+- Lead magnet: the packet is emailed by hand today. The form now lands on
+  /plan-sent/ which promises one business day. Automate when ready.
+- Light theme is final.
+- Disabled-veteran-owned business award: Jayden recalls an email to
+  admin@haggertyutah.com. **Find it** so the claim can be stated precisely.
