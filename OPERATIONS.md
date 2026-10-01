@@ -83,10 +83,12 @@ Each one is there because breaking it already cost something in this repo.
 | `unused-file` | Every stylesheet in `src/css/` is loaded by a template, and there are no `.less`/`.scss` files. | Twelve `.less` files sat here for years; nothing compiled them, so editing them did nothing. |
 | `build-output` | Nothing under `public/` is committed (except the CMS's `public/images/blog/`). | `public/` is regenerated; committed files there get deleted by a clean build. |
 
-Pages switched off with `permalink: false` are skipped until they are switched
-back on. A few older stylesheets (`local.css`, `blog.css`, `projects.css`,
-`reviews.css`) are grandfathered at the top of the script. That list should
-only shrink: when you move one onto the tokens, take it off the list.
+Only what visitors can reach is checked: published pages, the layouts those
+pages actually use, includes, and the stylesheets any of them load. Pages
+switched off with `permalink: false`, and layouts or stylesheets only they use
+(the blog's `blog-post.html` and `blog.css`; `reviews.css`; `projects.css`),
+are skipped. Switch one back on, or add a blog post, and its stylesheet has to
+pass, so it gets moved onto the tokens at the moment it goes live.
 
 ## Recommended, not yet done
 

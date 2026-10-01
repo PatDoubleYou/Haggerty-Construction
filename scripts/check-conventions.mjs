@@ -7,8 +7,9 @@
  * drifting back into the habits that broke it?" Each rule exists because the
  * problem it prevents actually happened in this repo — see OPERATIONS.md.
  *
- * Grandfathered files are listed explicitly. The lists should only shrink:
- * when you clean one of those files up, delete it from the list.
+ * Pages switched off with `permalink: false`, and stylesheets only those pages
+ * load, are skipped. The moment a page is switched back on, it and its
+ * stylesheet have to pass.
  */
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join, relative, extname } from 'node:path';
@@ -17,10 +18,6 @@ import { execSync } from 'node:child_process';
 const SRC = 'src';
 const failures = [];
 const fail = (rule, file, msg) => failures.push({ rule, msg: `${file}: ${msg}` });
-
-/* Older stylesheets that predate the design tokens. Fold each into main.css's
- * tokens, then remove it from this list. */
-const LEGACY_CSS = new Set(['local.css', 'blog.css', 'projects.css', 'reviews.css']);
 
 /* Netlify CMS writes blog uploads here (admin/config.yml media_folder). The
  * blog is unpublished; retire or repoint the CMS, then remove this. */
@@ -37,16 +34,50 @@ function walk(dir, out = []) {
 
 const files = walk(SRC).filter((f) => !f.startsWith(join(SRC, 'admin')));
 const isTemplate = (f) => ['.html', '.md', '.njk'].includes(extname(f));
-const isUnpublished = (text) => /^permalink:\s*false\s*$/m.test(text.split(/^---\s*$/m)[1] ?? '');
+const frontMatter = (text) => (text.startsWith('---') ? text.split(/^---\s*$/m)[1] ?? '' : '');
+const fmValue = (text, key) => frontMatter(text).match(new RegExp(`^${key}:\\s*['"]?([^'"\\n]+?)['"]?\\s*$`, 'm'))?.[1];
+const isUnpublished = (text) => fmValue(text, 'permalink') === 'false';
 
-/* Templates that are actually published. Pages switched off with
- * `permalink: false` are skipped until they are switched back on. */
-const templates = files
-  .filter(isTemplate)
-  .map((f) => ({ f, text: readFileSync(f, 'utf8') }))
-  .filter(({ text }) => !isUnpublished(text));
+const LAYOUTS = join(SRC, '_layouts');
+const INCLUDES = join(SRC, '_includes');
+const all = files.filter(isTemplate).map((f) => ({ f, text: readFileSync(f, 'utf8') }));
+
+/* A page's layout comes from its front matter or the nearest directory data
+ * file (src/blog/blog.json -> "layout": "blog-post.html"). */
+function layoutOf(f, text) {
+  const own = fmValue(text, 'layout');
+  if (own) return own;
+  for (let dir = f.slice(0, f.lastIndexOf('/')); dir.startsWith(SRC); dir = dir.slice(0, dir.lastIndexOf('/'))) {
+    try {
+      const data = JSON.parse(readFileSync(join(dir, dir.split('/').pop() + '.json'), 'utf8'));
+      if (data.layout) return data.layout;
+    } catch { /* no directory data file here */ }
+  }
+  return null;
+}
+
+/* Published pages, plus the layouts they actually use (following each
+ * layout's own `layout:` chain), plus includes. Pages switched off with
+ * `permalink: false`, and layouts only they use, are skipped until a page
+ * using them is switched back on. */
+const pages = all.filter(({ f, text }) => !f.startsWith(LAYOUTS) && !f.startsWith(INCLUDES) && !isUnpublished(text));
+const liveLayouts = new Set();
+for (const { f, text } of pages) {
+  for (let name = layoutOf(f, text); name && !liveLayouts.has(name); ) {
+    liveLayouts.add(name);
+    const layout = all.find((t) => t.f === join(LAYOUTS, name));
+    name = layout && fmValue(layout.text, 'layout');
+  }
+}
+const templates = all.filter(({ f }) =>
+  f.startsWith(INCLUDES) || (f.startsWith(LAYOUTS) ? liveLayouts.has(relative(LAYOUTS, f)) : pages.some((p) => p.f === f))
+);
 
 const COLOR = /#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\(/;
+
+/* A stylesheet is "live" if a live page, layout or include loads it. */
+const liveText = templates.map(({ text }) => text).join('\n');
+const isLiveStylesheet = (f) => liveText.includes('/' + relative(SRC, f));
 
 /* ------------------------------------------------------------------ */
 /* 1. Colors live in tokens.                                           */
@@ -55,8 +86,7 @@ const COLOR = /#[0-9a-fA-F]{3,8}\b|\b(?:rgba?|hsla?)\(/;
 /*    a theme is one block of tokens, not a hunt through 1,000 lines.  */
 /* ------------------------------------------------------------------ */
 for (const f of files.filter((f) => f.endsWith('.css'))) {
-  const name = f.split('/').pop();
-  if (name.endsWith('.min.css') || LEGACY_CSS.has(name)) continue;
+  if (f.endsWith('.min.css') || !isLiveStylesheet(f)) continue;
   const css = readFileSync(f, 'utf8').replace(/\/\*[\s\S]*?\*\//g, (c) => c.replace(/[^\n]/g, ' '));
   css.split('\n').forEach((line, i) => {
     if (COLOR.test(line) && !/^\s*--[\w-]+\s*:/.test(line)) {
