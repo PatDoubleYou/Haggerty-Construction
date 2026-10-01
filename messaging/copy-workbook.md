@@ -273,8 +273,8 @@ gold, not a summary.
   attributes to the Washington County Historical Society's Santa Clara
   pioneer list: Solomon and Anna Barbara Meier Blickensturfer, and Gottlieb
   Blickensturfer, arriving with the Swiss company on Nov 28, 1861.
-  **Not yet verified first-hand** (wchsutah.org was down). Check against
-  Mom's genealogy books before publishing.
+  **Confirmed by Jayden:** Gottlieb is the name Mom gave. Records spell it
+  Blickensturfer; the family spells it Blickenstorfer.
 - A Blickenstorfer ancestor built the house Jayden lives in (there's a
   plaque). **Keep private** — don't say where.
 - Swiss Days (the poster) is Santa Clara's pioneer festival.
@@ -292,3 +292,49 @@ gold, not a summary.
 - Found: the editor at `/admin` already has a **Projects** collection. Fixed
   its uploads so posted projects build (they would have failed). Next: make
   sure Blake has a login and knows how to use it.
+
+---
+
+## 8. Round 5 — kitchens, surprises, focus (Jayden)
+
+### Positioning: niche down
+> "We do custom residential remodels in Washington County, Utah."
+
+Jayden's instinct: stop casting a wide net for search traffic, do one thing
+really well. Off-niche today: the commercial and basement pages, and New
+Construction / Commercial / General Contracting in the estimate form.
+
+### What a kitchen job includes
+- Usually cabinets and appliances; often lighting changes, moved outlets,
+  backsplash, countertops, paint. Sometimes flooring. Sometimes reframing,
+  new layouts, a vent hood through the roof. "It can get complicated."
+
+### What kitchens cost here
+- Middle-of-the-road: around **$50K**. Easily **$100K+**. You can spend that
+  much on cabinets or appliances alone in higher-end homes. Varies wildly.
+
+### Kitchen surprises we plan for
+- **Appliance layouts** get messed up a lot. We've installed a lot of
+  appliances, so we read the specs and blueprints: outlets and power in the
+  right spot, cabinet openings the right size. "Our skills are forged from
+  fixing those mistakes we've seen so many times" (a lot of cabinet
+  modification on other people's jobs).
+- **Cabinets on top of the floor or not.** Change the layout and you get
+  flooring gaps.
+- **Selections drive sequencing:** disposal or not and what size; dishwasher,
+  sink and drain rough-ins; things that have to be in the concrete at the
+  right point in the schedule. A lot of ordering and sequencing.
+
+### A kitchen we're proud of
+- The **Kraai** job (the whole-home remodel): floor-to-ceiling cabinets, a ton
+  of storage, a nice modern color, countertops that rounded it all off.
+  *(Ask before naming them publicly.)*
+
+### Behind-the-wall surprises (bathrooms, floors)
+- We name likely surprises up front, with a price: e.g. pulling carpet, "this
+  might have soaked into the subfloor; if so, it's about this much." Then
+  there's dog pee all over the subfloor, and it's "just like we said": replace
+  it, or prime and seal it. Already discussed, already priced.
+- Same with mold. And we plan selections up front (shower liner, tile and its
+  size, hardware) because the build depends on them.
+
