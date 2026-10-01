@@ -9,10 +9,7 @@ preloadCSS: '/css/local.css'
 
 <section class="hero-section hero-service">
     {% if heroImage %}
-    <picture class="hero-bg">
-        <source media="(min-width: 768px)" srcset="{{ heroImage }}" type="image/webp">
-        <img src="{{ heroImageMobile if heroImageMobile else heroImage }}" alt="{{ heroImageAlt }}" width="1920" height="800" fetchpriority="high">
-    </picture>
+    {% image heroImage, heroImageAlt, 'hero-bg', 'eager', '100vw' %}
     {% endif %}
     <div class="container position-on-top text-center pt-5">
         <h1 class="hero-title fw-bold mb-3">{{ title }}</h1>
@@ -197,13 +194,13 @@ preloadCSS: '/css/local.css'
         </div>
     </div>
     <div class="row g-3 justify-content-center">
-        {% for img in galleryImages %}
+        {% asyncEach img in galleryImages %}
         <div class="col-6 col-md-4">
             <div class="service-gallery-item shadow-sm rounded overflow-hidden">
-                <img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid w-100 img-cover-4x3" loading="lazy" decoding="async">
+                {% image img.src, img.alt, 'd-block', 'lazy', '(min-width: 768px) 33vw, 50vw', 'img-fluid w-100 img-cover-4x3' %}
             </div>
         </div>
-        {% endfor %}
+        {% endeach %}
     </div>
     <div class="row mt-4">
         <div class="col text-center">
@@ -227,26 +224,26 @@ preloadCSS: '/css/local.css'
     </div>
     <div class="row g-4 justify-content-center">
         {% if beforeAfter %}
-        {% for pair in beforeAfter %}
+        {% asyncEach pair in beforeAfter %}
         <div class="col-12 col-lg-6">
             <div class="before-after-pair">
                 <div class="row g-2">
                     <div class="col-6">
                         <div class="before-after-item rounded overflow-hidden position-relative">
                             <span class="ba-label">Before</span>
-                            <img src="{{ pair.before }}" alt="{{ pair.alt }} — before" class="img-fluid w-100 img-cover-4x3" loading="lazy" decoding="async">
+                            {% image pair.before, pair.alt + ' — before', 'd-block', 'lazy', '(min-width: 992px) 25vw, 50vw', 'img-fluid w-100 img-cover-4x3' %}
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="before-after-item rounded overflow-hidden position-relative">
                             <span class="ba-label ba-label-after">After</span>
-                            <img src="{{ pair.after }}" alt="{{ pair.alt }} — after" class="img-fluid w-100 img-cover-4x3" loading="lazy" decoding="async">
+                            {% image pair.after, pair.alt + ' — after', 'd-block', 'lazy', '(min-width: 992px) 25vw, 50vw', 'img-fluid w-100 img-cover-4x3' %}
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        {% endfor %}
+        {% endeach %}
         {% else %}
         <!-- PLACEHOLDER: Real before/after project photos to be supplied by Jayden. Do NOT use AI-generated or stock imagery here. Once real photos are ready, add a `beforeAfter` list to this page's front matter (before / after / alt) and remove `beforeAfterPlaceholder`. -->
         {% for n in [1, 2] %}

@@ -6,11 +6,16 @@ const path = require('path');
 
 // allows the use of {% image... %} to create responsive, optimised images
 // CHANGE DEFAULT MEDIA QUERIES AND WIDTHS
-async function imageShortcode(src, alt, className, loading, sizes = '(max-width: 600px) 400px, 850px') {
+//   src       './src/…' file path, or a site URL like '/assets/images/…' (what
+//             front matter uses) — URLs are resolved to their source under src/
+//   imgClass  classes for the <img> itself (className goes on <picture>)
+//   loading   'lazy', or 'eager' for above-the-fold heroes (also sets fetchpriority)
+async function imageShortcode(src, alt, className, loading, sizes = '(max-width: 600px) 400px, 850px', imgClass = '') {
   // don't pass an alt? chuck it out. passing an empty string is okay though
   if (alt === undefined) {
     throw new Error(`Missing \`alt\` on responsiveimage from: ${src}`);
   }
+  if (src.startsWith('/')) src = `./src${src}`;
 
   // create the metadata for an optimised image
   let metadata = await Image(`${src}`, {
@@ -20,7 +25,9 @@ async function imageShortcode(src, alt, className, loading, sizes = '(max-width:
     outputDir: './public/images',
     filenameFormat: function (id, src, width, format, options) {
       const extension = path.extname(src);
-      const name = path.basename(src, extension);
+      // Spaces would break srcset (a space separates the URL from its width
+      // descriptor), so the browser would fall back to the tiny src image.
+      const name = path.basename(src, extension).trim().replace(/\s+/g, '-');
       return `${name}-${width}w.${format}`;
     },
   });
@@ -38,12 +45,12 @@ async function imageShortcode(src, alt, className, loading, sizes = '(max-width:
           .join(', ')}" sizes="${sizes}">`;
       })
       .join('\n')}
-      <img
+      <img${imgClass ? ` class="${imgClass}"` : ''}
         src="${lowsrc.url}"
         width="${highsrc.width}"
         height="${highsrc.height}"
         alt="${alt}"
-        loading="${loading}"
+        loading="${loading}"${loading === 'eager' ? '\n        fetchpriority="high"' : ''}
         decoding="async">
     </picture>`;
 }

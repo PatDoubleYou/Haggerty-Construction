@@ -149,6 +149,31 @@ for (const file of pages) {
   }
 }
 
+/* 6b. Every image a page asks for must exist, and srcset URLs must not
+ *     contain spaces. Generated /images/*-850w.webp files only exist if some
+ *     template runs that source through {% image %}, so hand-written references
+ *     to them broke silently (the About page hero 404'd on the live site). */
+for (const file of pages) {
+  const html = readFileSync(file, 'utf8');
+  const url = '/' + relative(PUBLIC, file).replace(/index\.html$/, '').replace(/\.html$/, '');
+  const wanted = new Set();
+  for (const m of html.matchAll(/<(?:img|source)\b[^>]*?\ssrc="(\/[^"]+)"/g)) wanted.add(m[1]);
+  for (const m of html.matchAll(/<link\b[^>]*rel="preload"[^>]*href="(\/[^"]+)"/g)) wanted.add(m[1]);
+  for (const m of html.matchAll(/\ssrcset="([^"]+)"/g)) {
+    for (const candidate of m[1].split(',')) {
+      const parts = candidate.trim().split(/\s+/);
+      if (parts.length > 2) {
+        fail('image', `${url} has a srcset URL with a space in it (browsers drop it): ${candidate.trim()}`);
+        continue;
+      }
+      if (parts[0].startsWith('/')) wanted.add(parts[0]);
+    }
+  }
+  for (const src of wanted) {
+    if (!resolves(decodeURI(src))) fail('image', `${url} loads ${src}, which does not exist in the build`);
+  }
+}
+
 /* 7. The conversion page must exist. Named explicitly so the failure message is
  *    obvious rather than buried in a link report. */
 if (!existsSync(join(PUBLIC, 'success', 'index.html'))) {
