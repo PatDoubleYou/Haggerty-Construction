@@ -32,15 +32,6 @@ capabilities:
   - icon: 'bi-wrench-adjustable'
     title: 'Repairs & Updates'
     text: 'Drywall patches, door replacements, fixture upgrades. Small projects handled with the same care as big ones.'
-process:
-  - title: 'Discovery'
-    text: 'We walk your home together and talk about what is working, what is not, and what you want it to become.'
-  - title: 'Plan & Estimate'
-    text: 'You get a detailed scope of work with honest pricing. We use Haggerty OS to keep everything organized.'
-  - title: 'Construction'
-    text: 'We coordinate every trade — framing, plumbing, electrical, finishes — through our hand-picked network of local craftsmen. One team managing it all, start to finish.'
-  - title: 'Final Review'
-    text: 'We do a thorough walkthrough together. Nothing is done until you are completely satisfied.'
 faqs:
   - question: 'Do you handle the permits and inspections?'
     answer: 'Yes. As a licensed general contractor, we pull all necessary permits and coordinate inspections with the city. You do not need to worry about any of the paperwork.'

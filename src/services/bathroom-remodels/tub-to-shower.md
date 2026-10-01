@@ -35,15 +35,6 @@ capabilities:
   - icon: 'bi-shield-check'
     title: 'Full Waterproofing'
     text: 'Kerdi membrane, proper slope, sealed transitions. Built to last, not just to look good.'
-process:
-  - title: 'Free Consultation'
-    text: 'We look at your current tub, measure the space, and discuss what kind of shower makes sense.'
-  - title: 'Design & Estimate'
-    text: 'Detailed estimate with materials, timeline, and pricing. No guessing.'
-  - title: 'Build'
-    text: 'Tub removal, plumbing, waterproofing, tile, glass, fixtures — start to finish.'
-  - title: 'Final Walkthrough'
-    text: 'We check every detail and make sure you love the result before we call it done.'
 faqs:
   - question: 'How long does a tub-to-shower conversion take?'
     answer: 'Most conversions take 5-7 days including tub removal, plumbing, waterproofing, tile, and glass. More complex conversions with layout changes may take up to 10 days.'

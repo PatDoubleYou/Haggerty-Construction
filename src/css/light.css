@@ -457,3 +457,15 @@
     color: var(--text-muted);
     font-weight: 600;
 }
+
+/* Optional sections can land two of the same color side by side; a hairline
+   keeps them reading as separate sections. */
+.theme-light .section-alt + .section-alt,
+.theme-light .section:not(.section-alt):not(.band-dark) + .section:not(.section-alt):not(.band-dark) {
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Markdown body on service pages */
+.theme-light .service-content h2 { margin: 2.5rem 0 1rem; }
+.theme-light .service-content h2:first-child { margin-top: 0; }
+.theme-light .service-content strong { color: var(--text-primary); }

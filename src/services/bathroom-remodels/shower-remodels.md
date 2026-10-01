@@ -35,15 +35,6 @@ capabilities:
   - icon: 'bi-shield-check'
     title: 'Waterproofing'
     text: 'Kerdi membrane, proper pan construction, sealed transitions — the things you cannot see that prevent the problems you never want.'
-process:
-  - title: 'Free Consultation'
-    text: 'We assess your current shower, discuss your vision, and talk through options that work for your space.'
-  - title: 'Design & Estimate'
-    text: 'You get a detailed estimate with material selections, timeline, and real pricing. No guesswork.'
-  - title: 'Build'
-    text: 'Demo, plumbing, waterproofing, tile, glass, fixtures — every step coordinated by our team.'
-  - title: 'Final Walkthrough'
-    text: 'We test everything, check every grout line, and make sure you are completely happy before we leave.'
 faqs:
   - question: 'How long does a shower remodel take?'
     answer: 'A standard shower remodel with custom tile takes 5-10 days depending on complexity. If we are also moving plumbing or changing the layout, add another 2-3 days. We give you a clear timeline before we start and stick to it.'

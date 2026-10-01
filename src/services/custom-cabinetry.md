@@ -32,15 +32,6 @@ capabilities:
   - icon: 'bi-tools'
     title: 'Garage Storage'
     text: 'Workshop cabinets, overhead storage, and organization systems built to handle the heavy stuff.'
-process:
-  - title: 'Consultation'
-    text: 'We measure your space, talk about what you need to store, and discuss styles and finishes.'
-  - title: 'Design'
-    text: 'We design the cabinetry around your space — not from a catalog. Every dimension is custom.'
-  - title: 'Build & Install'
-    text: 'Our manufacturer builds to spec, and our crew handles delivery and installation with precision.'
-  - title: 'Walkthrough'
-    text: 'We make sure every door closes right, every drawer slides smooth, and you are completely happy.'
 galleryImages:
   - src: '/assets/images/Maxfields office built-in final.jpg'
     alt: 'Custom built-in office cabinetry'

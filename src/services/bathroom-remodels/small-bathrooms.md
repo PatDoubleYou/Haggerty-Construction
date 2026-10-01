@@ -35,15 +35,6 @@ capabilities:
   - icon: 'bi-box-seam'
     title: 'Built-In Storage'
     text: 'Recessed medicine cabinets, shower niches, and vertical shelving designed into the walls.'
-process:
-  - title: 'Free Consultation'
-    text: 'We measure your bathroom and talk about what matters most to you in the space.'
-  - title: 'Design & Estimate'
-    text: 'A plan that maximizes your space, with honest pricing and a clear timeline.'
-  - title: 'Build'
-    text: 'Demo, plumbing, tile, fixtures, paint — every trade coordinated by our team.'
-  - title: 'Final Walkthrough'
-    text: 'We make sure every detail is right before we call it done.'
 faqs:
   - question: 'Can you really make my small bathroom feel bigger?'
     answer: 'Yes. Glass shower enclosures instead of curtains, large-format tile, floating vanities, recessed storage, and proper lighting all work together to make a small bathroom feel significantly more open. We do this regularly.'

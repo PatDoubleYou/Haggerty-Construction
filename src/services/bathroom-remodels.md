@@ -32,15 +32,6 @@ capabilities:
   - icon: 'bi-box-seam'
     title: 'Storage Solutions'
     text: 'Medicine cabinets, linen closets, floating shelves. Smart storage designed into the space from day one.'
-process:
-  - title: 'Free Consultation'
-    text: 'We visit your bathroom, hear your vision, and talk through options that fit your space and budget.'
-  - title: 'Design & Estimate'
-    text: 'You get a detailed estimate with material selections, timeline, and real pricing. No guesswork.'
-  - title: 'Build'
-    text: 'Demo, plumbing, tile, fixtures, paint — every trade coordinated by our team from start to finish.'
-  - title: 'Final Walkthrough'
-    text: 'We walk the finished bathroom together and fix anything that is not exactly right.'
 faqs:
   - question: 'How long does a bathroom remodel take?'
     answer: 'A guest bath refresh with new vanity, fixtures, and paint typically takes 1-2 weeks. A full master bathroom renovation with custom tile work and layout changes runs 3-6 weeks. We give you a clear timeline before we start.'
