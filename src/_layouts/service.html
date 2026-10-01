@@ -15,8 +15,8 @@ preloadCSS: '/css/local.css'
     </picture>
     {% endif %}
     <div class="container position-on-top text-center pt-5">
-        <h1 class="hero-title fw-bold text-white mb-3">{{ title }}</h1>
-        <p class="hero-subtitle text-light fs-4 fw-light">{{ subtitle }}</p>
+        <h1 class="hero-title fw-bold mb-3">{{ title }}</h1>
+        <p class="hero-subtitle fs-4 fw-light text-strong">{{ subtitle }}</p>
     </div>
 </section>
 
@@ -84,7 +84,7 @@ preloadCSS: '/css/local.css'
         <div class="col-md-6 col-lg-4">
             <div class="capability-card h-100 border-0 p-4 text-center">
                 <i class="bi {{ item.icon }} service-icon mb-3"></i>
-                <h4 class="text-white fw-bold mb-2">{{ item.title }}</h4>
+                <h4 class="fw-bold mb-2">{{ item.title }}</h4>
                 <p class="text-muted mb-0">{{ item.text }}</p>
             </div>
         </div>
@@ -101,7 +101,7 @@ preloadCSS: '/css/local.css'
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <div class="mid-page-cta text-center bg-surface-card rounded-4 shadow-sm border border-secondary p-4 p-md-5">
-                <h3 class="text-white fw-bold mb-2">Ready to talk about your project?</h3>
+                <h3 class="fw-bold mb-2">Ready to talk about your project?</h3>
                 <p class="text-muted mb-4">Free, no-pressure estimates. We'll walk your space and give you real numbers.</p>
                 <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
                     <a href="#contact" class="btn btn-primary btn-lg px-4">Get a Free Estimate</a>
@@ -119,7 +119,7 @@ preloadCSS: '/css/local.css'
 <!-- ============================================ -->
 
 {% if process %}
-<div class="container my-5 py-5" style="background-color: var(--surface-card); border-radius: var(--radius-lg);">
+<div class="container my-5 py-5 panel">
     <div class="row text-center mb-5 px-4">
         <div class="col">
             <h2 class="section-title animated-underline fw-bold mb-3">Our Process</h2>
@@ -131,7 +131,7 @@ preloadCSS: '/css/local.css'
         <div class="col-md-6 col-lg-3 text-center">
             <div class="process-step">
                 <div class="process-number mb-3">{{ loop.index }}</div>
-                <h5 class="text-white fw-bold mb-2">{{ step.title }}</h5>
+                <h5 class="fw-bold mb-2">{{ step.title }}</h5>
                 <p class="text-muted small">{{ step.text }}</p>
             </div>
         </div>
@@ -149,12 +149,12 @@ preloadCSS: '/css/local.css'
         <div class="col-lg-6">
             <h2 class="section-title animated-underline fw-bold mb-3">You'll Always Know What's Happening</h2>
             <p class="text-muted fs-5 lh-lg mb-4">
-                The #1 fear with any remodel is a contractor who goes over budget, misses the timeline, or goes quiet. We built our own project-management software — <strong class="text-white">Haggerty OS</strong> — so that never happens to you.
+                The #1 fear with any remodel is a contractor who goes over budget, misses the timeline, or goes quiet. We built our own project-management software — <strong class="text-strong">Haggerty OS</strong> — so that never happens to you.
             </p>
             <ul class="haggerty-os-benefits list-unstyled fs-5">
-                <li class="d-flex mb-3"><i class="bi bi-check-circle-fill me-3 mt-1" style="color: var(--accent-warm);"></i><span class="text-muted"><strong class="text-white">Real-time updates.</strong> See progress and what's next without having to chase us down.</span></li>
-                <li class="d-flex mb-3"><i class="bi bi-check-circle-fill me-3 mt-1" style="color: var(--accent-warm);"></i><span class="text-muted"><strong class="text-white">Line-item estimates.</strong> Real numbers, itemized — so you know exactly what you're paying for.</span></li>
-                <li class="d-flex mb-3"><i class="bi bi-check-circle-fill me-3 mt-1" style="color: var(--accent-warm);"></i><span class="text-muted"><strong class="text-white">A clear timeline.</strong> Know the schedule up front, and hear it from us the moment anything changes.</span></li>
+                <li class="d-flex mb-3"><i class="bi bi-check-circle-fill me-3 mt-1 icon-accent"></i><span class="text-muted"><strong class="text-strong">Real-time updates.</strong> See progress and what's next without having to chase us down.</span></li>
+                <li class="d-flex mb-3"><i class="bi bi-check-circle-fill me-3 mt-1 icon-accent"></i><span class="text-muted"><strong class="text-strong">Line-item estimates.</strong> Real numbers, itemized — so you know exactly what you're paying for.</span></li>
+                <li class="d-flex mb-3"><i class="bi bi-check-circle-fill me-3 mt-1 icon-accent"></i><span class="text-muted"><strong class="text-strong">A clear timeline.</strong> Know the schedule up front, and hear it from us the moment anything changes.</span></li>
             </ul>
         </div>
         <div class="col-lg-6">
@@ -200,7 +200,7 @@ preloadCSS: '/css/local.css'
         {% for img in galleryImages %}
         <div class="col-6 col-md-4">
             <div class="service-gallery-item shadow-sm rounded overflow-hidden">
-                <img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid w-100" loading="lazy" decoding="async" style="aspect-ratio: 4/3; object-fit: cover;">
+                <img src="{{ img.src }}" alt="{{ img.alt }}" class="img-fluid w-100 img-cover-4x3" loading="lazy" decoding="async">
             </div>
         </div>
         {% endfor %}
@@ -234,13 +234,13 @@ preloadCSS: '/css/local.css'
                     <div class="col-6">
                         <div class="before-after-item rounded overflow-hidden position-relative">
                             <span class="ba-label">Before</span>
-                            <img src="{{ pair.before }}" alt="{{ pair.alt }} — before" class="img-fluid w-100" loading="lazy" decoding="async" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <img src="{{ pair.before }}" alt="{{ pair.alt }} — before" class="img-fluid w-100 img-cover-4x3" loading="lazy" decoding="async">
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="before-after-item rounded overflow-hidden position-relative">
                             <span class="ba-label ba-label-after">After</span>
-                            <img src="{{ pair.after }}" alt="{{ pair.alt }} — after" class="img-fluid w-100" loading="lazy" decoding="async" style="aspect-ratio: 4/3; object-fit: cover;">
+                            <img src="{{ pair.after }}" alt="{{ pair.alt }} — after" class="img-fluid w-100 img-cover-4x3" loading="lazy" decoding="async">
                         </div>
                     </div>
                 </div>
@@ -255,14 +255,14 @@ preloadCSS: '/css/local.css'
                 <div class="col-6">
                     <div class="before-after-placeholder rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <span class="ba-label">Before</span>
-                        <i class="bi bi-image text-muted" style="font-size: 2rem;"></i>
+                        <i class="bi bi-image text-muted icon-lg"></i>
                         <p class="text-muted small mb-0 mt-2">Real project photo coming soon</p>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="before-after-placeholder rounded d-flex flex-column align-items-center justify-content-center text-center p-4">
                         <span class="ba-label ba-label-after">After</span>
-                        <i class="bi bi-image text-muted" style="font-size: 2rem;"></i>
+                        <i class="bi bi-image text-muted icon-lg"></i>
                         <p class="text-muted small mb-0 mt-2">Real project photo coming soon</p>
                     </div>
                 </div>
@@ -282,7 +282,7 @@ preloadCSS: '/css/local.css'
 <section class="faq-section section-spacing-lg mb-5">
     <div class="container">
         <div class="text-center mb-4">
-            <h2 class="section-title animated-underline text-white">Frequently Asked Questions</h2>
+            <h2 class="section-title animated-underline">Frequently Asked Questions</h2>
         </div>
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -375,7 +375,7 @@ preloadCSS: '/css/local.css'
             <a href="{{ spoke.url }}" class="text-decoration-none">
                 <div class="card spoke-card h-100 bg-surface-card border-0 shadow-sm p-4">
                     {% if spoke.icon %}<i class="bi {{ spoke.icon }} service-icon mb-3 d-block text-center"></i>{% endif %}
-                    <h4 class="card-title text-white fw-bold text-center mb-2">{{ spoke.title }}</h4>
+                    <h4 class="card-title fw-bold text-center mb-2">{{ spoke.title }}</h4>
                     <p class="card-text text-muted text-center mb-0">{{ spoke.description }}</p>
                 </div>
             </a>
@@ -401,7 +401,7 @@ preloadCSS: '/css/local.css'
         <div class="col-md-4">
             <a href="{{ svc.url }}" class="text-decoration-none">
                 <div class="card service h-100 bg-surface-card border-0 shadow-sm text-center p-4">
-                    <h4 class="card-title text-white fw-bold">{{ svc.title }}</h4>
+                    <h4 class="card-title fw-bold">{{ svc.title }}</h4>
                     <p class="card-text text-muted mb-0">{{ svc.description }}</p>
                 </div>
             </a>
@@ -450,7 +450,7 @@ preloadCSS: '/css/local.css'
         <div class="col-lg-6">
             <h2 class="section-title animated-underline fw-bold mb-3">Not Ready to Call Yet?</h2>
             <p class="text-muted fs-5 lh-lg mb-0">
-                See exactly what you get before you commit to anything. Download a real example of our line-item estimate and <strong class="text-white">Project Success Plan</strong> — the same transparent paperwork every Haggerty client gets.
+                See exactly what you get before you commit to anything. Download a real example of our line-item estimate and <strong class="text-strong">Project Success Plan</strong> — the same transparent paperwork every Haggerty client gets.
             </p>
         </div>
         <div class="col-lg-6">
@@ -467,7 +467,7 @@ preloadCSS: '/css/local.css'
     <div class="row justify-content-center">
         <div class="col-lg-8">
             <p class="trust-strip text-center text-muted mb-0">
-                <i class="bi bi-patch-check-fill me-2" style="color: var(--accent-warm);"></i>
+                <i class="bi bi-patch-check-fill me-2 icon-accent"></i>
                 Licensed &amp; insured in Utah &mdash; Lic. #12338912-5501
             </p>
             <!--
@@ -475,12 +475,12 @@ preloadCSS: '/css/local.css'
                 Jayden to confirm whether a warranty exists and the exact wording. Once confirmed,
                 uncomment and edit the line below (and consider adding it to the footer too):
                 <p class="trust-strip text-center text-muted mb-0 mt-2">
-                    <i class="bi bi-shield-check me-2" style="color: var(--accent-warm);"></i>
+                    <i class="bi bi-shield-check me-2 icon-accent"></i>
                     Backed by our ___-year workmanship warranty
                 </p>
             -->
             <p class="trust-strip text-center text-muted mb-0 mt-2">
-                <i class="bi bi-people-fill me-2" style="color: var(--accent-warm);"></i>
+                <i class="bi bi-people-fill me-2 icon-accent"></i>
                 Family-owned &middot; Free estimates &middot; Coordinated by our team from demo to final walkthrough
             </p>
         </div>
