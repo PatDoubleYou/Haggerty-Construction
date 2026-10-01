@@ -228,3 +228,16 @@ gold, not a summary.
 4. Tell me about a time it saved a job.
 5. What did the Guard teach you that you still use running a job site?
 6. What's the one thing you want every client to feel when we finish?
+
+---
+
+## 6. Build log
+
+- **Homepage v1 (light theme)** built on branch `ccr-ab74eedd-yelxox`.
+  Light theme is opt-in per page (`theme: 'light'` front matter →
+  `src/css/light.css`); every other page is still dark until we roll it out.
+  Section order: hero → the other story → how it works (+ example plan
+  download) → what smooth looks like → services → work → who we're for →
+  smooth is fast (Jayden) → reviews → FAQ → contact.
+- Still a placeholder on the homepage: client name + review for the
+  whole-home job (see TODO in `src/index.html`).

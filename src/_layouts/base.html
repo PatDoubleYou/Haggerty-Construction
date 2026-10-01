@@ -50,6 +50,9 @@
     <link href="/css/bootstrap.min.css" rel="stylesheet">
         
     <link rel="stylesheet" href="/css/main.css">
+    {% if theme == 'light' %}
+    <link rel="stylesheet" href="/css/light.css">
+    {% endif %}
     <link rel="stylesheet" href="https://use.typekit.net/pfv6oag.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" media="print" onload="this.media='all'">
 
@@ -154,7 +157,7 @@
     </script>
 </head>
 
-<body>
+<body{% if theme %} class="theme-{{ theme }}"{% endif %}>
     <!--Screen reader skip main nav-->
     <a class="skip" aria-label="skip to main content" href="#main">Click To Skip To Main Content</a>
 

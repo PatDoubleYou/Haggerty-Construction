@@ -1,6 +1,6 @@
              <div class="rounded overflow-hidden shadow-lg border border-secondary bg-dark p-4 p-md-5 text-start lead-magnet-card" style="margin-top: -2rem;">
-                 <h4 class="text-white fw-bold mb-3">{{ title | default("Download a Free Example") }}</h4>
-                 <p class="text-muted small mb-4">{{ description | default("See exactly what you get before you sign anything. Enter your email to receive our 12-page Example Estimate and Project Success Plan.") }}</p>
+                 <h4 class="text-white fw-bold mb-3">{{ leadMagnetTitle | default("Download a Free Example") }}</h4>
+                 <p class="text-muted small mb-4">{{ leadMagnetDescription | default("See exactly what you get before you sign anything. Enter your email to receive our 12-page Example Estimate and Project Success Plan.") }}</p>
                  <form name="lead-magnet" data-netlify="true" netlify-honeypot="website" method="POST">
                      <input type="hidden" name="form-name" value="lead-magnet" />
                      <!-- Honeypot: hidden from humans, irresistible to link-spam bots. Real visitors leave it blank. -->
@@ -18,6 +18,6 @@
                              I agree to receive occasional construction tips and updates from Haggerty Construction.
                          </label>
                      </div>
-                     <button type="submit" class="btn btn-primary w-100 btn-lg shadow">{{ buttonText | default("Send Me the PDF") }}</button>
+                     <button type="submit" class="btn btn-primary w-100 btn-lg shadow">{{ leadMagnetButton | default("Send Me the PDF") }}</button>
                  </form>
              </div>
