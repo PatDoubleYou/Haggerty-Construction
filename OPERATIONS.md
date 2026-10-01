@@ -81,7 +81,7 @@ Each one is there because breaking it already cost something in this repo.
 | `inline-colors` | No colors in `style=""`. Use a class (`.icon-accent`, `.panel`, …). | Same as above, in the markup. |
 | `image-shortcode` | Never link to generated `/images/<name>-850w.webp` files. Point at the original in `/assets/images/` and render it with `{% image %}`. | Those files exist only if some *other* template happens to generate them. The About page hero 404'd on the live site because of this. |
 | `unused-file` | Every stylesheet in `src/css/` is loaded by a template, and there are no `.less`/`.scss` files. | Twelve `.less` files sat here for years; nothing compiled them, so editing them did nothing. |
-| `build-output` | Nothing under `public/` is committed (except the CMS's `public/images/blog/`). | `public/` is regenerated; committed files there get deleted by a clean build. |
+| `build-output` | Nothing under `public/` is committed. | `public/` is regenerated; committed files there get deleted by a clean build. |
 
 Only what visitors can reach is checked: published pages, the layouts those
 pages actually use, includes, and the stylesheets any of them load. Pages
@@ -104,10 +104,9 @@ pass, so it gets moved onto the tokens at the moment it goes live.
 
 ## Gotchas
 
-- `public/` is the build output and is gitignored — **except** `public/images/blog/`,
-  which is committed (Netlify CMS's `media_folder` points there). A
-  `rm -rf public` before rebuilding will delete those tracked files. Restore
-  with `git checkout -- public/images/blog/`. Moving the CMS media folder to
-  `src/` (or retiring the CMS with the blog) removes this trap.
+- `public/` is the build output and is gitignored; nothing in it is committed.
+  The site editor at `/admin` (Decap/Netlify CMS) saves uploads to
+  `src/assets/images/uploads/`, so they go through the image optimizer like
+  every other photo.
 - Netlify `_redirects` is **first match wins**. Specific rules must appear above
   wildcards. `npm run check` enforces this.

@@ -19,10 +19,6 @@ const SRC = 'src';
 const failures = [];
 const fail = (rule, file, msg) => failures.push({ rule, msg: `${file}: ${msg}` });
 
-/* Netlify CMS writes blog uploads here (admin/config.yml media_folder). The
- * blog is unpublished; retire or repoint the CMS, then remove this. */
-const TRACKED_OUTPUT_ALLOWED = ['public/images/blog/'];
-
 function walk(dir, out = []) {
   for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
@@ -157,9 +153,7 @@ for (const f of files) {
 try {
   const tracked = execSync('git ls-files public', { encoding: 'utf8' }).split('\n').filter(Boolean);
   for (const t of tracked) {
-    if (!TRACKED_OUTPUT_ALLOWED.some((p) => t.startsWith(p))) {
-      fail('build-output', t, 'is committed, but public/ is build output — put the source under src/');
-    }
+    fail('build-output', t, 'is committed, but public/ is build output — put the source under src/');
   }
 } catch {
   /* not a git checkout (e.g. a tarball build) — nothing to check */
