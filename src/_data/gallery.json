@@ -1,5 +1,29 @@
 [
   {
+    "path": "src/assets/images/projects/whole-home-kitchen-finished.jpg",
+    "alt": "Finished kitchen with white shaker cabinets to the ceiling, glass-front uppers and a dark island"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-kitchen-pantry-wall.jpg",
+    "alt": "Floor-to-ceiling pantry cabinets around a built-in fridge"
+  },
+  {
+    "path": "src/assets/images/projects/primary-bath-tub-and-vanity.jpg",
+    "alt": "Remodeled primary bathroom with a freestanding tub and double vanity"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-kitchen-coffee-bar.jpg",
+    "alt": "Coffee bar with open shelves on a beadboard back beside pantry cabinets"
+  },
+  {
+    "path": "src/assets/images/projects/primary-bath-freestanding-tub.jpg",
+    "alt": "Freestanding soaking tub with a floor-mounted tub filler"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-kitchen-farmhouse-sink.jpg",
+    "alt": "White farmhouse sink in shaker base cabinets with black countertops"
+  },
+  {
     "path": "src/assets/images/projects/hockey-scoreboard-footing.jpg",
     "alt": "Pouring a concrete footing for a new scoreboard at the Red Rock Hockey rink in St. George"
   },

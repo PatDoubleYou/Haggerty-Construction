@@ -6,8 +6,8 @@ eyebrow: 'Bathroom remodels &middot; Washington County, Utah'
 tagTitle: 'Bathroom Remodeling in St. George, Utah'
 description: "Custom bathroom remodels in St. George: tile showers, tub-to-shower conversions, new layouts. Mold and water damage planned for up front, not discovered mid-job."
 metaTitle: 'Bathroom Remodeling in St. George, UT | Haggerty Construction'
-heroImage: '/assets/images/projects/bathroom-patterned-tile-shower.jpg'
-heroImageAlt: 'Custom patterned-tile walk-in shower by Haggerty Construction in St. George'
+heroImage: '/assets/images/projects/primary-bath-tub-and-vanity.jpg'
+heroImageAlt: 'Remodeled primary bathroom with a freestanding tub, double vanity and frameless glass shower by Haggerty Construction'
 permalink: '/services/bathroom-remodels/'
 serviceType: 'Bathroom Remodeling'
 eleventyNavigation:
@@ -18,11 +18,11 @@ planForTitle: "What's behind the wall."
 planForIntro: "You never really know what's behind a shower wall until it's open. You can still plan for it."
 planForImages:
   - src: '/assets/images/projects/shower-wall-tearout.jpg'
-    alt: 'Haggerty Construction pulling old plaster and tile off a shower wall during a bathroom remodel'
-    caption: 'Old plaster coming off a shower wall.'
+    alt: 'Haggerty Construction pulling old plaster and lath off a bathroom wall during a remodel'
+    caption: 'Old plaster and lath coming off a bathroom wall.'
   - src: '/assets/images/projects/bathroom-subfloor-repair.jpg'
-    alt: 'Opened bathroom subfloor around the drain during a remodel'
-    caption: 'Same bathroom, subfloor opened up around the drain.'
+    alt: 'Bathroom floor opened up to the joists, with new plumbing going in'
+    caption: 'Floor opened up to the joists for new plumbing.'
 planFor:
   - title: 'Water damage and mold'
     text: "If there's a good chance of it, we tell you before we start, along with roughly what fixing it costs. If we open the wall and it's there, it's not a surprise. We already talked about it, and we fix it the way we agreed."
@@ -71,6 +71,10 @@ faqs:
 galleryTitle: 'Bathrooms we have done.'
 gallerySubtitle: 'Real bathroom projects around St. George, including the waterproofing most people never see.'
 galleryImages:
+  - src: '/assets/images/projects/primary-bath-tub-and-vanity.jpg'
+    alt: 'Remodeled primary bathroom with a freestanding tub, double vanity and frameless glass shower'
+  - src: '/assets/images/projects/primary-bath-freestanding-tub.jpg'
+    alt: 'Freestanding soaking tub with a floor-mounted tub filler in a remodeled primary bathroom'
   - src: '/assets/images/projects/guest-bath-finished.jpg'
     alt: 'Finished guest bathroom with a patterned-tile walk-in shower and frameless glass door'
   - src: '/assets/images/projects/guest-bath-vanity.jpg'

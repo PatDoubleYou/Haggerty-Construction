@@ -6,8 +6,8 @@ eyebrow: 'Kitchen remodels &middot; Washington County, Utah'
 tagTitle: 'Kitchen Remodeling in St. George, Utah'
 description: 'Kitchen remodels in St. George, planned before demo: appliance specs, lead times and layout settled up front. Most run $50K to $100K+. Free detailed estimate.'
 metaTitle: 'Kitchen Remodeling in St. George, UT | Haggerty Construction'
-heroImage: '/assets/images/gallery/latest-remodel/after.jpg'
-heroImageAlt: 'Finished kitchen remodel by Haggerty Construction in St. George, Utah'
+heroImage: '/assets/images/projects/whole-home-kitchen-pantry-wall.jpg'
+heroImageAlt: 'A finished wall of floor-to-ceiling shaker cabinets around a built-in fridge, from a Haggerty Construction remodel in Washington, Utah'
 permalink: '/services/kitchen-remodels/'
 serviceType: 'Kitchen Remodeling'
 eleventyNavigation:
@@ -17,12 +17,9 @@ eleventyNavigation:
 planForTitle: 'Where kitchen remodels go wrong.'
 planForIntro: "Most kitchen surprises aren't surprises. They're details nobody checked. These are the ones we check first."
 planForImages:
-  - src: '/assets/images/projects/outdoor-kitchen-appliance-install.jpg'
-    alt: 'Haggerty Construction fitting a built-in appliance into an outdoor kitchen island'
-    caption: 'Fitting a built-in appliance. The opening has to match the spec sheet, not the guess.'
   - src: '/assets/images/projects/kitchen-gutted-before.jpg'
-    alt: 'A kitchen gutted down to the subfloor before a remodel'
-    caption: 'A kitchen down to the subfloor, before the new layout goes in.'
+    alt: 'A kitchen with the old cabinets removed and the existing tile floor covered to protect it'
+    caption: 'Old cabinets out, existing tile floor covered and protected.'
 planFor:
   - title: 'Appliance layouts'
     text: "This is the one we see most. The fridge opening comes up short, the outlet ends up behind the wrong cabinet, the power isn't where the range needs it. We've installed a lot of appliances and modified a lot of cabinets to fix other people's openings, so we read the specs before anything gets built."
@@ -35,6 +32,20 @@ planFor:
 pricing:
   title: 'What a kitchen costs here.'
   text: "A solid, middle-of-the-road kitchen remodel usually lands around $50,000, and it's easy to reach $100,000 or more. In higher-end homes you can spend that much on cabinets or appliances alone. The range is wide because kitchens are that different. Your free estimate gives you the real number for yours."
+feature:
+  title: 'A kitchen, start to finish.'
+  text: 'From our most recent whole-home remodel, which took in the kitchen, the laundry room and two bathrooms. Cabinets to the ceiling, the fridge built into a full wall of pantry storage, a coffee bar with open shelves, and a farmhouse sink. One we're proud of.'
+  images:
+    - src: '/assets/images/projects/whole-home-kitchen-uppers-install.jpg'
+      alt: 'Tall white upper cabinets being installed during a whole-home remodel'
+      caption: 'Uppers going in.'
+    - src: '/assets/images/projects/whole-home-kitchen-finished.jpg'
+      alt: 'Finished kitchen with white shaker cabinets to the ceiling, glass-front uppers, a dark island and black countertops'
+      caption: 'Finished.'
+    - src: '/assets/images/projects/whole-home-kitchen-coffee-bar.jpg'
+      alt: 'Coffee bar with open shelves on a beadboard back, beside floor-to-ceiling pantry cabinets'
+    - src: '/assets/images/projects/whole-home-kitchen-farmhouse-sink.jpg'
+      alt: 'White farmhouse sink set into shaker base cabinets with black countertops and a stainless dishwasher'
 capabilities:
   - title: 'Cabinets'
     text: 'Custom cabinets designed with our local manufacturer and installed by us, or new doors and drawers on boxes worth keeping.'
@@ -51,8 +62,6 @@ capabilities:
 galleryTitle: 'Kitchens we have done.'
 gallerySubtitle: 'Real kitchen projects around St. George, from demo to finished.'
 galleryImages:
-  - src: '/assets/images/projects/whole-home-kitchen-uppers-install.jpg'
-    alt: 'Installing tall white upper cabinets under new pendant lights during a whole-home remodel'
   - src: '/assets/images/projects/whole-home-sage-cabinets-install.jpg'
     alt: 'Sage-green cabinets being installed during a whole-home remodel'
   - src: '/assets/images/gallery/latest-remodel/after.jpg'
