@@ -475,3 +475,7 @@
 
 /* Showcase photos: same portrait shape so a mixed set lines up */
 .theme-light .feature-photo { aspect-ratio: 3 / 4; }
+
+/* Photos beside a "what we plan for" list: landscape, so a portrait shot
+   doesn't stretch the column */
+.theme-light .plan-photo { aspect-ratio: 4 / 3; }

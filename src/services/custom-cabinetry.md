@@ -33,6 +33,8 @@ capabilities:
     title: 'Garage Storage'
     text: 'Workshop cabinets, overhead storage, and organization systems built to handle the heavy stuff.'
 galleryImages:
+  - src: '/assets/images/projects/built-in-shelves-install.jpg'
+    alt: 'Floor-to-ceiling white built-in shelves being installed by Haggerty Construction'
   - src: '/assets/images/Maxfields office built-in final.jpg'
     alt: 'Custom built-in office cabinetry'
   - src: '/assets/images/gallery/Book Case.jpg'

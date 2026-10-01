@@ -16,6 +16,13 @@ eleventyNavigation:
     order: 200
 planForTitle: 'Where kitchen remodels go wrong.'
 planForIntro: "Most kitchen surprises aren't surprises. They're details nobody checked. These are the ones we check first."
+planForImages:
+  - src: '/assets/images/projects/outdoor-kitchen-appliance-install.jpg'
+    alt: 'Haggerty Construction fitting a built-in appliance into an outdoor kitchen island'
+    caption: 'Fitting a built-in appliance. The opening has to match the spec sheet, not the guess.'
+  - src: '/assets/images/projects/kitchen-gutted-before.jpg'
+    alt: 'A kitchen gutted down to the subfloor before a remodel'
+    caption: 'A kitchen down to the subfloor, before the new layout goes in.'
 planFor:
   - title: 'Appliance layouts'
     text: "This is the one we see most. The fridge opening comes up short, the outlet ends up behind the wrong cabinet, the power isn't where the range needs it. We've installed a lot of appliances and modified a lot of cabinets to fix other people's openings, so we read the specs before anything gets built."
@@ -44,6 +51,10 @@ capabilities:
 galleryTitle: 'Kitchens we have done.'
 gallerySubtitle: 'Real kitchen projects around St. George, from demo to finished.'
 galleryImages:
+  - src: '/assets/images/projects/whole-home-kitchen-uppers-install.jpg'
+    alt: 'Installing tall white upper cabinets under new pendant lights during a whole-home remodel'
+  - src: '/assets/images/projects/whole-home-sage-cabinets-install.jpg'
+    alt: 'Sage-green cabinets being installed during a whole-home remodel'
   - src: '/assets/images/gallery/latest-remodel/after.jpg'
     alt: 'Finished kitchen remodel with custom cabinetry and granite counters in St. George'
   - src: '/assets/images/projects/kitchen-oak-before.jpg'

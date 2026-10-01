@@ -16,6 +16,13 @@ eleventyNavigation:
     order: 300
 planForTitle: "What's behind the wall."
 planForIntro: "You never really know what's behind a shower wall until it's open. You can still plan for it."
+planForImages:
+  - src: '/assets/images/projects/shower-wall-tearout.jpg'
+    alt: 'Haggerty Construction pulling old plaster and tile off a shower wall during a bathroom remodel'
+    caption: 'Old plaster coming off a shower wall.'
+  - src: '/assets/images/projects/bathroom-subfloor-repair.jpg'
+    alt: 'Opened bathroom subfloor around the drain during a remodel'
+    caption: 'Same bathroom, subfloor opened up around the drain.'
 planFor:
   - title: 'Water damage and mold'
     text: "If there's a good chance of it, we tell you before we start, along with roughly what fixing it costs. If we open the wall and it's there, it's not a surprise. We already talked about it, and we fix it the way we agreed."

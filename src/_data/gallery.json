@@ -1,5 +1,33 @@
 [
   {
+    "path": "src/assets/images/projects/hockey-scoreboard-footing.jpg",
+    "alt": "Pouring a concrete footing for a new scoreboard at the Red Rock Hockey rink in St. George"
+  },
+  {
+    "path": "src/assets/images/projects/hockey-scoreboard-posts.jpg",
+    "alt": "Setting the steel scoreboard posts from a lift at the Red Rock Hockey rink"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-kitchen-uppers-install.jpg",
+    "alt": "Installing tall white upper cabinets under new pendant lights during a whole-home remodel"
+  },
+  {
+    "path": "src/assets/images/projects/whole-home-sage-cabinets-install.jpg",
+    "alt": "Sage-green cabinets going in during a whole-home remodel"
+  },
+  {
+    "path": "src/assets/images/projects/built-in-shelves-install.jpg",
+    "alt": "Floor-to-ceiling white built-in shelves being installed"
+  },
+  {
+    "path": "src/assets/images/projects/crew-truck-jobsite.jpg",
+    "alt": "Haggerty Construction crew at a taped-off job site with the company truck"
+  },
+  {
+    "path": "src/assets/images/projects/framing-mountain-view.jpg",
+    "alt": "Haggerty Construction framing an opening with snowy mountains in the distance"
+  },
+  {
     "path": "src/assets/images/gallery/office-built-in-dark.jpg",
     "alt": "Custom dark blue office built-in with desk, shelving, and cabinet storage"
   },

@@ -10,6 +10,7 @@ theme: 'light'
     heroImage(Alt)        hero photo, a /assets/images/... path
     content               the markdown body: the page's story, in our words
     planFor[]             { title, text }  "What we plan for up front"
+    planForImages[]       { src, alt, caption }  real photos shown beside that list
     feature               { eyebrow, title, text, images[{ src, alt, caption }] }  a showcase
     pricing               { title, text }  "What it costs"
     capabilities[]        { title, text }  "What it can include"
@@ -101,6 +102,18 @@ theme: 'light'
                 <span class="eyebrow">Plan it slow</span>
                 <h2 class="mb-3">{{ planForTitle or "What we plan for up front." }}</h2>
                 {% if planForIntro %}<p class="lede mb-0">{{ planForIntro }}</p>{% endif %}
+                {% if planForImages %}
+                <div class="mt-4 d-grid gap-3">
+                    {% asyncEach img in planForImages %}
+                    <figure class="mb-0">
+                        <div class="photo-frame plan-photo">
+                            {% image img.src, img.alt, 'd-block', 'lazy', '(min-width: 992px) 30vw, 100vw', 'img-fluid w-100' %}
+                        </div>
+                        {% if img.caption %}<figcaption class="photo-caption">{{ img.caption }}</figcaption>{% endif %}
+                    </figure>
+                    {% endeach %}
+                </div>
+                {% endif %}
             </div>
             <div class="col-lg-8">
                 <ul class="smooth-list">
