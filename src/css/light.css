@@ -37,8 +37,10 @@
     --shadow-lift:   0 10px 28px rgba(31, 29, 26, 0.12);
 }
 
+/* html sits outside body's token scope, so it needs its own copy */
 :root:has(body.theme-light) {
-    background-color: #FAF8F5; /* = --surface-base; html sits outside body's token scope */
+    --page-bg: #FAF8F5;
+    background-color: var(--page-bg);
 }
 
 /* Dark islands: nav, footer, photo hero and dark bands keep the charcoal
