@@ -3,7 +3,7 @@ layout: 'base.html'
 description: 'See real kitchen, bathroom, and custom cabinetry projects completed by Haggerty Construction in St. George, Utah — before, during, and after.'
 metaTitle: 'St. George Remodeling Gallery | Haggerty Construction'
 tagTitle: 'Portfolio'
-preloadImg: '/images/cabinets2-1920w.webp'
+preloadImg: ''
 preloadCSS: '/css/main.css'
 permalink: 'gallery/'
 eleventyNavigation:
@@ -45,12 +45,12 @@ eleventyNavigation:
         <p class="text-center text-muted mb-4">Click any project to see the full story.</p>
 
         <div class="row g-4">
-            {% for project in collections.project | reverse %}
+            {% asyncEach project in collections.project | reverse %}
                 <div class="col-md-6 col-lg-4">
                     <a href="{{ project.url }}" class="project-card-link">
                         <div class="project-card">
                             <div class="project-card-img">
-                                <img src="{{ project.data.heroImage }}" alt="{{ project.data.heroImageAlt }}" loading="lazy" />
+                                {% image project.data.heroImage, project.data.heroImageAlt, '', 'lazy', '(min-width: 992px) 33vw, (min-width: 768px) 50vw, 100vw' %}
                             </div>
                             <div class="project-card-body">
                                 <h3 class="project-card-title">{{ project.data.title }}</h3>
@@ -63,7 +63,7 @@ eleventyNavigation:
                         </div>
                     </a>
                 </div>
-            {% endfor %}
+            {% endeach %}
         </div>
     </section>
 

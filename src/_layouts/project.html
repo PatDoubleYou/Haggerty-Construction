@@ -13,9 +13,7 @@ eleventyComputed:
 <!-- ============================================ -->
 
 <section class="project-hero">
-    <picture class="project-hero-img">
-        <img src="{{ heroImage }}" alt="{{ heroImageAlt }}" width="1920" height="800" loading="eager" decoding="async" />
-    </picture>
+    {% image heroImage, heroImageAlt, 'project-hero-img', 'eager', '100vw' %}
     <div class="project-hero-overlay">
         <div class="container">
             <h1 class="project-title">{{ title }}</h1>
