@@ -29,7 +29,6 @@ merging to `main` deploys.
 | `src/_data/client.json` | Business name, phone, email, **canonical domain** |
 | `src/css/main.css` | Design tokens (`:root`) and site styles |
 | `src/css/light.css` | Light theme — a page opts in with `theme: 'light'` in front matter |
-| `src/css/local.css` | Older service-page styles, to be folded into `main.css` |
 | `src/assets/images/` | Original photos. Never link to these directly — see below |
 | `messaging/` | Copywriting notes. Not published |
 | `scripts/` | CI checks and the uptime monitor |
