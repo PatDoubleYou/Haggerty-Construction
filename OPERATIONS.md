@@ -91,6 +91,47 @@ switched off with `permalink: false`, and layouts or stylesheets only they use
 are skipped. Switch one back on, or add a blog post, and its stylesheet has to
 pass, so it gets moved onto the tokens at the moment it goes live.
 
+## AI agent traffic
+
+Since 2026-11 the site counts page fetches by AI assistants and agents, so we
+can see how much of our traffic is ChatGPT, Claude, Perplexity and the rest,
+which pages they read, and whether it grows month to month. Human visitors and
+Googlebot are not counted.
+
+**Read it:** <https://haggertyutah.com/api/agent-stats> (this month, plain
+text), `?month=2026-10` for another month, `?format=json` for a machine.
+Nothing in it is sensitive, so it is public. The useful line is **`user`**:
+fetches made because a person, right then, asked an assistant about us. That
+is a shortlist being built.
+
+**How it works.** `netlify/edge-functions/agent-log.js` runs in front of every
+page (not images, CSS, `/admin/` or `/api/`). If the `User-Agent` matches one
+of the agents in `netlify/shared/agents.mjs`, it writes one record to the
+Netlify Blobs store `agent-hits` and then serves the page unchanged. Form
+`POST`s are passed straight through without looking at them, so the lead
+pipeline is never in this code path. Any failure is logged and ignored, and the
+function is configured with `onError: 'bypass'`, so a crash still serves the
+page. `npm run test` checks the matcher in CI.
+
+**Optional: also show it in GA4.** Set `GA4_API_SECRET` in the Netlify
+dashboard (Site configuration → Environment variables; create the secret in
+GA4 under Admin → Data streams → the web stream → Measurement Protocol API
+secrets). Each hit is then also sent to GA4 as an `ai_agent_fetch` event with
+`agent_name`, `agent_kind` and `page_path`, next to the human traffic.
+Without the variable, nothing is sent.
+
+**What it cannot see.** Agentic browsers (Perplexity Comet, Claude for Chrome,
+ChatGPT Agent driving a real browser) present an ordinary Chrome user-agent and
+are indistinguishable from people here. Two things cover that gap: the
+"An AI assistant" option in the estimate form's "How did you hear about us?",
+and asking at every intake call. Agents that sign their requests (Web Bot
+Auth, `Signature-Agent` header) are counted as `signed:<host>` even when we
+have no pattern for them.
+
+**Adding an agent.** Add a row to `AGENTS` in `netlify/shared/agents.mjs`
+(specific user-driven names before the broader crawler names they share a
+prefix with) and a real user-agent string to `scripts/test-agents.mjs`.
+
 ## Recommended, not yet done
 
 - **Branch protection on `main`:** require the `Build and check` status check

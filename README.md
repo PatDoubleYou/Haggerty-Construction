@@ -30,6 +30,9 @@ merging to `main` deploys.
 | `src/css/main.css` | Design tokens (`:root`) and site styles |
 | `src/css/light.css` | Light theme — a page opts in with `theme: 'light'` in front matter |
 | `src/assets/images/` | Original photos. Never link to these directly — see below |
+| `netlify/edge-functions/agent-log.js` | Counts page fetches by AI agents (ChatGPT, Claude, Perplexity, …) into Netlify Blobs. Never touches the page |
+| `netlify/functions/agent-stats.mjs` | `/api/agent-stats`: this month's AI agent traffic, as text or `?format=json` |
+| `netlify/shared/agents.mjs` | The list of agents both of those recognise |
 | `messaging/` | Copywriting notes. Not published |
 | `scripts/` | CI checks and the uptime monitor |
 

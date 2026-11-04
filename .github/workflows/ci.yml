@@ -26,6 +26,11 @@ jobs:
       - name: Check conventions
         run: npm run lint
 
+      # The AI-agent matcher shared by the edge logger and the stats endpoint.
+      # A bad pattern would either hide agents or count every Chrome visitor.
+      - name: Test agent matcher
+        run: npm run test
+
       - name: Build site
         run: npm run build
 

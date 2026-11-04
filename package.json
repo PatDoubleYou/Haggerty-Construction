@@ -9,7 +9,8 @@
     "lint": "node scripts/check-conventions.mjs",
     "check": "node scripts/check-build.mjs",
     "smoke": "node scripts/smoke.mjs",
-    "verify": "npm run lint && npm run build && npm run check",
+    "test": "node scripts/test-agents.mjs",
+    "verify": "npm run lint && npm run test && npm run build && npm run check",
     "strip-photo-metadata": "node scripts/strip-photo-metadata.mjs"
   },
   "repository": {
@@ -25,6 +26,7 @@
     "luxon": "^3.7.2"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^7.0.0"
+    "@11ty/eleventy-img": "^7.0.0",
+    "@netlify/blobs": "^11.1.7"
   }
 }
