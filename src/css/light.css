@@ -1,0 +1,521 @@
+/* ============================================
+   Haggerty Construction — Light Theme
+   Opt-in per page with `theme: 'light'` in front matter.
+   Loaded after main.css; most of the work is re-pointing the design
+   tokens, so existing components follow along without edits.
+   ============================================ */
+
+.theme-light {
+    /* Surfaces — warm paper, not stark white */
+    --surface-base:     #FAF8F5;
+    --surface-card:     #FFFFFF;
+    --surface-elevated: #F2EDE6;
+    --surface-overlay:  #E9E2D8;
+
+    /* Text */
+    --text-primary:     #1F1D1A;
+    --text-secondary:   #45403A;
+    --text-muted:       #6A6259;
+
+    /* Borders */
+    --border-subtle:    #E6E0D8;
+    --border-emphasis:  #CFC5B8;
+
+    /* Accents */
+    --accent-primary:   #3F5F7C;
+    --accent-hover:     #31506B;
+    --accent-muted:     rgba(63, 95, 124, 0.15);
+    --accent-warm:      #A07D5A;
+    --accent-warm-text: #7A5A3B; /* cognac dark enough for body-size text */
+    --accent-warm-muted: rgba(160, 125, 90, 0.14);
+
+    --ink-band:      #1F1D1A; /* the darkest neutral, for full-bleed dark bands */
+    --scrim-hero:    linear-gradient(90deg, rgba(20, 19, 17, 0.88) 0%, rgba(20, 19, 17, 0.65) 55%, rgba(20, 19, 17, 0.35) 100%);
+    --hairline-on-photo: rgba(240, 244, 248, 0.4);
+
+    --shadow-soft:   0 1px 2px rgba(31, 29, 26, 0.06), 0 6px 20px rgba(31, 29, 26, 0.06);
+    --shadow-lift:   0 10px 28px rgba(31, 29, 26, 0.12);
+}
+
+/* html sits outside body's token scope, so it needs its own copy */
+:root:has(body.theme-light) {
+    --page-bg: #FAF8F5;
+    background-color: var(--page-bg);
+}
+
+/* Dark islands: nav, footer, photo hero and dark bands keep the charcoal
+   palette so white logos and text-over-photo still read. */
+.theme-light .navbar,
+.theme-light footer,
+.theme-light .hero-section,
+.theme-light .band-dark {
+    --surface-base:     #1a1a1a;
+    --surface-card:     #242424;
+    --surface-elevated: #2c2c2c;
+    --text-primary:     #F0F4F8;
+    --text-secondary:   #D2D8DE;
+    --text-muted:       #B1BCC7;
+    --border-subtle:    #333333;
+    --border-emphasis:  #444444;
+    --accent-warm-text: #D4B48F;
+    color: var(--text-primary);
+}
+
+/* Bootstrap's dark-mode utilities, mapped to tokens so they flip with the
+   section they sit in (dark inside the hero, ink everywhere else). */
+.theme-light .text-white,
+.theme-light .text-light { color: var(--text-primary) !important; }
+.theme-light .link-light { color: var(--text-secondary) !important; }
+.theme-light .bg-dark { background-color: var(--surface-card) !important; }
+.theme-light .border-secondary { border-color: var(--border-emphasis) !important; }
+
+.theme-light .btn { box-shadow: none; }
+.theme-light .btn-primary:hover { box-shadow: var(--shadow-soft); }
+.theme-light .btn-outline-light:hover,
+.theme-light .btn-outline-light:focus { color: var(--on-accent) !important; }
+
+.theme-light .service,
+.theme-light .review-card,
+.theme-light .accordion { box-shadow: var(--shadow-soft); }
+.theme-light .service:hover { box-shadow: var(--shadow-lift); }
+.theme-light .accordion-button::after { filter: none; }
+.theme-light .shadow-lg { box-shadow: var(--shadow-soft) !important; }
+
+/* ============================================
+   Shared pieces
+   ============================================ */
+
+.theme-light .eyebrow {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent-warm-text);
+    margin-bottom: 0.75rem;
+}
+
+.theme-light .section {
+    padding: clamp(64px, 9vw, 112px) 0;
+}
+
+.theme-light .section-alt {
+    background-color: var(--surface-elevated);
+}
+
+.theme-light .section h2 {
+    font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+    line-height: 1.2;
+    color: var(--text-primary);
+}
+
+.theme-light .lede {
+    font-size: clamp(1.1rem, 1.6vw, 1.3rem);
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.theme-light .prose p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.75;
+}
+
+/* ============================================
+   Homepage hero
+   ============================================ */
+
+.theme-light .hero-home {
+    padding: 0;
+    min-height: min(88vh, 820px);
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.theme-light .hero-home::before {
+    background: var(--scrim-hero);
+}
+
+.theme-light .hero-home .container {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.theme-light .hero-home .hero-title {
+    font-size: clamp(2.2rem, 5.6vw, 4rem);
+    line-height: 1.08;
+    max-width: 15ch;
+    margin-bottom: 1.25rem;
+}
+
+.theme-light .hero-tagline {
+    font-family: apotek-extrawide, sans-serif;
+    font-size: clamp(1.05rem, 2vw, 1.35rem);
+    color: var(--accent-warm-text);
+    margin-bottom: 1rem;
+}
+
+.theme-light .hero-home .hero-body {
+    font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+    line-height: 1.7;
+    color: var(--text-secondary);
+    max-width: 38rem;
+    margin-bottom: 2rem;
+}
+
+.theme-light .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem 1.5rem;
+}
+
+.theme-light .hero-actions .btn {
+    font-size: 1.15rem;
+    padding: 16px 32px;
+}
+
+.theme-light .hero-phone {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid var(--hairline-on-photo);
+}
+.theme-light .hero-phone:hover { border-bottom-color: var(--text-primary); }
+
+.theme-light .hero-trust {
+    margin-top: 2.25rem;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+.theme-light .hero-trust .stars { color: var(--star); letter-spacing: 2px; }
+
+/* ============================================
+   How it works — numbered steps
+   ============================================ */
+
+.theme-light .steps {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 2rem;
+    counter-reset: step;
+}
+
+@media (min-width: 768px) {
+    .theme-light .steps { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 3rem; }
+}
+@media (min-width: 1200px) {
+    .theme-light .steps { grid-template-columns: repeat(4, 1fr); }
+}
+
+.theme-light .steps li {
+    counter-increment: step;
+    border-top: 2px solid var(--text-primary);
+    padding-top: 1.25rem;
+}
+
+.theme-light .steps li::before {
+    content: counter(step, decimal-leading-zero);
+    display: block;
+    font-family: apotek-extrawide, sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--accent-warm-text);
+    margin-bottom: 0.5rem;
+}
+
+.theme-light .steps h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
+    color: var(--text-primary);
+}
+
+.theme-light .steps p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.theme-light .steps .price {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    background: var(--accent-warm-muted);
+    padding: 0.2rem 0.6rem;
+    border-radius: var(--radius-sm);
+}
+
+/* ============================================
+   What smooth looks like — ruled list
+   ============================================ */
+
+.theme-light .smooth-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid var(--border-emphasis);
+}
+
+.theme-light .smooth-list li {
+    padding: 1.4rem 0;
+    border-bottom: 1px solid var(--border-emphasis);
+}
+
+@media (min-width: 768px) {
+    .theme-light .smooth-list li {
+        display: grid;
+        grid-template-columns: 13rem 1fr;
+        gap: 2rem;
+    }
+}
+
+.theme-light .smooth-list h3 {
+    font-size: 1.05rem;
+    margin: 0 0 0.4rem;
+    color: var(--text-primary);
+}
+
+.theme-light .smooth-list p {
+    margin: 0;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.theme-light .photo-frame {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-soft);
+}
+.theme-light .photo-frame picture {
+    display: block;
+    height: 100%;
+}
+.theme-light .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.theme-light .photo-caption {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 0.75rem;
+}
+
+.theme-light .proof-note {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid var(--accent-warm);
+    background: var(--surface-card);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    color: var(--text-primary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+/* ============================================
+   Who we're for — dark band
+   ============================================ */
+
+.theme-light .band-dark {
+    background-color: var(--ink-band);
+}
+
+.theme-light .band-dark h2 { color: var(--text-primary); }
+.theme-light .band-dark .lede { color: var(--text-secondary); }
+
+/* ============================================
+   Smooth is fast — the story
+   ============================================ */
+
+.theme-light .story-photo {
+    aspect-ratio: 4 / 5;
+}
+
+.theme-light .signature {
+    margin-top: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+.theme-light .signature span {
+    display: block;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+.theme-light .team-row img {
+    width: 96px;
+    height: 96px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--surface-card);
+    box-shadow: var(--shadow-soft);
+}
+.theme-light .team-row .name { font-weight: 600; color: var(--text-primary); margin-top: 0.6rem; }
+.theme-light .team-row .role { font-size: 0.9rem; color: var(--text-muted); }
+
+.theme-light .text-link {
+    color: var(--accent-primary);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+}
+.theme-light .text-link:hover { color: var(--accent-hover); }
+
+/* ============================================
+   Lead magnet card on light pages
+   ============================================ */
+
+.theme-light .lead-magnet-card {
+    margin-top: 0 !important;
+}
+.theme-light .lead-magnet-card .form-control {
+    background-color: var(--surface-base) !important;
+    color: var(--text-primary) !important;
+}
+
+/* ============================================
+   Fit-and-finish
+   ============================================ */
+
+.theme-light .btn {
+    font-size: 1.1rem;
+    padding: 14px 28px;
+}
+
+.theme-light .service .card-title { color: var(--text-primary); }
+.theme-light a:hover .service .card-title { color: var(--accent-primary); }
+
+@media (min-width: 992px) {
+    .theme-light .smooth-photo {
+        position: sticky;
+        top: 96px;
+    }
+    .theme-light .smooth-photo .photo-frame {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+.theme-light .hero-home .hero-title,
+.theme-light .hero-home .hero-body { text-align: left; margin-left: 0; }
+
+/* Inner pages: same hero treatment as the homepage, shorter */
+.theme-light .hero-short { min-height: min(64vh, 620px); }
+
+/* ============================================
+   Team — who does what
+   ============================================ */
+
+.theme-light .team-grid {
+    display: grid;
+    gap: 2.5rem;
+}
+@media (min-width: 992px) {
+    .theme-light .team-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+}
+
+.theme-light .team-member img {
+    width: 112px;
+    height: 112px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--surface-card);
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 1.25rem;
+}
+.theme-light .team-member h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    color: var(--text-primary);
+}
+.theme-light .team-member .role {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--accent-warm-text);
+    margin-bottom: 1rem;
+}
+.theme-light .team-member p {
+    color: var(--text-secondary);
+    line-height: 1.75;
+}
+
+/* A short pull quote from a client */
+.theme-light .pull-quote {
+    font-size: clamp(1.25rem, 2.4vw, 1.6rem);
+    line-height: 1.5;
+    color: var(--text-primary);
+    margin: 0 0 1rem;
+}
+.theme-light .pull-quote-by {
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+/* Optional sections can land two of the same color side by side; a hairline
+   keeps them reading as separate sections. */
+.theme-light .section-alt + .section-alt,
+.theme-light .section:not(.section-alt):not(.band-dark) + .section:not(.section-alt):not(.band-dark) {
+    border-top: 1px solid var(--border-subtle);
+}
+
+/* Markdown body on service pages */
+.theme-light .service-content h2 { margin: 2.5rem 0 1rem; }
+.theme-light .service-content h2:first-child { margin-top: 0; }
+.theme-light .service-content strong { color: var(--text-primary); }
+
+/* Card titles stay card-sized even when they're h2s inside a .section */
+.theme-light .section .card-title { font-size: 1.3rem; line-height: 1.3; }
+
+/* Showcase photos: same portrait shape so a mixed set lines up */
+.theme-light .feature-photo { aspect-ratio: 3 / 4; }
+
+/* Photos beside a "what we plan for" list: landscape, so a portrait shot
+   doesn't stretch the column */
+.theme-light .plan-photo { aspect-ratio: 4 / 3; }
+
+/* Sections carry their own padding and background, so the footer sits
+   right under the last one; its top margin otherwise shows as a stripe of
+   page background. */
+.theme-light main + footer { margin-top: 0 !important; }
+
+/* Project pages: the short facts list beside the story */
+.theme-light .project-facts {
+    margin: 0;
+    border-top: 2px solid var(--text-primary);
+    padding-top: 1.25rem;
+}
+.theme-light .project-facts dt {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent-warm-text);
+    margin-bottom: 0.25rem;
+}
+.theme-light .project-facts dd {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+}
+.theme-light .project-facts dd:last-child { margin-bottom: 0; }
+
+/* Gallery tiles: same frame as every other photo on the site */
+.theme-light .gallery-tile { height: auto; aspect-ratio: 4 / 3; box-shadow: var(--shadow-soft); }
+
+/* Footer: the Utah Veteran-Owned Business registry decal */
+.veteran-badge-img { width: 88px; height: auto; margin: 0 auto; }
+
+/* The star rating in the hero links out to the Google profile */
+.theme-light .hero-trust-link {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid var(--hairline-on-photo);
+}
+.theme-light .hero-trust-link:hover { color: var(--text-primary); border-bottom-color: var(--text-primary); }

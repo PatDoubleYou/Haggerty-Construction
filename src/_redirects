@@ -1,1 +1,43 @@
+# Removed weather-stripping landing page — send any old/ad traffic to the homepage
+/pages/weather-stripping-special/  /  301
+/pages/weather-stripping-special   /  301
 
+# Old success page path (was /pages/success/ before it got a permalink)
+/pages/success/  /success/  301
+
+# Niched down to residential remodels (2026-10-01). Neither page earned a
+# click in the prior 3 months of Search Console data.
+/services/commercial-remodeling/  /services/                 301
+/services/commercial-remodeling   /services/                 301
+/services/basement-finishing/     /services/home-remodeling/ 301
+/services/basement-finishing      /services/home-remodeling/ 301
+
+# Bathroom sub-pages folded into the main bathroom page (2026-10-01). They
+# were old template copy with unverified prices and had ~0 impressions.
+/services/bathroom-remodels/shower-remodels/   /services/bathroom-remodels/ 301
+/services/bathroom-remodels/shower-remodels    /services/bathroom-remodels/ 301
+/services/bathroom-remodels/small-bathrooms/   /services/bathroom-remodels/ 301
+/services/bathroom-remodels/small-bathrooms    /services/bathroom-remodels/ 301
+/services/bathroom-remodels/tub-to-shower/     /services/bathroom-remodels/ 301
+/services/bathroom-remodels/tub-to-shower      /services/bathroom-remodels/ 301
+
+# Retired blog (2026-08-25) — the two posts were generic AI-written filler.
+# Specific rules must stay above the wildcard: Netlify uses first match wins.
+/blog/how-to-patch-a-drywall-hole/    /services/home-remodeling/  301
+/blog/diy-energy-efficient-upgrades/  /                           301
+/blog/*                               /                           301
+
+# ---------------------------------------------------------------------------
+# DO NOT add an apex -> www redirect here.
+#
+# Netlify's Domain management has haggertyutah.com (apex) set as the PRIMARY
+# domain, so Netlify itself 301s www -> apex at the domain layer, BEFORE this
+# file is consulted. A rule here sending apex -> www therefore creates an
+# infinite loop (www -> apex -> www -> ...) and takes the whole site down with
+# ERR_TOO_MANY_REDIRECTS. That is exactly what happened between 2026-07-21 and
+# 2026-08-25.
+#
+# The canonical host is now the apex (haggertyutah.com) — see src/_data/client.json.
+# If you ever want www to be canonical, change the PRIMARY DOMAIN in the Netlify
+# dashboard and update client.json to match. Change one place, never both.
+# ---------------------------------------------------------------------------

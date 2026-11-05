@@ -1,0 +1,99 @@
+---
+layout: 'base.html'
+theme: 'light'
+title: 'Our Services'
+tagTitle: 'Remodeling Services'
+description: 'Custom home remodels in Washington County, Utah: kitchens, bathrooms, whole-home remodels and custom cabinetry, planned before demo. Family-owned. Free detailed estimates.'
+metaTitle: 'Remodeling Services in St. George, UT | Haggerty Construction'
+preloadCSS: ''
+preloadImg: ''
+permalink: '/services/'
+eleventyNavigation:
+    key: Services
+    order: 200
+services:
+  - title: 'Kitchen Remodels'
+    url: '/services/kitchen-remodels/'
+    image: '/assets/images/projects/whole-home-kitchen-pantry-wall.jpg'
+    alt: 'Floor-to-ceiling pantry cabinets around a built-in fridge in a kitchen remodeled by Haggerty Construction'
+    text: 'Cabinets, counters, appliances and layout, with every appliance spec checked against the openings and the power before demo.'
+  - title: 'Bathroom Remodels'
+    url: '/services/bathroom-remodels/'
+    image: '/assets/images/projects/guest-bath-finished.jpg'
+    alt: 'Finished guest bathroom with a patterned-tile walk-in shower by Haggerty Construction'
+    text: "Custom tile, walk-in showers and vanities. We plan for what's behind the wall before we open it."
+  - title: 'Whole-Home Remodels'
+    url: '/services/home-remodeling/'
+    image: '/assets/images/projects/whole-home-kitchen-finished.jpg'
+    alt: 'Finished kitchen from a whole-home remodel by Haggerty Construction'
+    text: 'Several rooms, one plan, one schedule, and one person to call.'
+  - title: 'Custom Cabinetry & Built-Ins'
+    url: '/services/custom-cabinetry/'
+    image: '/assets/images/gallery/green-bookcase-wall.jpg'
+    alt: 'Floor-to-ceiling dark green built-in bookcase by Haggerty Construction'
+    text: "Built-ins, bookcases and storage designed for your home. It's where we started."
+---
+
+<section class="hero-section hero-home hero-short">
+    {% image '/assets/images/portfolio/hero-desktop.webp', 'Haggerty Construction installing cabinets during a remodel', 'hero-bg', 'eager', '100vw' %}
+    <div class="container position-on-top">
+        <div class="row">
+            <div class="col-lg-9 col-xl-8">
+                <span class="eyebrow">Our services</span>
+                <h1 class="hero-title">We do one thing.</h1>
+                <p class="hero-body">Custom remodels of people's homes in Washington County, Utah. Kitchens, bathrooms, whole homes, and the cabinetry that ties them together.</p>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">Get your free estimate</a>
+                    <a href="tel:+14354141974" class="hero-phone" id="hero-phone-call">or call (435) 414-1974</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="row g-4">
+            {% asyncEach svc in services %}
+            <div class="col-md-6">
+                <a href="{{ svc.url }}" class="text-decoration-none">
+                    <div class="card service h-100 border-0">
+                        {% image svc.image, svc.alt, 'card-img-top', 'lazy', '(min-width: 768px) 50vw, 100vw' %}
+                        <div class="card-body p-4">
+                            <h2 class="h4 card-title fw-bold mb-2">{{ svc.title }}</h2>
+                            <p class="card-text text-muted mb-0">{{ svc.text }}</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endeach %}
+        </div>
+    </div>
+</section>
+
+{% include "components/how-it-works.html" %}
+
+<section class="section band-dark">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-8">
+                <span class="eyebrow">Not sure where yours fits?</span>
+                <h2 class="mb-4">Tell us about it anyway.</h2>
+                <p class="lede mb-0">If it's a remodel of your home in Washington County and you want it run right, let's talk.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section section-alt">
+    <div class="container">
+        {% include "contact-form.html" %}
+    </div>
+</section>
+
+<div class="sticky-cta-bar d-lg-none" aria-label="Quick contact options">
+    <a href="tel:+14354141974" class="sticky-cta-call" id="sticky-cta-phone">
+        <i class="bi bi-telephone-fill me-2" aria-hidden="true"></i>Call
+    </a>
+    <a href="#contact" class="sticky-cta-estimate">Free estimate</a>
+</div>
